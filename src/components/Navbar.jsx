@@ -38,7 +38,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="tel:+40700000000"
+          href="tel:+40757211551"
           className="hidden rounded-sm bg-amber px-4 py-2 font-body text-sm font-semibold text-charcoal transition-colors hover:bg-amber-light md:inline-block"
         >
           Sună acum
@@ -69,7 +69,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="tel:+40700000000"
+            href="tel:+40757211551"
             className="mt-2 rounded-sm bg-amber px-4 py-2 text-center font-body text-sm font-semibold text-charcoal"
           >
             Sună acum

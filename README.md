@@ -14,12 +14,11 @@ Deschide `http://localhost:5173`.
 ## Ce mai trebuie completat
 
 1. **Poze reale** — în `src/components/Gallery.jsx`, înlocuiește array-ul `PHOTOS` cu pozele reale. Cel mai simplu: pune fișierele în `public/images/` și referențiază-le ca `/images/nume-poza.jpg`.
-2. **Video** — în `src/components/VideoSection.jsx`, înlocuiește `VIDEO_ID` cu ID-ul real al clipului de pe YouTube (partea din URL după `v=`).
+2. **Video** — în `src/components/VideoSection.jsx`, editează array-ul `VIDEOS` cu link-urile clipurilor publice de pe Facebook. Clipurile cu muzică sub drepturi de autor nu pot fi încorporate (apar doar ca link).
 3. **Formular de contact (EmailJS)** — creează cont gratuit pe emailjs.com, apoi completează în `src/components/ContactForm.jsx`:
    - `SERVICE_ID`
    - `TEMPLATE_ID`
    - `PUBLIC_KEY`
-4. **Telefon** — înlocuiește `+40700000000` cu numărul real, în `Navbar.jsx` și `Footer.jsx`.
 
 ## Deploy pe Vercel
 
