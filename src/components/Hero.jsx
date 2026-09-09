@@ -23,7 +23,7 @@ export default function Hero() {
             href="#contact"
             className="rounded-sm bg-amber px-6 py-3 font-body font-semibold text-charcoal transition-colors hover:bg-amber-light"
           >
-            Cere ofertă gratuită
+            Cere ofertă
           </a>
           <a
             href="#proiecte"
