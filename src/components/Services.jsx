@@ -1,23 +1,23 @@
 const STEPS = [
   {
     n: '01',
-    title: 'Consultanță & ofertă',
-    text: 'Venim la fața locului, discutăm ce vrei să construiești sau renovezi și îți facem o ofertă clară, fără costuri ascunse.',
+    title: 'Vizită & ofertă',
+    text: 'Venim în locuință, măsurăm, discutăm ce vrei să renovezi sau să amenajezi și îți facem o ofertă clară pe fiecare lucrare, fără costuri ascunse.',
   },
   {
     n: '02',
-    title: 'Proiect & materiale',
-    text: 'Stabilim planul de execuție și alegem materialele împreună cu tine, în funcție de buget și termene.',
+    title: 'Plan & finisaje',
+    text: 'Stabilim ordinea lucrărilor și alegem împreună finisajele — gresie, faianță, parchet, corpuri de iluminat, vopsele — în funcție de buget și termene.',
   },
   {
     n: '03',
     title: 'Execuție',
-    text: 'Echipa noastră execută lucrarea conform planului, cu actualizări periodice despre stadiul șantierului.',
+    text: 'Compartimentări, instalații, gips-carton, glet, zugrăveli și montaj. Lucrăm curat, protejăm suprafețele și te ținem la curent cu stadiul.',
   },
   {
     n: '04',
     title: 'Predare',
-    text: 'Predăm lucrarea finalizată, curățăm șantierul și rămânem disponibili pentru orice întrebare ulterioară.',
+    text: 'Facem curățenie după noi, verificăm fiecare detaliu împreună cu tine și rămânem disponibili pentru orice retuș ulterior.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function Services() {
         Cum lucrăm
       </h2>
       <p className="mt-3 max-w-xl font-body text-steel">
-        Patru etape simple, de la prima discuție până la predarea cheii.
+        Patru etape simple, de la prima vizită până la locuința gata de mutat.
       </p>
 
       <div className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2">

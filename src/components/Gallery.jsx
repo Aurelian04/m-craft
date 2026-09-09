@@ -2,12 +2,12 @@ import { useState } from 'react'
 
 // Placeholder images — replace src with real project photos in /public/images
 const PHOTOS = [
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+1', alt: 'Proiect 1' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+2', alt: 'Proiect 2' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+3', alt: 'Proiect 3' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+4', alt: 'Proiect 4' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+5', alt: 'Proiect 5' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Proiect+6', alt: 'Proiect 6' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Living', alt: 'Renovare living' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Bucatarie', alt: 'Amenajare bucătărie' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Baie', alt: 'Renovare baie' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Dormitor', alt: 'Amenajare dormitor' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Hol', alt: 'Finisaje hol' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Apartament', alt: 'Renovare completă apartament' },
 ]
 
 export default function Gallery() {
@@ -17,10 +17,10 @@ export default function Gallery() {
     <section id="proiecte" className="bg-concrete-dark py-24">
       <div className="mx-auto max-w-6xl px-5">
         <h2 className="font-display text-4xl font-extrabold tracking-tight text-charcoal md:text-5xl">
-          Proiecte finalizate
+          Interioare finalizate
         </h2>
         <p className="mt-3 max-w-xl font-body text-steel">
-          O parte din lucrările executate în ultimii ani.
+          O parte din apartamentele și casele amenajate în ultimii ani.
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">

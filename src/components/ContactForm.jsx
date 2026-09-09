@@ -30,7 +30,7 @@ export default function ContactForm() {
           Cere o ofertă
         </h2>
         <p className="mt-3 font-body text-concrete/70">
-          Completează formularul și te contactăm în cel mai scurt timp.
+          Spune-ne pe scurt ce vrei să renovezi sau să amenajezi și te contactăm în cel mai scurt timp.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
@@ -74,7 +74,7 @@ export default function ContactForm() {
 
           <div>
             <label htmlFor="message" className="font-body text-sm text-concrete/70">
-              Despre ce e vorba proiectul?
+              Ce lucrări ai nevoie? (cameră, suprafață, termen dorit)
             </label>
             <textarea
               id="message"

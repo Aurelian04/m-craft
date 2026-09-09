@@ -3,19 +3,19 @@ export default function Hero() {
     <section className="blueprint-grid relative overflow-hidden bg-charcoal text-concrete">
       <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
         <p className="font-body text-sm font-semibold uppercase tracking-widest text-amber">
-          Construcții &amp; renovări
+          Amenajări &amp; renovări interioare
         </p>
 
         <h1 className="mt-4 max-w-3xl font-display text-6xl font-extrabold leading-[0.95] tracking-tight md:text-8xl">
-          Construim ce
+          Interioare
           <br />
-          rămâne în picioare.
+          făcute ca la carte.
         </h1>
 
         <p className="mt-6 max-w-xl font-body text-lg text-concrete/75">
-          De la fundație până la finisaje: case, extinderi și renovări
-          executate la termen, cu materiale verificate și o echipă care
-          răspunde la telefon.
+          Renovări complete de apartamente și case: gips-carton, zugrăveli,
+          gresie și faianță, parchet, instalații și finisaje — executate curat,
+          la termen, cu o echipă care răspunde la telefon.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">

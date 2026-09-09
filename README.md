@@ -1,6 +1,6 @@
 # Mihai Construct
 
-Site de prezentare pentru o firmă de construcții. React + Vite + Tailwind CSS v4, fără backend.
+Site de prezentare pentru o firmă de amenajări și renovări interioare. React + Vite + Tailwind CSS v4, fără backend.
 
 ## Pornire locală
 
