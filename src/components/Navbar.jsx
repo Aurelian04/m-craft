@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from '../assets/logo.png'
 
 const LINKS = [
   { href: '#servicii', label: 'Servicii' },
@@ -13,8 +14,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-charcoal text-concrete">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#" className="font-display text-2xl font-extrabold tracking-tight">
-          M<span className="text-amber">-CRAFT</span>
+        <a href="#" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="M-Craft"
+            className="h-10 w-auto md:h-12"
+          />
+          <span className="font-display text-2xl font-extrabold tracking-tight">
+            M<span className="text-amber">-CRAFT</span>
+          </span>
         </a>
 
         <nav className="hidden gap-8 md:flex">
