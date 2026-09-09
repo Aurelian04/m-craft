@@ -18,7 +18,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="M-Craft"
-            className="h-10 w-auto md:h-12"
+            className="h-12 w-auto md:h-16"
           />
           <span className="font-display text-2xl font-extrabold tracking-tight">
             M<span className="text-amber">-CRAFT</span>
