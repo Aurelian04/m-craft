@@ -1,4 +1,4 @@
-# Mihai Construct
+# M-Craft
 
 Site de prezentare pentru o firmă de amenajări și renovări interioare. React + Vite + Tailwind CSS v4, fără backend.
 

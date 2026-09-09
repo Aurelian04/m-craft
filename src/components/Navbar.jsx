@@ -14,7 +14,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-charcoal text-concrete">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#" className="font-display text-2xl font-extrabold tracking-tight">
-          MIHAI <span className="text-amber">CONSTRUCT</span>
+          M<span className="text-amber">-CRAFT</span>
         </a>
 
         <nav className="hidden gap-8 md:flex">

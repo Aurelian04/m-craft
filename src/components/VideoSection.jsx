@@ -13,7 +13,7 @@ export default function VideoSection() {
         <iframe
           className="h-full w-full"
           src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Prezentare renovare interioară Mihai Construct"
+          title="Prezentare renovare interioară M-Craft"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
