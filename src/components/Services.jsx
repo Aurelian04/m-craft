@@ -7,12 +7,12 @@ const STEPS = [
   {
     n: '02',
     title: 'Plan & finisaje',
-    text: 'Stabilim ordinea lucrărilor și alegem împreună finisajele — gresie, faianță, parchet, corpuri de iluminat, vopsele — în funcție de buget și termene.',
+    text: 'Stabilim ordinea lucrărilor și alegem împreună finisajele — gresie, faianță, parchet, vopsele — în funcție de buget și termene.',
   },
   {
     n: '03',
     title: 'Execuție',
-    text: 'Compartimentări, instalații, gips-carton, glet, zugrăveli și montaj. Lucrăm curat, protejăm suprafețele și te ținem la curent cu stadiul.',
+    text: 'Compartimentări, gips-carton, glet, zugrăveli și montaj. Lucrăm curat, protejăm suprafețele și te ținem la curent cu stadiul.',
   },
   {
     n: '04',

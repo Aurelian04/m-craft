@@ -8,6 +8,7 @@ const PHOTOS = [
   { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Dormitor', alt: 'Amenajare dormitor' },
   { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Hol', alt: 'Finisaje hol' },
   { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Apartament', alt: 'Renovare completă apartament' },
+  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Spatiu+comercial', alt: 'Amenajare spațiu comercial' },
 ]
 
 export default function Gallery() {
@@ -20,7 +21,7 @@ export default function Gallery() {
           Interioare finalizate
         </h2>
         <p className="mt-3 max-w-xl font-body text-steel">
-          O parte din apartamentele și casele amenajate în ultimii ani.
+          O parte din apartamentele, casele și spațiile comerciale amenajate în ultimii ani.
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">

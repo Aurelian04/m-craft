@@ -14,7 +14,7 @@ export default function Hero() {
 
         <p className="mt-6 max-w-xl font-body text-lg text-concrete/75">
           Renovări complete de apartamente și case: gips-carton, zugrăveli,
-          gresie și faianță, parchet, instalații și finisaje — executate curat,
+          gresie și faianță, parchet și finisaje — executate curat,
           la termen, cu o echipă care răspunde la telefon.
         </p>
 
