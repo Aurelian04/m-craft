@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
-// Fill these in after creating a free account at emailjs.com
-const SERVICE_ID = 'YOUR_SERVICE_ID'
-const TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-const PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
+// Cheie de acces Web3Forms. Se obține gratuit pe https://web3forms.com:
+// introduci adresa de email pe care trebuie să ajungă cererile, confirmi
+// printr-un click în email și primești cheia. E ok să fie vizibilă în cod.
+const ACCESS_KEY = 'YOUR_ACCESS_KEY'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
@@ -13,8 +12,17 @@ export default function ContactForm() {
     e.preventDefault()
     setStatus('sending')
 
+    const data = new FormData(e.target)
+    data.append('access_key', ACCESS_KEY)
+    data.append('subject', 'Cerere de ofertă nouă — site M-Craft')
+
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      })
+      const json = await res.json()
+      if (!json.success) throw new Error(json.message || 'Trimitere eșuată')
       setStatus('sent')
       e.target.reset()
     } catch (err) {
@@ -34,6 +42,16 @@ export default function ContactForm() {
         </p>
 
         <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
+          {/* Honeypot anti-spam — ascuns pentru utilizatori, completat doar de boți */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            aria-hidden="true"
+          />
+
           <div>
             <label htmlFor="name" className="font-body text-sm text-concrete/70">
               Nume
