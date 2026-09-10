@@ -17,10 +17,10 @@ export default function Gallery() {
     <section id="proiecte" className="bg-concrete-dark py-24">
       <div className="mx-auto max-w-6xl px-5">
         <h2 className="font-display text-4xl font-extrabold tracking-tight text-charcoal md:text-5xl">
-          Interioare finalizate
+          Lucrări recente
         </h2>
         <p className="mt-3 max-w-xl font-body text-steel">
-          O parte din apartamentele, casele și spațiile comerciale amenajate în ultimii ani.
+          Imagini din apartamente, case și spații comerciale la care am lucrat.
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">
