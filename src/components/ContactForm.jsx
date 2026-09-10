@@ -3,7 +3,7 @@ import { useState } from 'react'
 // Cheie de acces Web3Forms. Se obține gratuit pe https://web3forms.com:
 // introduci adresa de email pe care trebuie să ajungă cererile, confirmi
 // printr-un click în email și primești cheia. E ok să fie vizibilă în cod.
-const ACCESS_KEY = 'YOUR_ACCESS_KEY'
+const ACCESS_KEY = '7c14d1a3-6229-40e0-b216-0b9c40990f67'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
