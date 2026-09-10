@@ -1,14 +1,13 @@
 import { useState } from 'react'
 
-// Placeholder images — replace src with real project photos in /public/images
+// Real project photos live in /public/images
 const PHOTOS = [
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Living', alt: 'Renovare living' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Bucatarie', alt: 'Amenajare bucătărie' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Baie', alt: 'Renovare baie' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Dormitor', alt: 'Amenajare dormitor' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Hol', alt: 'Finisaje hol' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Apartament', alt: 'Renovare completă apartament' },
-  { src: 'https://placehold.co/800x600/2b251f/ece7dd?text=Spatiu+comercial', alt: 'Amenajare spațiu comercial' },
+  { src: '/images/interior-01.jpg', alt: 'Renovare spațiu interior — finisaje și pardoseală' },
+  { src: '/images/comercial-01.jpg', alt: 'Amenajare spațiu comercial — pereți din gips-carton' },
+  { src: '/images/interior-02.jpg', alt: 'Baie placată cu faianță tip onyx' },
+  { src: '/images/comercial-02.jpg', alt: 'Tavan din gips-carton într-un spațiu comercial' },
+  { src: '/images/interior-03.jpg', alt: 'Hol amenajat cu gresie și tâmplărie' },
+  { src: '/images/comercial-03.jpg', alt: 'Spațiu comercial în amenajare — structură tavan' },
 ]
 
 export default function Gallery() {
