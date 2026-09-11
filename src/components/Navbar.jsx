@@ -18,7 +18,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="M-Craft — Construcții & Renovări"
-            className="h-14 w-auto md:h-[4.5rem]"
+            className="h-16 w-auto md:h-24"
           />
         </a>
 
