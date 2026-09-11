@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
 
 const LINKS = [
   { href: '#servicii', label: 'Servicii' },
@@ -14,15 +14,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-charcoal text-concrete">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#" className="flex items-center gap-3">
+        <a href="#" className="flex items-center">
           <img
             src={logo}
-            alt="M-Craft"
-            className="h-12 w-auto md:h-16"
+            alt="M-Craft — Construcții & Renovări"
+            className="h-14 w-auto md:h-[4.5rem]"
           />
-          <span className="font-display text-2xl font-extrabold tracking-tight">
-            M<span className="text-amber">-CRAFT</span>
-          </span>
         </a>
 
         <nav className="hidden gap-8 md:flex">
