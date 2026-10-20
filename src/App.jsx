@@ -5,6 +5,7 @@ import Gallery from './components/Gallery'
 import VideoSection from './components/VideoSection'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import CookieBanner from './components/CookieBanner'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <VideoSection />
       <ContactForm />
       <Footer />
+      <CookieBanner />
     </>
   )
 }

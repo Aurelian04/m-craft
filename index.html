@@ -10,6 +10,24 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    </script>
     <title>M-Craft — Amenajări și renovări interioare</title>
     <meta name="description" content="M-Craft — renovări și amenajări interioare pentru apartamente și case: gips-carton, zugrăveli, gresie, faianță, parchet și finisaje. Ofertă gratuită, execuție la termen." />
   </head>
