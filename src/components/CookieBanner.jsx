@@ -13,6 +13,12 @@ export default function CookieBanner() {
                 onClick={() => {
                     setVisible(false)
                     localStorage.setItem('cookie-consent', 'accepted')
+                    window.gtag('consent', 'update', {
+                    ad_storage: 'granted',
+                    ad_user_data: 'granted',
+                    ad_personalization: 'granted',
+                    analytics_storage: 'granted',
+                    })
                 }}
                 className='bg-amber text-charcoal px-5 py-2 font-semibold'
                 >Accept</button>
