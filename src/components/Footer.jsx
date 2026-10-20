@@ -6,9 +6,14 @@ export default function Footer({ onCookieSettings }) {
         <a href="tel:+40757211551" className="hover:text-amber">
           +40 757 211 551
         </a>
-        <button className="hover:text-amber"
-        onClick={onCookieSettings}
-        >Setari Cookie-uri</button>
+        <div className="flex gap-4">
+          <a href="/politica-confidentialitate.html" className="hover:text-amber">
+            Politica de confidențialitate
+          </a>
+          <button onClick={onCookieSettings} className="hover:text-amber">
+            Setări cookie-uri
+          </button>
+        </div>
       </div>
     </footer>
   )
