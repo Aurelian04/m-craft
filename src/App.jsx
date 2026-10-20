@@ -6,8 +6,12 @@ import VideoSection from './components/VideoSection'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
+import { useState } from 'react'
 
 export default function App() {
+
+  const [bannerVisible, setVisible] = useState(localStorage.getItem('cookie-consent') === null)
+
   return (
     <>
       <Navbar />
@@ -16,8 +20,8 @@ export default function App() {
       <Gallery />
       <VideoSection />
       <ContactForm />
-      <Footer />
-      <CookieBanner />
+      <Footer onCookieSettings={() => setVisible(true)}/>
+      <CookieBanner visible={bannerVisible} setVisible={setVisible}/>
     </>
   )
 }

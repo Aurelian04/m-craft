@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ onCookieSettings }) {
   return (
     <footer className="bg-charcoal-soft py-8 text-concrete/60">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 font-body text-sm md:flex-row md:items-center">
@@ -6,6 +6,9 @@ export default function Footer() {
         <a href="tel:+40757211551" className="hover:text-amber">
           +40 757 211 551
         </a>
+        <button className="hover:text-amber"
+        onClick={onCookieSettings}
+        >Setari Cookie-uri</button>
       </div>
     </footer>
   )

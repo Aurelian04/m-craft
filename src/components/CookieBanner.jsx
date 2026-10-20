@@ -1,7 +1,4 @@
-import { useState } from 'react'
-
-export default function CookieBanner() {
-    const [visible, setVisible] = useState(localStorage.getItem('cookie-consent') === null)
+export default function CookieBanner({ visible, setVisible }) {
 
     if (!visible) return null
 
@@ -27,6 +24,12 @@ export default function CookieBanner() {
                 onClick={() => {
                     setVisible(false)
                     localStorage.setItem('cookie-consent', 'refused')
+                    window.gtag('consent', 'update', {
+                    ad_storage: 'denied',
+                    ad_user_data: 'denied',
+                    ad_personalization: 'denied',
+                    analytics_storage: 'denied',
+                    })
                 }}
                 className='border border-concrete px-5 py-2'
                 >Refuz</button>
