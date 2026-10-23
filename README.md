@@ -9,16 +9,23 @@ Tehnologie: Nuxt 4 (Vue 3), TypeScript, CSS simplu (fără framework de CSS), fo
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run generate   # build static în .output/public
+npm run build      # build static în dist/
 npm run typecheck
 ```
 
-## Publicare (Vercel)
+## Publicare (Cloudflare Pages)
 
-`vercel.json` configurează build-ul: `npm run generate`, cu ieșirea în `.output/public`. Branch-ul `main` merge în producție, iar celelalte branch-uri primesc automat câte un preview.
+Proiectul Cloudflare Pages `m-craft` construiește automat fiecare push:
 
-- Domeniul: se setează variabila `NUXT_PUBLIC_SITE_URL` (de ex. `https://domeniu.ro`). Fără ea, pe Vercel se folosește domeniul de producție al proiectului (`VERCEL_PROJECT_PRODUCTION_URL`). Din domeniu se generează canonical, sitemap, Open Graph și datele structurate.
-- Articolele de blog marcate `draft: true` și notele „De validat de firmă” din paginile legale apar doar local și în preview, niciodată în producție.
+- comanda de build e `npm run build` (care rulează `nuxt generate`), iar directorul publicat e `dist`;
+- `main` merge în producție;
+- celelalte branch-uri primesc un preview la `https://<branch>.m-craft.pages.dev`.
+
+Configurații importante:
+
+- **Domeniul:** în Cloudflare Pages, la *Settings → Environment variables (Production)*, se setează `NUXT_PUBLIC_SITE_URL`, de exemplu `https://domeniu.ro`. Din el se generează canonical, sitemap, Open Graph și datele structurate. Fără el, sitemap-ul rămâne gol.
+- **Ciorne:** articolele marcate `draft: true` și notele „De validat de firmă” din paginile legale apar doar în preview (branch diferit de `main`), la `npm run dev` sau cu `SHOW_DRAFTS=1`.
+- **Fișiere Cloudflare:** redirecționări în `public/_redirects`, antete de cache în `public/_headers`. Versiunea de Node e în `.nvmrc`.
 
 ## Unde se modifică conținutul
 

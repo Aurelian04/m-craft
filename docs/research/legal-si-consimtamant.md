@@ -3,7 +3,7 @@
 Documentare făcută la 2026-10-23, pentru textele din `app/data/legal/` (`termeni.ts`, `confidentialitate.ts`, `cookie.ts`). Nu este o verificare juridică finală: textele și concluziile de mai jos trebuie revizuite de un jurist înainte de publicare.
 
 Ce s-a schimbat față de politica veche (`docs/politica-veche.html`, datată 20.10.2026):
-- găzduirea este pe Vercel, nu pe Cloudflare;
+- găzduirea: inițial s-a presupus Vercel; verificarea ulterioară a arătat că site-ul este publicat pe **Cloudflare Pages** (proiectul m-craft.pages.dev), deci textele finale numesc Cloudflare, Inc. ca furnizor de găzduire. Secțiunile despre Vercel de mai jos rămân doar ca istoric al researchului;
 - fonturile sunt găzduite local, deci Google Fonts a fost scos dintre destinatari;
 - au fost adăugate Google Maps (doar la click), linkurile tel: și WhatsApp, căutarea locală și formularul cu localitate și serviciu;
 - pictograma SOL nu se mai folosește: platforma SOL a fost închisă (vezi mai jos);

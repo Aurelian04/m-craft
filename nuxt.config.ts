@@ -1,6 +1,7 @@
-// Site static (nuxt generate), găzduit pe Vercel. Nu are nevoie de server Node.
-const vercelEnv = process.env.VERCEL_ENV // 'production' | 'preview' | 'development' | undefined
-const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL
+// Site static (nuxt generate), găzduit pe Cloudflare Pages. Nu are nevoie de server Node.
+// Cloudflare Pages setează CF_PAGES_BRANCH la build; producția se construiește din „main”.
+const branch = process.env.CF_PAGES_BRANCH
+const isPreviewBuild = !!branch && branch !== 'main'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
@@ -46,10 +47,11 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
 
   runtimeConfig: {
     public: {
-      // Domeniul final nu e încă stabilit. Pe Vercel se folosește domeniul de producție al proiectului.
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || (productionHost ? `https://${productionHost}` : ''),
-      // Articolele marcate draft apar doar în preview și local, niciodată în producție.
-      showDrafts: vercelEnv !== 'production',
+      // Domeniul final nu e încă stabilit: se setează NUXT_PUBLIC_SITE_URL în Cloudflare Pages (producție).
+      // Fără el nu se generează canonical, Open Graph absolut și intrări în sitemap.
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || '',
+      // Ciornele (articole draft, note „De validat”) apar doar în preview, la `nuxt dev` sau cu SHOW_DRAFTS=1.
+      showDrafts: isPreviewBuild || process.env.SHOW_DRAFTS === '1' || process.env.NODE_ENV === 'development',
       // Cheia Web3Forms a proiectului M-CRAFT (publică prin design).
       web3formsKey: '7c14d1a3-6229-40e0-b216-0b9c40990f67',
       // Google tag: se completează când există contul. Gol = niciun script Google.
@@ -70,6 +72,8 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
 
   nitro: {
     preset: 'static',
+    // Cloudflare Pages publică directorul dist (setarea proiectului de la versiunea cu Vite)
+    output: { publicDir: 'dist' },
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml', '/robots.txt'],

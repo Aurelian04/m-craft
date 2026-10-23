@@ -93,7 +93,7 @@ const doc: LegalDoc = {
       type: 'ul',
       items: [
         'Web3Forms (operat de Web3Creative, India): primește datele din formular, le verifică împotriva spamului și le trimite pe adresa de email a firmei. Acționează ca persoană împuternicită, pe baza acordului său de prelucrare a datelor. Folosește la rândul său subcontractanți pentru infrastructură (de exemplu Amazon Web Services, Cloudflare, Hetzner) și pentru filtrarea spamului (CleanTalk și Akismet, care pot primi adresa IP și adresa de email a celui care trimite formularul).',
-        'Vercel Inc. (SUA): găzduiește website-ul și păstrează jurnalele tehnice ale serverului. Acționează ca persoană împuternicită.',
+        'Cloudflare, Inc. (SUA), prin serviciul Cloudflare Pages: găzduiește website-ul și îl livrează prin rețeaua sa, prelucrând date tehnice ale cererilor (de exemplu adresa IP) pentru livrare și securitate. Acționează ca persoană împuternicită.',
         'Google: furnizorul căsuței de email în care primim cererile (Gmail). După „Accept”, și furnizorul serviciului Google Ads de măsurare a conversiilor, pentru care Google acționează ca operator independent. După click pe „Afișează harta”, și furnizorul hărții Google Maps. Pentru utilizatorii din Spațiul Economic European, serviciile Google sunt oferite de Google Ireland Limited.',
         'WhatsApp Ireland Limited (grupul Meta) și operatorul dumneavoastră de telefonie: pentru conversațiile pe care le inițiați prin aceste canale, conform propriilor politici.',
         'Autorități publice, instanțe sau consultanți (de exemplu contabil sau avocat): doar când legea o cere sau când este necesar pentru apărarea unui drept.',
@@ -112,14 +112,14 @@ const doc: LegalDoc = {
     {
       type: 'ul',
       items: [
-        'Vercel Inc. (SUA): este certificată în Cadrul UE-SUA privind protecția datelor (EU-U.S. Data Privacy Framework) și folosește clauzele contractuale standard aprobate de Comisia Europeană, incluse în acordul său de prelucrare a datelor.',
+        'Cloudflare, Inc. (SUA): este certificată în Cadrul UE-SUA privind protecția datelor (EU-U.S. Data Privacy Framework) și include clauzele contractuale standard aprobate de Comisia Europeană în acordul său de prelucrare a datelor.',
         'Google LLC (SUA): este certificată în Cadrul UE-SUA privind protecția datelor și folosește clauzele contractuale standard acolo unde este necesar.',
         'Web3Forms: furnizorul operează din India, iar infrastructura lui (inclusiv în SUA) poate prelucra date în mai multe regiuni. Pentru transferurile din SEE, acordul său de prelucrare a datelor include clauzele contractuale standard aprobate de Comisia Europeană.',
       ],
     },
     {
       type: 'note',
-      text: 'De validat de firmă: acceptați explicit acordul de prelucrare a datelor (DPA) Web3Forms din contul firmei și păstrați o copie a versiunii acceptate (versiunea 1.0, actualizată la 13 iulie 2026, publicată la web3forms.com/dpa). Verificați că proiectul Vercel este pe planul Pro: planul Hobby este permis doar pentru uz personal, necomercial, iar acordul de prelucrare a datelor Vercel se aplică planurilor Pro și Enterprise.',
+      text: 'De validat de firmă: acceptați explicit acordul de prelucrare a datelor (DPA) Web3Forms din contul firmei și păstrați o copie a versiunii acceptate (versiunea 1.0, actualizată la 13 iulie 2026, publicată la web3forms.com/dpa). Verificați în contul Cloudflare că acordul de prelucrare a datelor (DPA) al Cloudflare se aplică contului folosit pentru găzduire și confirmați certificarea DPF pe dataprivacyframework.gov.',
     },
 
     { type: 'h2', text: 'Cât timp păstrăm datele' },
@@ -128,7 +128,7 @@ const doc: LegalDoc = {
       items: [
         'Cererile de ofertă și conversațiile care nu devin contract: cel mult 12 luni de la ultimul contact, apoi le ștergem.',
         'Datele din cererile care devin contract: pe durata contractului și apoi cât timp cere legea, inclusiv perioada de arhivare a documentelor financiar-contabile.',
-        'Jurnalele tehnice ale serverului: pe perioada scurtă stabilită de furnizorul de găzduire pentru planul folosit. Vercel poate păstra separat, ca operator, date tehnice generate de serviciu, conform propriei politici de confidențialitate.',
+        'Jurnalele tehnice ale serverului: pe perioada scurtă stabilită de furnizorul de găzduire pentru planul folosit. Cloudflare poate păstra separat, ca operator, date tehnice generate de serviciu, conform propriei politici de confidențialitate.',
         'Copia cererii păstrată de Web3Forms: perioada de păstrare setată în contul firmei, după care furnizorul o șterge automat. Furnizorul șterge periodic și jurnalele tehnice ale serverelor sale.',
         'Alegerea privind cookie-urile: rămâne în browserul dumneavoastră până o modificați sau ștergeți datele website-ului.',
         'Cookie-urile Google: pe durata indicată în Politica de cookie-uri.',
@@ -136,7 +136,7 @@ const doc: LegalDoc = {
     },
     {
       type: 'note',
-      text: 'De validat de firmă: perioada de 12 luni pentru cererile neconcretizate este o propunere. Stabiliți perioada reală și aplicați-o efectiv, inclusiv în căsuța de email și în WhatsApp. Web3Forms păstrează implicit trimiterile până la 3 ani, iar perioada se poate seta pe formular între 7 zile și 3 ani: recomandăm valoarea minimă (7 zile), apoi treceți valoarea aleasă în textul de mai sus. Pentru logurile Vercel, documentația indică o păstrare de 1 zi pe planul Pro (30 de zile cu Observability Plus): după alegerea planului, puteți trece valoarea exactă în text.',
+      text: 'De validat de firmă: perioada de 12 luni pentru cererile neconcretizate este o propunere. Stabiliți perioada reală și aplicați-o efectiv, inclusiv în căsuța de email și în WhatsApp. Web3Forms păstrează implicit trimiterile până la 3 ani, iar perioada se poate seta pe formular între 7 zile și 3 ani: recomandăm valoarea minimă (7 zile), apoi treceți valoarea aleasă în textul de mai sus. Pentru datele tehnice prelucrate de Cloudflare, verificați în contul Cloudflare perioada de păstrare a jurnalelor și treceți-o în text.',
     },
 
     { type: 'h2', text: 'Cum protejăm datele' },

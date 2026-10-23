@@ -83,9 +83,10 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
 - **Denumirea exactă din ONRC:** „M CRAFT CONSTRUCTII SRL” (folosită) sau „M-CRAFT CONSTRUCȚII S.R.L.”.
 
 ### Accesuri și configurări
-- **Domeniul final:** se setează `NUXT_PUBLIC_SITE_URL` în Vercel.
+- **Găzduire:** site-ul e publicat pe **Cloudflare Pages** (proiectul `m-craft`). Ultimul deploy Vercel e din 11.09.2026, deci configurația Vercel a fost scoasă. Preview-ul branch-ului este la https://redesign.m-craft.pages.dev.
+- **Domeniul final:** se setează `NUXT_PUBLIC_SITE_URL` în Cloudflare Pages (variabilele de producție).
 - **Google Ads:** ID-ul `AW-…` și etichetele celor 3 conversii, plus `G-…` dacă se folosește GA4. Se completează în `nuxt.config.ts`.
-- **Vercel:** planul Hobby e doar pentru uz necomercial, deci pentru un site de firmă e nevoie de Pro.
+- **Cloudflare:** de verificat dacă DPA-ul Cloudflare se aplică contului (politica de confidențialitate numește Cloudflare ca furnizor de găzduire).
 - **Web3Forms:**
   - de acceptat DPA-ul;
   - de setat perioada de păstrare a trimiterilor;
