@@ -57,7 +57,7 @@ if (siteUrl) {
             <Pic :photo="cover" priority sizes="(max-width: 860px) 100vw, 40vw" ratio="4 / 3" />
             <figcaption>{{ cover.alt }}</figcaption>
           </figure>
-          <aside v-else class="intro__factors">
+          <aside v-else class="intro__factors band band--left">
             <h2>Ce influențează oferta</h2>
             <ul>
               <li v-for="f in service.quoteFactors.slice(0, 5)" :key="f">{{ f }}</li>
@@ -80,7 +80,7 @@ if (siteUrl) {
         <section class="block">
           <h2>Materiale și variante</h2>
           <dl class="options">
-            <div v-for="o in service.options" :key="o.title">
+            <div v-for="o in service.options" :key="o.title" class="band band--top">
               <dt>{{ o.title }}</dt>
               <dd>{{ o.text }}</dd>
             </div>
@@ -89,7 +89,7 @@ if (siteUrl) {
 
         <section class="block">
           <h2>Ce influențează oferta și durata</h2>
-          <ul class="factors">
+          <ul class="factors band band--left">
             <li v-for="f in service.quoteFactors" :key="f">{{ f }}</li>
           </ul>
         </section>
@@ -107,7 +107,7 @@ if (siteUrl) {
       </article>
 
       <aside class="side">
-        <div class="side__box">
+        <div class="side__box band band--top">
           <h2>Cere o ofertă</h2>
           <p>Spuneți-ne ce lucrare aveți și unde. Puteți trimite și fotografii pe WhatsApp.</p>
           <ContactActions :service="slug" :whatsapp-text="service.whatsappText" quote-href="#oferta" />
@@ -121,7 +121,7 @@ if (siteUrl) {
             </li>
           </ul>
         </nav>
-        <nav v-if="posts.length" class="side__box" aria-label="Articole">
+        <nav v-if="posts.length" class="side__box band band--top" aria-label="Articole">
           <h2>De citit</h2>
           <ul class="side__links">
             <li v-for="p in posts" :key="p.slug">
@@ -204,7 +204,8 @@ if (siteUrl) {
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 6px solid var(--amber);
-  padding: 18px 20px;
+  border-radius: var(--r-lg);
+  padding: 18px 20px 18px 25px;
 }
 
 .intro__factors h2 {
@@ -256,7 +257,7 @@ if (siteUrl) {
 }
 
 .options dt {
-  font-weight: 600;
+  font-weight: 550;
   margin-bottom: 2px;
 }
 
@@ -299,6 +300,7 @@ if (siteUrl) {
 .side__box {
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 16px;
 }
 
@@ -405,22 +407,22 @@ if (siteUrl) {
 /* Culoare (docs/design/culoare.md) */
 .intro { background: var(--svc-t); border-bottom: 0; }
 .intro__area svg { color: var(--svc-d); }
-.intro__photo :deep(img) { border-bottom: 6px solid var(--svc-d); }
-.intro__factors { border-left: 6px solid var(--svc-d); }
+.intro__photo :deep(img) { border-bottom: 6px solid var(--svc-d); border-radius: var(--r-lg) var(--r-lg) var(--r-sm) var(--r-sm); }
+.intro__factors { border-left: 1px solid var(--svc-d); --band: var(--svc-d); --band-w: 5px; }
 
 .block + .block { border-top: 3px solid var(--svc-m); }
 
 .options { border-top: 0; gap: 8px; }
 .options > div,
-.options > div:nth-child(even) { background: var(--svc-t); border: 0; border-top: 4px solid var(--svc-d); padding: 12px 14px; }
+.options > div:nth-child(even) { background: var(--svc-t); border: 0; --band: var(--svc-d); border-radius: var(--r-md); padding: 16px 14px 12px; }
 .options dt { color: var(--svc-d); }
 
-.factors { background: var(--chihlimbar-t); padding: 16px 18px; border-left: 6px solid var(--amber); }
+.factors { background: var(--chihlimbar-t); padding: 16px 18px 16px 24px; --band: var(--amber); --band-w: 6px; border-radius: var(--r-lg); }
 .factors li::before { background: var(--chihlimbar-d); }
 
-.side__box:first-child { background: var(--chihlimbar-t); border-color: var(--chihlimbar-t); border-top: 4px solid var(--amber); }
-.side__box[aria-label='Articole'] { border-top: 4px solid var(--otel-d); }
+.side__box:first-child { background: var(--chihlimbar-t); border-color: var(--chihlimbar-t); border-top: 1px solid var(--amber); --band: var(--amber); --band-w: 3px; padding-top: 19px; }
+.side__box[aria-label='Articole'] { border-top: 1px solid var(--otel-d); --band: var(--otel-d); --band-w: 3px; padding-top: 19px; }
 .side__links li[data-svc] a { display: flex; gap: 10px; align-items: baseline; }
-.side__links li[data-svc] a::before { content: ''; flex: none; width: 10px; height: 10px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; }
+.side__links li[data-svc] a::before { content: ''; flex: none; width: 10px; height: 10px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; border-radius: calc(var(--r-sm) / 2); }
 .side__links a:hover { color: var(--svc-d); }
 </style>

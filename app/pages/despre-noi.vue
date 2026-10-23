@@ -29,7 +29,7 @@ usePageSeo({
             tratarea rosturilor, pregătirea băilor pentru placare.
           </p>
         </div>
-        <dl class="facts">
+        <dl class="facts band band--top">
           <div>
             <dt>Firma</dt>
             <dd>{{ company.legalName }}</dd>
@@ -144,6 +144,7 @@ usePageSeo({
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
 }
 
 .facts > div {
@@ -217,6 +218,7 @@ usePageSeo({
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 6px solid var(--amber);
+  border-radius: var(--r-lg);
 }
 
 .cta h2 {
@@ -238,12 +240,13 @@ usePageSeo({
 }
 
 /* Culoare (docs/design/culoare.md) */
-.facts { background: var(--chihlimbar-t); border: 0; border-top: 4px solid var(--amber); }
+.facts { background: var(--chihlimbar-t); border: 0; --band: var(--amber); padding-top: 4px; }
 .facts > div + div { border-top: 1px solid #ead2a8; }
-.facts dt { color: var(--teracota-d); font-weight: 600; }
+.facts dt { color: var(--teracota-d); font-weight: 550; }
 .who li::marker { color: var(--teracota-d); }
 .svc { columns: 2; }
 .svc a { color: var(--ink); text-decoration-color: var(--svc-d); }
-.org > div { background: var(--paper); padding: 14px 16px; border-top: 4px solid var(--otel-d); }
+.org > div { position: relative; overflow: hidden; background: var(--paper); padding: 18px 16px 14px; border-radius: var(--r-lg); }
+.org > div::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--otel-d); }
 .cta { border: 0; }
 </style>

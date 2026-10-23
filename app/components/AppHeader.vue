@@ -108,10 +108,10 @@ function submitSearch() {
                   <AppIcon name="chevron-down" />
                 </button>
               </div>
-              <div v-show="dropdownOpen" id="dd-servicii" class="dd">
+              <div v-show="dropdownOpen" id="dd-servicii" class="dd band band--top">
                 <ul class="dd__list">
                   <li v-for="s in serviceThumbs" :key="s.slug">
-                    <NuxtLink :to="serviceUrl(s.slug)" class="dd__item" :data-svc="s.slug">
+                    <NuxtLink :to="serviceUrl(s.slug)" class="dd__item band band--left" :data-svc="s.slug">
                       <img v-if="s.thumb" :src="s.thumb" alt="" width="64" height="48" loading="lazy">
                       <span>
                         <strong>{{ s.name }}</strong>
@@ -186,7 +186,7 @@ function submitSearch() {
         <NuxtLink to="/video/" class="mob__link mob__link--sec">Video</NuxtLink>
         <NuxtLink to="/recenzii/" class="mob__link mob__link--sec">Recenzii</NuxtLink>
       </nav>
-      <div class="mob__contact">
+      <div class="mob__contact band band--top">
         <a :href="company.phone.href" class="btn btn--primary" @click="track('call')"><AppIcon name="phone" />{{ company.phone.display }}</a>
         <a :href="whatsappUrl(defaultWhatsappText)" class="btn btn--wa" target="_blank" rel="noopener" @click="track('whatsapp')"><AppIcon name="whatsapp" />WhatsApp</a>
         <a :href="`mailto:${company.email}`" class="btn btn--outline"><AppIcon name="mail" />{{ company.email }}</a>
@@ -285,6 +285,7 @@ function submitSearch() {
   text-decoration: none;
   font-weight: 500;
   border-bottom: 2px solid transparent;
+  border-radius: var(--r-sm) var(--r-sm) 0 0;
 }
 
 .main-nav a:hover,
@@ -312,6 +313,7 @@ function submitSearch() {
   height: 36px;
   background: none;
   border: 0;
+  border-radius: var(--r-sm);
   cursor: pointer;
 }
 
@@ -333,6 +335,8 @@ function submitSearch() {
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
+  overflow: hidden;
   box-shadow: 0 8px 18px rgb(48 49 46 / 0.08);
   padding: 10px;
 }
@@ -356,6 +360,7 @@ function submitSearch() {
   align-items: center;
   padding: 8px;
   border: 0;
+  border-radius: var(--r-md);
 }
 
 .main-nav .dd__item:hover {
@@ -368,11 +373,12 @@ function submitSearch() {
   object-fit: cover;
   flex: none;
   background: var(--concrete);
+  border-radius: var(--r-sm);
 }
 
 .dd__item strong {
   display: block;
-  font-weight: 600;
+  font-weight: 550;
   line-height: 1.3;
 }
 
@@ -396,7 +402,7 @@ function submitSearch() {
 .main-nav .dd__foot a {
   padding: 4px 0;
   color: var(--rust);
-  font-weight: 600;
+  font-weight: 550;
   border: 0;
 }
 
@@ -404,6 +410,7 @@ function submitSearch() {
   display: flex;
   align-items: center;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   height: 38px;
 }
@@ -433,6 +440,7 @@ function submitSearch() {
   width: 36px;
   height: 36px;
   border: 0;
+  border-radius: var(--r-sm);
   background: none;
   cursor: pointer;
 }
@@ -449,6 +457,7 @@ function submitSearch() {
   width: 44px;
   height: 44px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   color: var(--ink);
   cursor: pointer;
@@ -473,7 +482,7 @@ function submitSearch() {
   border-bottom: 1px solid var(--line);
   color: var(--ink);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 550;
   font-size: 1.05rem;
 }
 
@@ -501,6 +510,7 @@ function submitSearch() {
   min-height: 40px;
   padding: 0 12px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   font-size: 0.9rem;
   cursor: pointer;
@@ -602,16 +612,16 @@ function submitSearch() {
 .main-nav a:hover { border-bottom-color: var(--amber); }
 .main-nav a.on { background: var(--chihlimbar-t); border-bottom: 3px solid var(--amber); }
 
-.dd { box-shadow: none; border: 1px solid var(--line); border-top: 4px solid var(--amber); }
-.main-nav .dd__item { border-left: 4px solid var(--svc-m); }
-.main-nav .dd__item:hover { background: var(--svc-t); border-left-color: var(--svc-d); }
-.dd__item img { border-bottom: 3px solid var(--svc-d); }
+.dd { box-shadow: none; border: 1px solid var(--line); border-top-color: var(--amber); --band: var(--amber); --band-w: 3px; padding-top: 13px; }
+.main-nav .dd__item { --band: var(--svc-m); padding-left: 12px; }
+.main-nav .dd__item:hover { background: var(--svc-t); --band: var(--svc-d); }
+.dd__item img { border-bottom: 3px solid var(--svc-d); border-radius: var(--r-sm) var(--r-sm) calc(var(--r-sm) / 2) calc(var(--r-sm) / 2); }
 .dd__foot { background: var(--chihlimbar-t); margin: 8px -10px -10px; padding: 10px 18px; border-top: 0; }
 
 .mob__sub { border-left: 0; padding-left: 0; }
 .mob__sub li[data-svc] a { display: flex; gap: 10px; align-items: center; }
-.mob__sub li[data-svc] a::before { content: ''; flex: none; width: 12px; height: 12px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; }
-.mob__contact { background: var(--chihlimbar-t); padding: 14px; border-top: 4px solid var(--amber); }
+.mob__sub li[data-svc] a::before { content: ''; flex: none; width: 12px; height: 12px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; border-radius: calc(var(--r-sm) / 2); }
+.mob__contact { background: var(--chihlimbar-t); padding: 18px 14px 14px; --band: var(--amber); border-radius: var(--r-lg); }
 
 .strip--mob { display: none; }
 @media (max-width: 860px) {

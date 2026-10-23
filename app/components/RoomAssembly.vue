@@ -115,6 +115,7 @@ const studs = [0, 1, 2, 3, 4, 5]
   margin: 0;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 16px;
 }
 
@@ -126,6 +127,8 @@ const studs = [0, 1, 2, 3, 4, 5]
   perspective-origin: 50% 30%;
   overflow: hidden;
   background: var(--bg);
+  /* doar cadrul scenei; geometria 3D rămâne cu muchii drepte */
+  border-radius: var(--r-md);
 }
 
 /* Geometrie: podea 240x240 în planul XY; pereții se ridică din marginea din spate și din stânga. */
@@ -368,15 +371,32 @@ const studs = [0, 1, 2, 3, 4, 5]
   grid-template-columns: 150px 1fr;
   gap: 8px;
   margin: 0;
-  padding: 7px 0 7px 12px;
-  border-left: 3px solid var(--line);
+  position: relative;
+  padding: 7px 8px 7px 18px;
+  border-radius: var(--r-sm);
   color: var(--ink-3);
-  transition: border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* bara de stare: dreaptă, cu capete ușor rotunjite */
+.ra__legend li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 6px;
+  border-radius: calc(var(--r-sm) / 2);
+  background: var(--line);
+  transition: background-color 0.3s ease;
 }
 
 .ra__legend li.done {
-  border-left-color: var(--amber);
   color: var(--ink);
+}
+
+.ra__legend li.done::before {
+  background: var(--amber);
 }
 
 .ra__legend li.now {
@@ -384,7 +404,7 @@ const studs = [0, 1, 2, 3, 4, 5]
 }
 
 .ra__legend strong {
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .ra__legend span {
@@ -407,6 +427,7 @@ const studs = [0, 1, 2, 3, 4, 5]
 
 .ra__replay {
   border: 1px solid var(--line);
+  border-radius: var(--r-sm);
   background: var(--paper);
   padding: 6px 10px;
   font-size: 0.875rem;
@@ -453,14 +474,13 @@ const studs = [0, 1, 2, 3, 4, 5]
 .wall__tiles span { background: var(--faianta-m); }
 .wall__paint { background: #f4ead8; }
 
-.ra__legend li { border-left-width: 6px; }
 .ra__legend li[data-layer='sapa'] { --lay: var(--beton-m); --lay-t: var(--beton-t); }
 .ra__legend li[data-layer='gresie'] { --lay: #d4bc97; --lay-t: var(--lemn-t); }
 .ra__legend li[data-layer='structura'] { --lay: var(--otel-m); --lay-t: var(--otel-t); }
 .ra__legend li[data-layer='placare'] { --lay: var(--verde-m); --lay-t: var(--verde-t); }
 .ra__legend li[data-layer='faianta'] { --lay: var(--faianta-m); --lay-t: var(--faianta-t); }
 .ra__legend li[data-layer='finisaj'] { --lay: var(--amber); --lay-t: var(--chihlimbar-t); }
-.ra__legend li.done { border-left-color: var(--lay); }
+.ra__legend li.done::before { background: var(--lay); }
 .ra__legend li.now { background: var(--lay-t); }
 .ra__replay:hover { background: var(--amber); border-color: var(--amber-line); }
 </style>

@@ -31,17 +31,17 @@ usePageSeo({ title: post.seoTitle, description: post.seoDescription, image, noin
       </article>
 
       <aside class="side">
-        <div v-if="services.length" class="box">
+        <div v-if="services.length" class="box band band--top">
           <h2>Servicii legate de subiect</h2>
           <ul>
             <li v-for="s in services" :key="s!.slug"><NuxtLink :to="serviceUrl(s!.slug)">{{ s!.name }}</NuxtLink></li>
           </ul>
         </div>
-        <div class="box box--cta on-amber">
+        <div class="box box--cta on-amber band band--top">
           <h2>Aveți o lucrare în plan?</h2>
           <ContactActions />
         </div>
-        <div v-if="others.length" class="box">
+        <div v-if="others.length" class="box band band--top">
           <h2>Alte articole</h2>
           <ul>
             <li v-for="o in others" :key="o.slug"><NuxtLink :to="postUrl(o.slug)">{{ o.title }}</NuxtLink></li>
@@ -75,6 +75,7 @@ h1 {
   display: inline-block;
   padding: 4px 10px;
   border: 1px dashed var(--rust);
+  border-radius: var(--r-sm);
   color: var(--rust);
   font-size: 0.875rem;
 }
@@ -98,6 +99,7 @@ h1 {
 .box {
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 14px 16px;
 }
 
@@ -126,9 +128,9 @@ h1 {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.fig :deep(img) { border-bottom: 6px solid var(--svc-d); }
+.fig :deep(img) { border-bottom: 6px solid var(--svc-d); border-radius: var(--r-lg) var(--r-lg) var(--r-sm) var(--r-sm); }
 article :deep(.prose h2) { border-top: 3px solid var(--svc-m); padding-top: 12px; }
-.box:first-child { background: var(--svc-t); border-color: var(--svc-t); border-top: 4px solid var(--svc-d); }
-.box--cta { background: var(--amber); border-color: var(--amber-line); }
-.box:last-child:not(.box--cta) { border-top: 4px solid var(--otel-d); }
+.box:first-child { background: var(--svc-t); border-color: var(--svc-t); border-top-color: var(--svc-d); --band: var(--svc-d); --band-w: 3px; padding-top: 17px; }
+.box--cta { background: var(--amber); border-color: var(--amber-line); border-top-width: 1px; --band: var(--amber-line); --band-w: 2px; padding-top: 16px; }
+.box:last-child:not(.box--cta) { border-top-color: var(--otel-d); --band: var(--otel-d); --band-w: 3px; padding-top: 17px; }
 </style>

@@ -21,7 +21,7 @@ usePageSeo({
       <p class="lead">Ghiduri practice pentru cei care pregătesc o renovare: ce se decide înainte, în ce ordine se lucrează și ce trebuie verificat.</p>
     </header>
 
-    <p v-if="!posts.length" class="empty">Articolele sunt în pregătire și vor fi publicate după verificare.</p>
+    <p v-if="!posts.length" class="empty band band--left">Articolele sunt în pregătire și vor fi publicate după verificare.</p>
 
     <ul v-else class="posts">
       <li v-for="p in posts" :key="p.slug" v-reveal :data-svc="p.relatedServices[0]">
@@ -72,6 +72,8 @@ usePageSeo({
   height: 100%;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
   color: var(--ink);
   text-decoration: none;
 }
@@ -102,7 +104,7 @@ usePageSeo({
   margin-top: auto;
   padding-top: 8px;
   color: var(--rust);
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .draft,
@@ -115,6 +117,7 @@ usePageSeo({
   margin-bottom: 6px;
   padding: 1px 6px;
   border: 1px dashed var(--rust);
+  border-radius: var(--r-sm);
   color: var(--rust);
 }
 
@@ -123,6 +126,7 @@ usePageSeo({
   padding: 16px;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
 }
 
 @media (max-width: 960px) {
@@ -140,7 +144,7 @@ usePageSeo({
 /* Culoare (docs/design/culoare.md) */
 .post :deep(img) { border-bottom: 5px solid var(--svc-m); }
 .post:hover { border-color: var(--svc-d); }
-.post__tag { align-self: start; margin-bottom: 6px; padding: 1px 8px; background: var(--svc-t); color: var(--svc-d); font-size: 0.8rem; font-weight: 600; }
+.post__tag { align-self: start; margin-bottom: 6px; padding: 1px 8px; background: var(--svc-t); color: var(--svc-d); font-size: 0.8rem; font-weight: 550; border-radius: var(--r-sm); }
 .post__more { color: var(--svc-d); }
-.empty { background: var(--chihlimbar-t); border: 0; border-left: 6px solid var(--amber); }
+.empty { background: var(--chihlimbar-t); border: 0; --band: var(--amber); --band-w: 6px; padding-left: 22px; }
 </style>

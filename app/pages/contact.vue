@@ -16,32 +16,32 @@ usePageSeo({
     <p class="lead">Ne puteți suna, scrie pe WhatsApp sau email, ori puteți completa formularul de mai jos.</p>
 
     <div class="channels">
-      <a :href="company.phone.href" class="ch" @click="track('call')">
+      <a :href="company.phone.href" class="ch band band--top" @click="track('call')">
         <AppIcon name="phone" />
         <span><small>Telefon</small><strong>{{ company.phone.display }}</strong></span>
       </a>
-      <a :href="whatsappUrl(defaultWhatsappText)" class="ch ch--wa" target="_blank" rel="noopener" @click="track('whatsapp')">
+      <a :href="whatsappUrl(defaultWhatsappText)" class="ch ch--wa band band--top" target="_blank" rel="noopener" @click="track('whatsapp')">
         <AppIcon name="whatsapp" />
         <span><small>WhatsApp (puteți trimite și fotografii)</small><strong>{{ company.whatsapp.display }}</strong></span>
       </a>
-      <a :href="`mailto:${company.email}`" class="ch">
+      <a :href="`mailto:${company.email}`" class="ch band band--top">
         <AppIcon name="mail" />
         <span><small>Email</small><strong>{{ company.email }}</strong></span>
       </a>
     </div>
 
     <div class="grid">
-      <section id="oferta" class="form-col">
+      <section id="oferta" class="form-col band band--top">
         <h2>Formular de cerere de ofertă</h2>
         <QuoteForm />
       </section>
 
       <aside class="info">
-        <section class="box">
+        <section class="box band band--top">
           <h2>Zona în care lucrăm</h2>
           <p>Lucrăm în județul Suceava. Sediul firmei este în Vicov de Sus.</p>
         </section>
-        <section class="box">
+        <section class="box band band--top">
           <h2>Date firmă</h2>
           <dl>
             <dt>Denumire</dt>
@@ -84,6 +84,7 @@ h1 {
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
   color: var(--ink);
   text-decoration: none;
 }
@@ -139,6 +140,7 @@ h1 {
 .box {
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 14px 16px;
 }
 
@@ -171,18 +173,18 @@ h1 {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.ch { background: var(--chihlimbar-t); border: 0; border-top: 4px solid var(--amber); }
-.ch:hover { background: #f3d8a8; border-top-color: var(--amber-line); }
-.ch--wa { background: var(--wa-t); border-top-color: var(--wa-d); }
-.ch--wa:hover { background: #c9e9d4; border-top-color: var(--wa-d); }
+.ch { --band: var(--amber); background: var(--chihlimbar-t); border: 0; padding-top: 18px; }
+.ch:hover { background: #f3d8a8; --band: var(--amber-line); }
+.ch--wa { background: var(--wa-t); --band: var(--wa-d); }
+.ch--wa:hover { background: #c9e9d4; --band: var(--wa-d); }
 .ch--wa svg { color: var(--wa-d); }
-.ch:last-child { background: var(--teracota-t); border-top-color: var(--teracota-d); }
+.ch:last-child { background: var(--teracota-t); --band: var(--teracota-d); }
 .ch:last-child:hover { background: #efcdbb; }
 .ch:last-child svg { color: var(--teracota-d); }
 
-.form-col { background: var(--chihlimbar-t); padding: 20px; border-top: 4px solid var(--amber); }
+.form-col { background: var(--chihlimbar-t); padding: 24px 20px 20px; --band: var(--amber); border-radius: var(--r-lg); }
 
-.box { border-top: 4px solid var(--otel-d); }
-.box:first-child { background: var(--verde-t); border-color: var(--verde-t); border-top-color: var(--verde-d); }
+.box { border-top-color: var(--otel-d); --band: var(--otel-d); --band-w: 3px; padding-top: 17px; }
+.box:first-child { background: var(--verde-t); border-color: var(--verde-t); border-top-color: var(--verde-d); --band: var(--verde-d); }
 .box dt { color: var(--otel-d); }
 </style>

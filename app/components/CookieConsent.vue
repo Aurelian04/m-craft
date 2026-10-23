@@ -24,7 +24,7 @@ function save() {
 
 <template>
   <div>
-    <section v-if="bannerOpen && !settingsOpen" class="cc" aria-label="Cookie-uri" role="region">
+    <section v-if="bannerOpen && !settingsOpen" class="cc band band--top" aria-label="Cookie-uri" role="region">
       <div class="wrap cc__in">
         <p class="cc__text">
           Folosim cookie-uri Google doar dacă sunteți de acord, ca să măsurăm dacă reclamele noastre aduc cereri de ofertă.
@@ -79,6 +79,7 @@ function save() {
   z-index: 80;
   background: var(--paper);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
   box-shadow: 0 -4px 14px rgb(48 49 46 / 0.08);
 }
 
@@ -108,6 +109,7 @@ function save() {
   width: min(560px, calc(100vw - 24px));
   border: 1px solid var(--line);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
   background: var(--paper);
   color: var(--ink);
   padding: 22px;
@@ -134,7 +136,7 @@ function save() {
 .opt h3 {
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 550;
   margin-bottom: 4px;
 }
 
@@ -156,6 +158,7 @@ function save() {
   width: 46px;
   height: 26px;
   border: 1px solid var(--ink);
+  border-radius: var(--r-sm);
   background: var(--concrete);
   position: relative;
   cursor: pointer;
@@ -170,6 +173,7 @@ function save() {
   width: 18px;
   height: 18px;
   background: var(--ink);
+  border-radius: calc(var(--r-sm) / 2);
   transition: transform 0.15s;
 }
 
@@ -207,9 +211,9 @@ function save() {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.cc { background: var(--chihlimbar-t); border-top: 4px solid var(--amber); box-shadow: none; }
+.cc { background: var(--chihlimbar-t); border-top: 0; box-shadow: none; --band: var(--amber); padding-top: 4px; }
 .cc__text a { color: var(--teracota-d); }
-.ccd { border-top: 4px solid var(--amber); }
+.ccd { border-top: 1px solid var(--amber); box-shadow: inset 0 3px 0 var(--amber); padding-top: 25px; }
 .ccd::backdrop { background: rgb(248 230 198 / 0.9); }
-.opt__fixed { padding: 1px 8px; background: var(--verde-t); color: var(--verde-d); }
+.opt__fixed { padding: 1px 8px; background: var(--verde-t); color: var(--verde-d); border-radius: var(--r-sm); }
 </style>

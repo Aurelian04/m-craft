@@ -9,8 +9,8 @@ export default defineNuxtConfig({
 
   // Fonturi găzduite local (fără Google Fonts), cu subseturile latin + latin-ext pentru diacritice.
   css: [
+    '@fontsource/big-shoulders-display/600',
     '@fontsource/big-shoulders-display/700',
-    '@fontsource/big-shoulders-display/800',
     '@fontsource-variable/work-sans/wght',
     '~/assets/css/main.css',
   ],

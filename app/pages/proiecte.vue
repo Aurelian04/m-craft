@@ -38,10 +38,10 @@ usePageSeo({
     </header>
 
     <div class="filters" role="group" aria-label="Filtrează fotografiile">
-      <button type="button" data-cat="toate" :aria-pressed="filter === 'toate'" @click="filter = 'toate'">
+      <button type="button" class="band band--bottom" data-cat="toate" :aria-pressed="filter === 'toate'" @click="filter = 'toate'">
         Toate <span>{{ media.photos.length }}</span>
       </button>
-      <button v-for="c in cats" :key="c.id" type="button" :data-cat="c.id" :aria-pressed="filter === c.id" @click="filter = c.id">
+      <button v-for="c in cats" :key="c.id" type="button" class="band band--bottom" :data-cat="c.id" :aria-pressed="filter === c.id" @click="filter = c.id">
         {{ c.label }} <span>{{ c.count }}</span>
       </button>
     </div>
@@ -53,7 +53,7 @@ usePageSeo({
           <h2>{{ g.title }}</h2>
           <p>{{ g.summary }}</p>
         </div>
-        <dl class="proj__meta">
+        <dl class="proj__meta band band--left">
           <dt>Lucrări vizibile</dt>
           <dd>
             <ul>
@@ -122,6 +122,7 @@ usePageSeo({
   min-height: 40px;
   padding: 6px 12px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   font-weight: 500;
   cursor: pointer;
@@ -184,11 +185,12 @@ usePageSeo({
   font-size: 0.925rem;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 12px 14px;
 }
 
 .proj__meta dt {
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .proj__meta dd {
@@ -221,6 +223,8 @@ usePageSeo({
 
 .ba__pair > div {
   position: relative;
+  overflow: hidden;
+  border-radius: var(--r-md);
 }
 
 .ba__pair span {
@@ -229,9 +233,10 @@ usePageSeo({
   top: 0;
   padding: 2px 8px;
   background: var(--paper);
-  font-weight: 600;
+  font-weight: 550;
   font-size: 0.85rem;
   border-bottom: 2px solid var(--amber);
+  border-radius: 0 0 var(--r-sm) 0;
 }
 
 .ba figcaption {
@@ -262,13 +267,13 @@ usePageSeo({
 [data-cat='exterioare'] { --cat-d: var(--teracota-d); --cat-m: var(--teracota-m); }
 [data-cat='constructii'] { --cat-d: var(--beton-d); --cat-m: var(--beton-m); }
 
-.filters button { border-bottom: 4px solid var(--cat-m); }
-.filters button:hover { border-color: var(--cat-d); }
-.filters button[aria-pressed='true'] { background: var(--cat-d); border-color: var(--cat-d); color: #fff; }
+.filters button { border-bottom-color: var(--cat-m); --band: var(--cat-m); --band-w: 3px; padding-bottom: 9px; }
+.filters button:hover { border-color: var(--cat-d); --band: var(--cat-d); }
+.filters button[aria-pressed='true'] { background: var(--cat-d); border-color: var(--cat-d); --band: var(--cat-d); color: #fff; }
 .filters button[aria-pressed='true'] span { color: #fff; }
 
 .proj { border-top: 6px solid var(--svc-m); }
-.proj__meta { background: var(--svc-t); border: 0; border-left: 5px solid var(--svc-d); }
+.proj__meta { background: var(--svc-t); border: 0; --band: var(--svc-d); --band-w: 5px; padding-left: 19px; }
 .proj__meta dt { color: var(--svc-d); }
 .proj__meta a { color: var(--ink); text-decoration-color: var(--svc-d); }
 

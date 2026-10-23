@@ -38,7 +38,7 @@ h1 {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.upd { display: inline-block; padding: 2px 10px; background: var(--otel-t); color: var(--otel-d); }
+.upd { display: inline-block; padding: 2px 10px; background: var(--otel-t); color: var(--otel-d); border-radius: var(--r-sm); }
 .page :deep(.prose h2) { border-top: 3px solid var(--otel-m); padding-top: 12px; }
 .page :deep(.prose li::marker) { color: var(--otel-d); }
 </style>

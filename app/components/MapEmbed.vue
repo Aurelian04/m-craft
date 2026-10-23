@@ -10,7 +10,7 @@ const link = `https://www.google.com/maps/search/?api=1&query=${query}`
 </script>
 
 <template>
-  <div class="map">
+  <div class="map band band--top">
     <iframe v-if="shown" :src="src" title="Hartă: sediul M-CRAFT" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
     <div v-else class="map__ph">
       <AppIcon name="pin" />
@@ -26,6 +26,8 @@ const link = `https://www.google.com/maps/search/?api=1&query=${query}`
 .map {
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
   background: var(--concrete);
 }
 
@@ -63,6 +65,6 @@ const link = `https://www.google.com/maps/search/?api=1&query=${query}`
 }
 
 /* Culoare (docs/design/culoare.md) */
-.map { background: var(--otel-t); border-top: 4px solid var(--otel-d); }
+.map { background: var(--otel-t); border-top-color: var(--otel-d); --band: var(--otel-d); --band-w: 3px; }
 .map__ph svg { color: var(--teracota-d); }
 </style>

@@ -19,7 +19,7 @@ usePageSeo({
       <ReviewList :reviews="reviews" />
     </template>
 
-    <div v-else class="empty">
+    <div v-else class="empty band band--left">
       <p class="lead">
         Pe această pagină publicăm doar recenzii reale ale clienților noștri, cu sursa lor. Deocamdată nu am publicat
         nicio recenzie pe site.
@@ -50,8 +50,9 @@ h1 {
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 6px solid var(--amber);
+  border-radius: var(--r-lg);
 }
 
 /* Culoare (docs/design/culoare.md) */
-.empty { background: var(--chihlimbar-t); border: 0; border-left: 6px solid var(--amber); }
+.empty { background: var(--chihlimbar-t); border: 0; --band: var(--amber); --band-w: 6px; padding-left: 26px; }
 </style>

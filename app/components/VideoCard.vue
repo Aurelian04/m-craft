@@ -52,6 +52,8 @@ async function play() {
   position: relative;
   background: var(--concrete);
   overflow: hidden;
+  border-radius: var(--r-md);
+  isolation: isolate;
 }
 
 .vc__frame video,
@@ -82,6 +84,7 @@ async function play() {
   height: 58px;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   color: var(--ink);
   transition: background-color 0.15s;
 }
@@ -102,8 +105,9 @@ async function play() {
   bottom: 6px;
   padding: 1px 6px;
   background: var(--paper);
+  border-radius: var(--r-sm);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 figcaption {

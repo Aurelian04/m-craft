@@ -6,7 +6,7 @@ defineProps<{ reviews: Review[] }>()
 
 <template>
   <ul class="rv">
-    <li v-for="(r, i) in reviews" :key="i">
+    <li class="band band--top" v-for="(r, i) in reviews" :key="i">
       <blockquote>
         <p>{{ r.text }}</p>
       </blockquote>
@@ -36,6 +36,7 @@ defineProps<{ reviews: Review[] }>()
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
   padding: 16px;
 }
 
@@ -50,8 +51,8 @@ blockquote {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.rv li { border-top: 4px solid var(--amber); }
-.rv li:nth-child(3n + 2) { border-top-color: var(--teracota-d); }
-.rv li:nth-child(3n) { border-top-color: var(--verde-d); }
+.rv li { --band: var(--amber); --band-w: 3px; border-top: 1px solid var(--band); padding-top: 19px; }
+.rv li:nth-child(3n + 2) { --band: var(--teracota-d); }
+.rv li:nth-child(3n) { --band: var(--verde-d); }
 .rv__meta strong { color: var(--teracota-d); }
 </style>

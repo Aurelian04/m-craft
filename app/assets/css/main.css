@@ -1,4 +1,4 @@
-/* M-CRAFT: temă exclusiv luminoasă, culori solide, colțuri drepte. */
+/* M-CRAFT: temă exclusiv luminoasă, culori solide, colțuri discret rotunjite. */
 
 :root {
   --bg: #faf8f3;
@@ -44,7 +44,11 @@
   --wrap: 1240px;
   --gutter: 16px;
   --section: 40px;
-  --radius: 2px;
+  /* Scara de raze: mic = etichete, chip-uri, miniaturi; mediu = butoane, câmpuri, carduri mici;
+     mare = carduri, panouri, imagini mari. Fără capsule (999px). */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
   --header-h: 64px;
 
   color-scheme: light;
@@ -96,9 +100,9 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.08;
-  letter-spacing: 0;
+  letter-spacing: 0.005em;
   margin: 0;
   color: var(--ink);
   text-wrap: balance;
@@ -114,12 +118,14 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 h4 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 p {
@@ -128,6 +134,12 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+/* Implicit browserul pune 700; în textul curent ajunge o accentuare mai ușoară. */
+strong,
+b {
+  font-weight: 600;
 }
 
 a {
@@ -204,6 +216,7 @@ button {
   background: var(--ink);
   color: #fff;
   padding: 10px 14px;
+  border-radius: var(--r-md);
 }
 
 .skip-link:focus {
@@ -215,7 +228,7 @@ button {
 .kicker {
   display: inline-block;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 550;
   color: var(--teracota-d);
   margin-bottom: 8px;
   padding-left: 10px;
@@ -249,7 +262,7 @@ button {
 }
 
 .more-link {
-  font-weight: 600;
+  font-weight: 550;
   white-space: nowrap;
 }
 
@@ -262,8 +275,8 @@ button {
   min-height: 46px;
   padding: 10px 18px;
   border: 1px solid transparent;
-  border-radius: var(--radius);
-  font-weight: 600;
+  border-radius: var(--r-md);
+  font-weight: 550;
   font-size: 0.975rem;
   line-height: 1.2;
   text-decoration: none;
@@ -368,11 +381,32 @@ button {
 }
 
 .note {
-  border-left: 4px solid var(--amber);
+  border-radius: var(--r-md);
   background: var(--chihlimbar-t);
-  padding: 12px 16px;
+  padding: 12px 16px 12px 20px;
   margin: 1em 0;
 }
+
+/* Bandă de culoare pe o singură latură a unui element rotunjit: rămâne dreaptă
+   și e tăiată curat de colțuri (o bordură groasă s-ar curba stângaci pe colț).
+   Culoarea vine din --band, grosimea din --band-w. */
+.band {
+  position: relative;
+  overflow: hidden;
+}
+
+.band::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--band, var(--amber));
+  transition: background-color 0.15s ease, width 0.15s ease;
+}
+
+.band--top::before { left: 0; right: 0; top: 0; height: var(--band-w, 4px); }
+.band--bottom::before { left: 0; right: 0; bottom: 0; height: var(--band-w, 4px); }
+.band--left::before { top: 0; bottom: 0; left: 0; width: var(--band-w, 4px); }
 
 /* Codul de culoare al serviciilor: orice element cu data-svc primește --svc-d/-m/-t. */
 [data-svc='interioare'] { --svc-d: var(--verde-d); --svc-m: var(--verde-m); --svc-t: var(--verde-t); }
@@ -415,6 +449,7 @@ button {
   background: var(--svc-m);
   outline: 1px solid var(--svc-d);
   outline-offset: -1px;
+  border-radius: calc(var(--r-sm) / 2);
 }
 
 .prose ul li::marker,

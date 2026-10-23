@@ -139,7 +139,7 @@ const year = new Date().getFullYear()
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-weight: 600;
+  font-weight: 550;
   padding-block: 3px;
 }
 

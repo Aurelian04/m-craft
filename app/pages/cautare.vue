@@ -24,7 +24,7 @@ usePageSeo({
   <div class="wrap page">
     <Breadcrumbs :items="[{ name: 'Căutare' }]" />
     <h1>Căutare pe site</h1>
-    <form class="sf" role="search" @submit.prevent="submit">
+    <form class="sf band band--top" role="search" @submit.prevent="submit">
       <label for="q" class="visually-hidden">Termen de căutare</label>
       <input id="q" v-model="q" type="search" name="q" placeholder="ex. gresie baie, tavan gips carton, sapa" autocomplete="off">
       <button type="submit" class="btn btn--dark"><AppIcon name="search" />Caută</button>
@@ -70,6 +70,7 @@ h1 {
   min-height: 48px;
   padding: 10px 14px;
   border: 1px solid #b9b2a5;
+  border-radius: var(--r-md);
   background: var(--paper);
   font: inherit;
   color: var(--ink);
@@ -107,7 +108,7 @@ h1 {
 .res__type {
   display: inline-block;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 550;
   color: var(--rust);
   margin-bottom: 2px;
 }
@@ -133,8 +134,8 @@ h1 {
 .res li[data-type='Proiect'] { --type-d: var(--teracota-d); --type-m: var(--teracota-m); --type-t: var(--teracota-t); }
 .res li[data-type='Articol'] { --type-d: var(--otel-d); --type-m: var(--otel-m); --type-t: var(--otel-t); }
 .res li[data-type='Pagină'] { --type-d: var(--beton-d); --type-m: var(--beton-m); --type-t: var(--beton-t); }
-.res__type { padding: 1px 8px; background: var(--type-t); color: var(--type-d); }
+.res__type { padding: 1px 8px; background: var(--type-t); color: var(--type-d); border-radius: var(--r-sm); }
 .res h2 a { text-decoration-color: var(--type-d); }
-.sf { padding: 14px; background: var(--chihlimbar-t); border-top: 4px solid var(--amber); }
+.sf { padding: 18px 14px 14px; background: var(--chihlimbar-t); --band: var(--amber); border-radius: var(--r-lg); }
 .sf input { border-color: #958b7a; }
 </style>

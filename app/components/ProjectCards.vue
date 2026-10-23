@@ -28,8 +28,21 @@ defineProps<{ projects: Project[] }>()
 .pc__card {
   background: var(--bg);
   border: 1px solid var(--line);
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
   color: var(--ink);
   text-decoration: none;
+}
+
+/* banda de culoare de la bază: dreaptă, tăiată de colțurile rotunjite ale cardului */
+.pc__card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
 }
 
 .pc__card:hover {
@@ -38,7 +51,7 @@ defineProps<{ projects: Project[] }>()
 }
 
 .pc__body {
-  padding: 10px 12px 12px;
+  padding: 10px 12px 16px;
 }
 
 .pc__body h3 {
@@ -65,6 +78,8 @@ defineProps<{ projects: Project[] }>()
 }
 
 /* Culoare (docs/design/culoare.md) */
-.pc__card { background: var(--paper); border: 1px solid var(--paper); border-bottom: 5px solid var(--svc-m); }
+.pc__card { background: var(--paper); border: 1px solid var(--paper); border-bottom-color: var(--svc-m); }
+.pc__card::after { background: var(--svc-m); }
 .pc__card:hover { border-color: var(--svc-d); }
+.pc__card:hover::after { background: var(--svc-d); }
 </style>

@@ -16,7 +16,7 @@ defineProps<{ blocks: PostBlock[] }>()
       <ol v-else-if="b.type === 'ol'">
         <li v-for="(it, j) in b.items" :key="j">{{ it }}</li>
       </ol>
-      <p v-else-if="b.type === 'note'" class="note">{{ b.text }}</p>
+      <p v-else-if="b.type === 'note'" class="note band band--left">{{ b.text }}</p>
     </template>
   </div>
 </template>

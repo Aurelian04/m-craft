@@ -82,7 +82,7 @@ onBeforeUnmount(stop)
         @touchstart.passive="paused = true"
         @keydown="onKey"
       >
-        <NuxtLink v-for="s in items" :key="s.slug" :to="serviceUrl(s.slug)" class="svc" :data-svc="s.slug">
+        <NuxtLink v-for="s in items" :key="s.slug" :to="serviceUrl(s.slug)" class="svc band band--left" :data-svc="s.slug">
           <Pic v-if="s.cover" :photo="s.cover" sizes="88px" ratio="1 / 1" alt="" class="svc__img" />
           <svg v-else class="svc__img svc__img--none" viewBox="0 0 52 52" aria-hidden="true">
             <rect x="12" y="10" width="5" height="32" fill="var(--svc-d)" />
@@ -143,6 +143,7 @@ onBeforeUnmount(stop)
   gap: 10px;
   padding: 5px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--bg);
   color: var(--ink);
   text-decoration: none;
@@ -159,6 +160,7 @@ onBeforeUnmount(stop)
   width: 52px !important;
   height: 52px;
   flex: none;
+  border-radius: var(--r-sm);
 }
 
 .svc__img--none {
@@ -166,7 +168,7 @@ onBeforeUnmount(stop)
 }
 
 .svc__name {
-  font-weight: 600;
+  font-weight: 550;
   font-size: 0.925rem;
   line-height: 1.25;
 }
@@ -183,6 +185,7 @@ onBeforeUnmount(stop)
   width: 36px;
   height: 36px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   cursor: pointer;
 }
@@ -208,7 +211,7 @@ onBeforeUnmount(stop)
 }
 
 /* Culoare (docs/design/culoare.md) */
-.svc { background: var(--svc-t); border: 1px solid var(--svc-t); border-left: 5px solid var(--svc-d); }
+.svc { background: var(--svc-t); border: 1px solid var(--svc-t); border-left-color: var(--svc-d); --band: var(--svc-d); padding-left: 9px; }
 .svc:hover { border-color: var(--svc-d); }
 .svc__img--none { background: var(--svc-m); }
 .ctrl button:hover { background: var(--amber); border-color: var(--amber-line); }

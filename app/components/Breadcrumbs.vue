@@ -46,7 +46,7 @@ useBreadcrumbLd(all.value.map((i) => ({ name: i.name, path: i.path ?? useRoute()
 }
 
 /* Culoare (docs/design/culoare.md) */
-.crumbs li + li::before { color: var(--amber); font-weight: 700; }
+.crumbs li + li::before { color: var(--amber); font-weight: 600; }
 .crumbs a { text-decoration-color: var(--amber); }
-.crumbs [aria-current] { color: var(--ink); font-weight: 600; }
+.crumbs [aria-current] { color: var(--ink); font-weight: 550; }
 </style>

@@ -24,7 +24,7 @@ useHead({ title: notFound.value ? 'Pagina nu a fost găsită | M-CRAFT' : 'Eroar
       </div>
       </div>
       <ul class="svc">
-        <li v-for="s in services" :key="s.slug" :data-svc="s.slug"><NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink></li>
+        <li v-for="s in services" :key="s.slug" :data-svc="s.slug"><NuxtLink :to="serviceUrl(s.slug)" class="band band--left">{{ s.name }}</NuxtLink></li>
       </ul>
     </div>
   </NuxtLayout>
@@ -51,10 +51,10 @@ h1 {
 }
 
 /* Culoare (docs/design/culoare.md) */
-.err { padding: 24px; }
+.err { padding: 24px; border-radius: var(--r-lg); }
 .err .links { margin-bottom: 0; }
 .svc { list-style: none; padding: 0; margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; columns: auto; }
 .svc li { margin: 0; }
-.svc a { display: block; padding: 10px 12px; background: var(--svc-t); border-left: 5px solid var(--svc-d); color: var(--ink); text-decoration: none; font-weight: 600; }
-.svc a:hover { border-left-width: 9px; }
+.svc a { display: block; padding: 10px 12px 10px 17px; background: var(--svc-t); --band: var(--svc-d); --band-w: 5px; border-radius: var(--r-md); color: var(--ink); text-decoration: none; font-weight: 550; }
+.svc a:hover { --band-w: 9px; }
 </style>

@@ -88,7 +88,7 @@ usePageSeo({
             Fotografiile de pe site sunt din lucrările noastre, multe surprinse în timpul execuției: așa se vede cum arată
             structura, izolația și straturile de finisaj înainte să fie acoperite.
           </p>
-          <div class="area">
+          <div class="area band band--left">
             <h3>Unde lucrăm</h3>
             <p>
               În județul Suceava, cu sediul în Vicov de Sus. Pentru o lucrare în altă localitate din județ, spuneți-ne unde este
@@ -169,7 +169,7 @@ usePageSeo({
           <p class="muted">Descrieți pe scurt lucrarea. Vă răspundem pe email sau la telefon.</p>
           <QuoteForm />
         </div>
-        <aside class="quote__side">
+        <aside class="quote__side band band--top">
           <h3>Preferați să vorbim direct?</h3>
           <ContactActions :show-quote="false" />
           <p class="muted">Pe WhatsApp puteți trimite și fotografii ale spațiului.</p>
@@ -200,6 +200,7 @@ usePageSeo({
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 6px solid var(--amber);
+  border-radius: var(--r-lg);
 }
 
 .hero__text h1 {
@@ -227,7 +228,7 @@ usePageSeo({
   align-items: center;
   gap: 8px;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 550;
   text-decoration: none;
 }
 
@@ -255,11 +256,13 @@ usePageSeo({
 .hero__main {
   grid-row: 1 / 3;
   height: 100% !important;
+  border-radius: var(--r-lg);
 }
 
 .hero__side {
   height: 100% !important;
   min-height: 0;
+  border-radius: var(--r-lg);
 }
 
 .svc-grid {
@@ -273,6 +276,8 @@ usePageSeo({
   flex-direction: column;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
   color: var(--ink);
   text-decoration: none;
   transition: border-color 0.15s ease;
@@ -330,9 +335,10 @@ usePageSeo({
 
 .area {
   margin: 16px 0;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 20px;
   background: var(--paper);
-  border-left: 3px solid var(--rust);
+  --band: var(--rust);
+  border-radius: var(--r-md);
 }
 
 .area h3 {
@@ -344,6 +350,10 @@ usePageSeo({
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
+}
+
+.about__photos > * {
+  border-radius: var(--r-md);
 }
 
 .recent {
@@ -359,6 +369,8 @@ usePageSeo({
   background: none;
   cursor: zoom-in;
   overflow: hidden;
+  border-radius: var(--r-md);
+  isolation: isolate;
   text-align: left;
 }
 
@@ -416,6 +428,7 @@ usePageSeo({
   align-self: start;
   background: var(--paper);
   border: 1px solid var(--line);
+  border-radius: var(--r-lg);
   padding: 20px;
 }
 
@@ -493,7 +506,7 @@ usePageSeo({
 .svc-card__ph { background: var(--svc-m); }
 .svc-card__ph span { border-color: var(--svc-d); }
 
-.area { background: var(--paper); border-left: 4px solid var(--verde-d); }
+.area { background: var(--paper); --band: var(--verde-d); }
 .recent__cap { background: var(--svc-t); border-top: 4px solid var(--svc-d); }
-.quote__side { border: 1px solid var(--line); border-top: 4px solid var(--wa-d); }
+.quote__side { border: 1px solid var(--line); border-top-color: var(--wa-d); --band: var(--wa-d); --band-w: 3px; padding-top: 23px; }
 </style>

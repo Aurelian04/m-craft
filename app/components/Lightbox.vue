@@ -121,8 +121,9 @@ function touchEnd(e: TouchEvent) {
   min-height: 44px;
   padding: 0 14px;
   border: 1px solid var(--ink);
+  border-radius: var(--r-md);
   background: var(--paper);
-  font-weight: 600;
+  font-weight: 550;
   cursor: pointer;
 }
 
@@ -149,6 +150,7 @@ function touchEnd(e: TouchEvent) {
   height: auto;
   object-fit: contain;
   background: var(--concrete);
+  border-radius: var(--r-md);
 }
 
 .lb__fig figcaption {
@@ -163,6 +165,7 @@ function touchEnd(e: TouchEvent) {
   margin-left: 8px;
   padding: 0 6px;
   border: 1px solid var(--line);
+  border-radius: var(--r-sm);
   font-size: 0.8rem;
 }
 
@@ -175,6 +178,7 @@ function touchEnd(e: TouchEvent) {
   width: 48px;
   height: 64px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
   cursor: pointer;
 }
@@ -210,5 +214,5 @@ function touchEnd(e: TouchEvent) {
 .lb__close { background: var(--amber); border-color: var(--amber-line); }
 .lb__nav:hover { background: var(--amber); border-color: var(--amber-line); }
 .lb__stage { background: var(--chihlimbar-t); border-color: var(--amber); color: var(--chihlimbar-d); }
-.lb__count { color: var(--teracota-d); font-weight: 600; }
+.lb__count { color: var(--teracota-d); font-weight: 550; }
 </style>

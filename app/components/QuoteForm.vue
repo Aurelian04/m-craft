@@ -115,11 +115,11 @@ async function submit() {
     </div>
 
     <div aria-live="polite">
-      <p v-if="status === 'sent'" class="qf__msg qf__msg--ok">
+      <p v-if="status === 'sent'" class="qf__msg qf__msg--ok band band--left">
         <AppIcon name="check" />
         Mulțumim! Cererea a fost trimisă. Vă răspundem pe email sau la telefon.
       </p>
-      <div v-else-if="status === 'error'" class="qf__msg qf__msg--err">
+      <div v-else-if="status === 'error'" class="qf__msg qf__msg--err band band--left">
         <p>
           Cererea nu a putut fi trimisă<template v-if="errorText"> ({{ errorText }})</template>. Datele completate au rămas în formular;
           puteți încerca din nou sau ne puteți contacta direct:
@@ -154,7 +154,7 @@ async function submit() {
   display: grid;
   gap: 4px;
   font-size: 0.925rem;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .qf__field small {
@@ -174,7 +174,7 @@ async function submit() {
   min-height: 46px;
   padding: 10px 12px;
   border: 1px solid #b9b2a5;
-  border-radius: var(--radius);
+  border-radius: var(--r-md);
   background: var(--paper);
   color: var(--ink);
   font: inherit;
@@ -214,8 +214,9 @@ async function submit() {
 
 .qf__msg {
   margin: 0;
-  padding: 12px 14px;
+  padding: 12px 14px 12px 17px;
   border: 1px solid var(--line);
+  border-radius: var(--r-md);
   background: var(--paper);
 }
 
@@ -223,8 +224,10 @@ async function submit() {
   display: flex;
   gap: 8px;
   align-items: center;
-  border-left: 4px solid var(--wa);
-  font-weight: 600;
+  border-left-color: var(--wa);
+  --band: var(--wa);
+  --band-w: 3px;
+  font-weight: 550;
 }
 
 .qf__msg--ok svg {
@@ -235,7 +238,9 @@ async function submit() {
 }
 
 .qf__msg--err {
-  border-left: 4px solid var(--rust);
+  border-left-color: var(--rust);
+  --band: var(--rust);
+  --band-w: 3px;
 }
 
 .qf__alt {
@@ -258,7 +263,7 @@ async function submit() {
 .qf input:focus,
 .qf select:focus,
 .qf textarea:focus { outline-color: var(--teracota-d); border-color: var(--teracota-d); }
-.qf__msg--ok { background: var(--wa-t); border-left-color: var(--wa-d); }
+.qf__msg--ok { background: var(--wa-t); border-left-color: var(--wa-d); --band: var(--wa-d); }
 .qf__msg--ok svg { color: var(--wa-d); }
-.qf__msg--err { background: var(--antifoc-t); border-left-color: var(--antifoc-d); }
+.qf__msg--err { background: var(--antifoc-t); border-left-color: var(--antifoc-d); --band: var(--antifoc-d); }
 </style>

@@ -44,7 +44,7 @@ summary {
   justify-content: space-between;
   gap: 16px;
   padding: 13px 0;
-  font-weight: 600;
+  font-weight: 550;
   cursor: pointer;
   list-style: none;
 }
@@ -61,6 +61,7 @@ summary::after {
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
+  border-radius: var(--r-sm);
   font-weight: 500;
   line-height: 1;
 }
@@ -77,8 +78,8 @@ details p {
 }
 
 /* Culoare (docs/design/culoare.md) */
-summary::after { background: var(--svc-d); border-color: var(--svc-d); color: #fff; font-weight: 700; }
-details[open] { background: var(--svc-t); }
+summary::after { background: var(--svc-d); border-color: var(--svc-d); color: #fff; font-weight: 600; }
+details[open] { background: var(--svc-t); border-radius: var(--r-md); }
 details[open] summary,
 details[open] p { padding-inline: 12px; }
 details[open] summary::after { background: var(--svc-d); }

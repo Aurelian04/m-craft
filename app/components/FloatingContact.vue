@@ -74,8 +74,9 @@ onMounted(() => {
   background: var(--paper);
   border: 1px solid var(--line);
   border-bottom: 3px solid var(--wa);
+  border-radius: var(--r-md);
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 550;
   text-decoration: none;
   box-shadow: 0 4px 12px rgb(48 49 46 / 0.12);
 }
@@ -121,8 +122,9 @@ onMounted(() => {
     gap: 8px;
     height: 46px;
     width: auto;
-    font-weight: 600;
+    font-weight: 550;
     text-decoration: none;
+    border-radius: var(--r-md);
     box-shadow: none;
   }
 

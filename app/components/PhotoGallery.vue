@@ -46,6 +46,9 @@ const open = ref<number | null>(null)
   cursor: zoom-in;
   break-inside: avoid;
   overflow: hidden;
+  border-radius: var(--r-md);
+  /* ține colțurile rotunjite și în timpul zoom-ului de la hover */
+  isolation: isolate;
 }
 
 .gal__item :deep(img) {

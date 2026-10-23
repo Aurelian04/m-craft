@@ -87,20 +87,22 @@ const steps = [
   }
 
   .steps li,
-  .steps li + li {
+  .steps li + li,
+  .steps li:nth-child(3) {
     padding: 4px 0 8px 18px;
     border-left: 0;
   }
 
   .steps li::before,
-  .steps li + li::before {
+  .steps li + li::before,
+  .steps li:nth-child(3)::before {
     top: 8px;
     left: -9px;
   }
 }
 
 /* Culoare (docs/design/culoare.md) */
-.steps li::before { width: 18px; height: 18px; top: -10px; }
+.steps li::before { width: 18px; height: 18px; top: -10px; border-radius: calc(var(--r-sm) / 2); }
 .steps li:nth-child(1)::before { background: var(--amber); }
 .steps li:nth-child(2)::before { background: var(--teracota-d); }
 .steps li:nth-child(3)::before { background: var(--otel-d); }

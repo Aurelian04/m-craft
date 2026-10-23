@@ -84,6 +84,12 @@ usePageSeo({
   border-bottom: 1px solid var(--line);
 }
 
+.row__img {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--r-md);
+}
+
 .row__ph {
   display: grid;
   place-items: center;
@@ -137,7 +143,7 @@ usePageSeo({
   content: '·';
   margin-right: 14px;
   color: var(--amber);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .row__cta {

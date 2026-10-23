@@ -78,6 +78,6 @@ usePageSeo({
 
 /* Culoare (docs/design/culoare.md) */
 .grp { border-top: 6px solid var(--svc-m); padding-top: 0; }
-.grp__head { background: var(--svc-t); padding: 10px 14px; margin-bottom: 14px; }
+.grp__head { background: var(--svc-t); padding: 10px 14px; margin-bottom: 14px; border-radius: 0 0 var(--r-md) var(--r-md); }
 .grp__head .more-link { color: var(--svc-d); }
 </style>
