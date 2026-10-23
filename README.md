@@ -1,44 +1,55 @@
-# M-Craft
+# M-CRAFT: website de prezentare
 
-Site de prezentare pentru o firmă de amenajări și renovări interioare. React + Vite + Tailwind CSS v4, fără backend.
+Site-ul firmei M CRAFT CONSTRUCTII SRL (Vicov de Sus, județul Suceava): servicii de renovare și amenajare, proiecte cu fotografii reale, video, blog, contact și cerere de ofertă.
+
+Tehnologie: Nuxt 4 (Vue 3), TypeScript, CSS simplu (fără framework de CSS), fonturi găzduite local. Site-ul este **generat static** (`nuxt generate`) și nu are nevoie de server Node.
 
 ## Pornire locală
 
 ```bash
 npm install
-npm run dev
+npm run dev        # http://localhost:3000
+npm run generate   # build static în .output/public
+npm run typecheck
 ```
 
-Deschide `http://localhost:5173`.
+## Publicare (Vercel)
 
-## Ce mai trebuie completat
+`vercel.json` configurează build-ul: `npm run generate`, cu ieșirea în `.output/public`. Branch-ul `main` merge în producție, iar celelalte branch-uri primesc automat câte un preview.
 
-1. **Poze reale** — în `src/components/Gallery.jsx`, înlocuiește array-ul `PHOTOS` cu pozele reale. Cel mai simplu: pune fișierele în `public/images/` și referențiază-le ca `/images/nume-poza.jpg`.
-2. **Video** — în `src/components/VideoSection.jsx`, editează array-ul `VIDEOS` cu link-urile clipurilor publice de pe Facebook. Clipurile cu muzică sub drepturi de autor nu pot fi încorporate (apar doar ca link).
-3. **Formular de contact (EmailJS)** — creează cont gratuit pe emailjs.com, apoi completează în `src/components/ContactForm.jsx`:
-   - `SERVICE_ID`
-   - `TEMPLATE_ID`
-   - `PUBLIC_KEY`
+- Domeniul: se setează variabila `NUXT_PUBLIC_SITE_URL` (de ex. `https://domeniu.ro`). Fără ea, pe Vercel se folosește domeniul de producție al proiectului (`VERCEL_PROJECT_PRODUCTION_URL`). Din domeniu se generează canonical, sitemap, Open Graph și datele structurate.
+- Articolele de blog marcate `draft: true` și notele „De validat de firmă” din paginile legale apar doar local și în preview, niciodată în producție.
 
-## Deploy pe Vercel
+## Unde se modifică conținutul
 
-1. Urcă proiectul pe GitHub (`git init`, `git add .`, `git commit`, apoi push la un repo nou).
-2. Pe vercel.com, "Add New Project" → alege repo-ul → Deploy (Vercel detectează automat Vite).
-3. După deploy, în Vercel: Settings → Domains → adaugă domeniul cumpărat și urmează instrucțiunile DNS (de obicei un record A sau CNAME).
+| Ce | Fișier |
+|---|---|
+| Datele firmei (telefon, email, adresă, CUI) | `app/data/company.ts` |
+| Servicii (texte, FAQ, mesaj WhatsApp) | `app/data/services/<slug>.ts`, ordinea în `app/data/services/index.ts` |
+| Articole de blog | `app/data/posts/<slug>.ts`, lista în `app/data/posts/index.ts` |
+| Pagini legale | `app/data/legal/*.ts` |
+| Recenzii (doar reale, cu sursă) | `app/data/reviews.ts` |
+| Fotografii, clipuri, proiecte, ce poză apare la fiecare serviciu | `scripts/media/selection.json`, apoi regenerare (mai jos) |
+| Măsurare Google (ID tag, conversii) | `nuxt.config.ts` → `runtimeConfig.public` |
+| Cheia Web3Forms a formularului | `nuxt.config.ts` → `runtimeConfig.public.web3formsKey` |
 
-## Structură
+## Fotografii și clipuri
 
+Originalele stau în afara repo-ului (`C:\M-Craft\Selectie_finala`). Scriptul generează versiunile pentru web:
+
+```bash
+pip install pillow
+python scripts/media/build_media.py "C:\M-Craft\Selectie_finala" <cale către ffmpeg>
 ```
-src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── Services.jsx
-│   ├── Gallery.jsx
-│   ├── VideoSection.jsx
-│   ├── ContactForm.jsx
-│   └── Footer.jsx
-├── App.jsx
-├── main.jsx
-└── index.css
-```
+
+- Fotografiile devin WebP la 480/960/1600 px, fără metadate EXIF/GPS. Clipurile devin MP4 H.264 de max. 540 px, fără sunet, cu copertă.
+- Rezultatul ajunge în `public/media/` și `app/data/media.json`.
+- Fișierele deja generate sunt sărite. Ffmpeg se poate lua din pachetul npm `ffmpeg-static`.
+
+## Măsurare și cookie-uri
+
+- Google Consent Mode v2: totul e refuzat implicit, iar tagul Google se încarcă doar după „Accept”. Fără un ID completat în `googleTagId`, nu se încarcă niciun script Google.
+- Evenimentele `generate_lead` (cerere trimisă cu succes), `click_telefon` și `click_whatsapp` sunt separate și nu conțin date personale.
+- Pentru Google Ads se completează etichetele de conversie în `googleAdsConversions`.
+
+Detalii, surse și ce mai trebuie confirmat: `docs/PREDARE.md` și `docs/research/`.

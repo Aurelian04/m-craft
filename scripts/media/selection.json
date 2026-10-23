@@ -1,0 +1,1979 @@
+{
+ "projects": [
+  {
+   "id": "sala-tavan-gips-carton",
+   "title": "Tavan din gips-carton într-o sală de mari dimensiuni",
+   "summary": "Montajul unui tavan din plăci de gips-carton într-o sală mare: plăcile prinse pe structură și susținute cu popi la montaj, alinierea verificată cu nivela laser, apoi rosturile și capetele șuruburilor tratate cu glet. Din tavan rămân doze și cabluri pentru corpurile de iluminat.",
+   "works": [
+    "Tavan din gips-carton",
+    "Susținere cu popi la montaj",
+    "Verificare cu nivela laser",
+    "Tratarea rosturilor"
+   ],
+   "services": [
+    "interioare"
+   ],
+   "cover": "s1-2434",
+   "before_after": []
+  },
+  {
+   "id": "locuinta-finisaje-bai",
+   "title": "Finisaje interioare și băi placate într-o locuință nouă",
+   "summary": "Locuință nouă în etapa de finisaje: pereți și tavane gletuite și vopsite, tavane din gips-carton cu trepte, un perete curb cu nișă, guri de ventilație și spoturi încastrate. Băile sunt placate cu plăci mari imitație onix. Pardoseala nu era încă montată în momentul fotografiilor.",
+   "works": [
+    "Tavane din gips-carton cu trepte",
+    "Perete curb cu nișă",
+    "Glet și vopsitorie",
+    "Placări în baie"
+   ],
+   "services": [
+    "interioare",
+    "pardoseli-placari"
+   ],
+   "cover": "s2-2528",
+   "before_after": []
+  },
+  {
+   "id": "sala-comerciala-pregatire",
+   "title": "Pregătirea unei săli comerciale pentru renovare",
+   "summary": "Sală comercială existentă, cu arcade decorative, în etapa de pregătire: pardoseala protejată cu folie, tencuiala degradată îndepărtată și reparată, profile metalice aduse pentru noile placări.",
+   "works": [
+    "Protejarea pardoselii",
+    "Reparații de tencuială",
+    "Pregătirea placărilor"
+   ],
+   "services": [
+    "mentenanta",
+    "interioare"
+   ],
+   "cover": "s3-2620",
+   "before_after": []
+  },
+  {
+   "id": "cladire-noua-instalatii",
+   "title": "Instalații sanitare și compartimentări într-o clădire nouă",
+   "summary": "Clădire nouă cu pereți din BCA, în etapa de instalații și compartimentări: cadre metalice pentru obiecte sanitare suspendate cu țevi de alimentare, placări cu gips-carton rezistent la umiditate în băi, coridoare gletuite cu jgheaburi de cabluri și ghene tehnice.",
+   "works": [
+    "Cadre pentru obiecte sanitare suspendate",
+    "Gips-carton rezistent la umiditate",
+    "Coridoare gletuite",
+    "Ghene tehnice"
+   ],
+   "services": [
+    "instalatii-sanitare",
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "cover": "s3-2630",
+   "before_after": []
+  },
+  {
+   "id": "casa-noua-bai-terasa",
+   "title": "Băi, tavane și izolația terasei într-o casă nouă",
+   "summary": "Casă nouă în etapa de instalații și finisaje brute: cadre metalice pentru WC suspendat placate cu OSB și gips-carton verde, tavanul terasei acoperite izolat cu vată minerală între profile metalice și tavane din gips-carton în camere.",
+   "works": [
+    "Cadre sanitare placate",
+    "Izolarea tavanului terasei",
+    "Tavane din gips-carton"
+   ],
+   "services": [
+    "instalatii-sanitare",
+    "exterioare",
+    "interioare"
+   ],
+   "before_after": [
+    [
+     "s4-2780",
+     "s4-2781",
+     "Același perete de baie, înainte și după placarea cu gips-carton rezistent la umiditate."
+    ]
+   ],
+   "cover": "s4-2811"
+  },
+  {
+   "id": "casa-glet-gips-carton",
+   "title": "Glet, glafuri și tavane din gips-carton într-o casă",
+   "summary": "Casă în execuție: tavane din gips-carton cu rosturi și șuruburi chituite, glafuri de ferestre tencuite cu profile de colț, pereți armați cu plasă și gletuiți. Planeitatea pereților e verificată cu dreptarul și cu lumină razantă.",
+   "works": [
+    "Glet pe pereți",
+    "Glafuri cu profile de colț",
+    "Tavane din gips-carton",
+    "Verificarea planeității"
+   ],
+   "services": [
+    "interioare"
+   ],
+   "cover": "s5-2926",
+   "before_after": []
+  },
+  {
+   "id": "hala-tavan-suspendat",
+   "title": "Termoizolare la interior și tavan suspendat într-o hală",
+   "summary": "Hală cu ferme metalice și acoperiș din panouri: pereții sunt termoizolați la interior cu plăci de polistiren extrudat, apoi se montează tijele de suspensie și rețeaua de profile metalice pentru tavanul suspendat.",
+   "works": [
+    "Termoizolare cu polistiren extrudat",
+    "Tije de suspensie",
+    "Structură de tavan suspendat"
+   ],
+   "services": [
+    "interioare"
+   ],
+   "before_after": [],
+   "cover": "s5-2997"
+  },
+  {
+   "id": "spatiu-comercial-compartimentari",
+   "title": "Compartimentări din gips-carton într-un spațiu comercial",
+   "summary": "Spațiu comercial mare la parter, surprins de la hala goală până la pereții chituiți: trasarea cu profile de ghidaj, structuri metalice, vată minerală, placări cu gips-carton standard, rezistent la umiditate și rezistent la foc, stâlpi și grinzi placate.",
+   "works": [
+    "Trasare și structuri metalice",
+    "Vată minerală în pereți",
+    "Plăci speciale (umiditate, foc)",
+    "Placarea stâlpilor și grinzilor"
+   ],
+   "services": [
+    "interioare"
+   ],
+   "cover": "s6-3109",
+   "before_after": []
+  },
+  {
+   "id": "cladire-holuri-gresie",
+   "title": "Holuri și săli cu gresie și soclu decorativ",
+   "summary": "Clădire cu holuri și săli aproape de final: gresie de format mare pe pardoseală, pereți albi cu soclu din tencuială decorativă și plafoniere LED. La data filmărilor mai erau de montat corpuri de iluminat și finisaje mărunte.",
+   "works": [
+    "Gresie de format mare",
+    "Soclu din tencuială decorativă",
+    "Plafoniere LED"
+   ],
+   "services": [
+    "pardoseli-placari",
+    "interioare"
+   ],
+   "cover": "s6-3059",
+   "before_after": []
+  },
+  {
+   "id": "spatiu-comercial-gletuire",
+   "title": "Gletuire pereți și casete din gips-carton într-un spațiu comercial",
+   "summary": "Spațiu comercial cu instalații la vedere, în etapa de finisaj: pereți și casete din gips-carton, inclusiv plăci rezistente la umiditate, cu glet pe rosturi și șuruburi, reparații de glet pe grinzi, șlițuri pentru cabluri și trasee de scurgere.",
+   "works": [
+    "Glet pe gips-carton",
+    "Reparații pe grinzi",
+    "Treceri pentru instalații"
+   ],
+   "services": [
+    "interioare",
+    "mentenanta"
+   ],
+   "cover": "s7-3189",
+   "before_after": []
+  },
+  {
+   "id": "spatiu-comercial-tavan-tehnic",
+   "title": "Finisaje interioare și tavan tehnic într-un spațiu comercial",
+   "summary": "Open space comercial cu instalații la vedere: pereți, stâlpi îmbrăcați și nișe din gips-carton gletuite și vopsite cu pompa airless, tavan deschis vopsit gri cu jgheaburi de cabluri, tuburi electrice și tubulatură de ventilație.",
+   "works": [
+    "Stâlpi îmbrăcați și nișe din gips-carton",
+    "Vopsire cu pompa airless",
+    "Tavan tehnic vopsit"
+   ],
+   "services": [
+    "interioare",
+    "instalatii-electrice"
+   ],
+   "cover": "s8-3298",
+   "before_after": []
+  },
+  {
+   "id": "structura-lemn",
+   "title": "Clădire pe structură de lemn în execuție",
+   "summary": "Clădire pe structură de lemn, cu pereți din OSB, ferestre de acoperiș și planșeu din grinzi de lemn izolat cu vată minerală, cu plăcile de gips-carton pregătite pentru montaj.",
+   "works": [
+    "Structură de lemn și OSB",
+    "Planșeu izolat",
+    "Pregătirea placărilor"
+   ],
+   "services": [
+    "interioare"
+   ],
+   "cover": "s8-3403",
+   "before_after": []
+  }
+ ],
+ "photos": [
+  {
+   "id": "s1-2434",
+   "src": "S1/photo/IMG_2434.JPEG",
+   "alt": "Perspectivă asupra unui tavan amplu din gips-carton, cu rosturi și șuruburi tratate cu glet",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2433",
+   "src": "S1/photo/IMG_2433.JPEG",
+   "alt": "Tavan din gips-carton cu rosturi și șuruburi gletuite, într-o sală mare cu pardoseală din plăci",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2435",
+   "src": "S1/photo/IMG_2435.JPEG",
+   "alt": "Tavan din gips-carton cu rosturi tratate deasupra unei săli cu pereți verzi și ferestre",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2410",
+   "src": "S1/photo/IMG_2410.JPEG",
+   "alt": "Tavan din gips-carton nou montat, verificat cu laser roșu, într-o sală lungă în renovare",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2408",
+   "src": "S1/photo/IMG_2408.JPEG",
+   "alt": "Tavan din gips-carton susținut cu popi telescopici lângă perete vopsit verde, cu fisuri la îmbinare",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2412",
+   "src": "S1/photo/IMG_2412.JPEG",
+   "alt": "Sală mare cu tavan din gips-carton înșurubat, cabluri electrice atârnând și bandă luminoasă pe pardoseală",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2425",
+   "src": "S1/photo/IMG_2425.JPEG",
+   "alt": "Tavan din gips-carton cu șuruburi chituite și rosturi în tratare, cu goluri pentru iluminat",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s1-2436",
+   "src": "S1/photo/IMG_2436.JPEG",
+   "alt": "Tavan din gips-carton cu benzi de glet pe rosturi, deasupra pardoselii cu canale metalice",
+   "project": "sala-tavan-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2528",
+   "src": "S2/photo/IMG_2528.JPEG",
+   "alt": "Încăpere luminoasă cu tavan casetat din gips-carton, ventilație încastrată și ferestre mari",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2526",
+   "src": "S2/photo/IMG_2526.JPEG",
+   "alt": "Living cu perete curb din gips-carton, nișă, tavan cu trepte și spoturi, înainte de pardoseală",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2524",
+   "src": "S2/photo/IMG_2524.JPEG",
+   "alt": "Baie placată cu plăci mari verzi imitație onix, cu fereastră îngustă și rezervor WC încastrat",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "instalatii-sanitare",
+    "pardoseli-placari"
+   ],
+   "categories": [
+    "interioare",
+    "bai"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2527",
+   "src": "S2/photo/IMG_2527.JPEG",
+   "alt": "Spațiu deschis cu pereți gletuiți, tavane cu trepte și perete curb, cu găleți de materiale",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2523",
+   "src": "S2/photo/IMG_2523.JPEG",
+   "alt": "Tavan casetat din gips-carton finisat alb, cu cabluri lăsate pentru iluminat, lângă fereastră",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s2-2522",
+   "src": "S2/photo/IMG_2522.JPEG",
+   "alt": "Gură de ventilație rotundă montată în tavanul casetat din gips-carton, finisat alb",
+   "project": "locuinta-finisaje-bai",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2620",
+   "src": "S3/photo/IMG_2620.JPEG",
+   "alt": "Sală comercială cu arcade maro, pardoseala acoperită cu folie și tencuială reparată pe stâlp",
+   "project": "sala-comerciala-pregatire",
+   "services": [
+    "interioare",
+    "mentenanta"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2622",
+   "src": "S3/photo/IMG_2622.JPEG",
+   "alt": "Perete cu calorifere și tencuială decojită sub arcade maro, pregătit pentru renovare",
+   "project": "sala-comerciala-pregatire",
+   "services": [
+    "mentenanta"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2630",
+   "src": "S3/photo/IMG_2630.JPEG",
+   "alt": "Cadre metalice pentru obiecte sanitare suspendate, cu țevi PEX roșii și albastre, pe perete BCA",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "instalatii-sanitare"
+   ],
+   "categories": [
+    "instalatii",
+    "bai"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2639",
+   "src": "S3/photo/IMG_2639.JPEG",
+   "alt": "Coridor cu pereți din gips-carton gletuiți, goluri de uși și trasee de cabluri la tavan",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2636",
+   "src": "S3/photo/IMG_2636.JPEG",
+   "alt": "Perete placat cu gips-carton verde înșurubat, cu decupaj pentru acces la instalații",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "instalatii-sanitare",
+    "interioare"
+   ],
+   "categories": [
+    "bai",
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2631",
+   "src": "S3/photo/IMG_2631.JPEG",
+   "alt": "Placare cu gips-carton verde rezistent la umiditate lângă perete cu strat gri de protecție",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "instalatii-sanitare",
+    "interioare"
+   ],
+   "categories": [
+    "bai",
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2640",
+   "src": "S3/photo/IMG_2640.JPEG",
+   "alt": "Sală cu tubulaturi de ventilație izolate cu folie aluminizată, montate sub tavan",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s3-2642",
+   "src": "S3/photo/IMG_2642.JPEG",
+   "alt": "Ghenă tehnică cu tubulatură de ventilație zincată, coloană de canalizare și țevi de apă",
+   "project": "cladire-noua-instalatii",
+   "services": [
+    "instalatii-sanitare"
+   ],
+   "categories": [
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2811",
+   "src": "S4/photo/IMG_2811.JPEG",
+   "alt": "Perspectivă de-a lungul terasei cu tavan izolat cu vată minerală pe profile metalice",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "exterioare"
+   ],
+   "categories": [
+    "exterioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2780",
+   "src": "S4/photo/IMG_2780.JPEG",
+   "alt": "Două cadre metalice pentru WC suspendat, cu racorduri de apă, parțial placate cu OSB",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "instalatii-sanitare",
+    "interioare"
+   ],
+   "categories": [
+    "bai",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2781",
+   "src": "S4/photo/IMG_2781.JPEG",
+   "alt": "Perete de instalații placat cu gips-carton verde, cu racorduri de apă și canalizare scoase",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "instalatii-sanitare",
+    "interioare"
+   ],
+   "categories": [
+    "bai",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2782",
+   "src": "S4/photo/IMG_2782.JPEG",
+   "alt": "Panou OSB peste cadre sanitare, cu decupaje pentru clapete, prinderi și scurgeri",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "instalatii-sanitare"
+   ],
+   "categories": [
+    "bai",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2810",
+   "src": "S4/photo/IMG_2810.JPEG",
+   "alt": "Izolație din vată minerală montată pe structură metalică sub tavanul unei terase acoperite",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "exterioare"
+   ],
+   "categories": [
+    "exterioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s4-2809",
+   "src": "S4/photo/IMG_2809.JPEG",
+   "alt": "Tavan de terasă cu vată minerală între profile metalice, cu case vecine în fundal",
+   "project": "casa-noua-bai-terasa",
+   "services": [
+    "exterioare"
+   ],
+   "categories": [
+    "exterioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2926",
+   "src": "S5/photo/IMG_2926.JPEG",
+   "alt": "Adeziv întins cu gletiera dințată pe perete, lângă pereți gletuiți și tavan din gips-carton",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2955",
+   "src": "S5/photo/IMG_2955.JPEG",
+   "alt": "Perete gletuit luminat lateral de un proiector pe stativ, pentru verificarea planeității",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2925",
+   "src": "S5/photo/IMG_2925.JPEG",
+   "alt": "Perete armat cu plasă și gletuit, tavan din gips-carton cu șuruburi chituite și scară",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-3010",
+   "src": "S5/photo/IMG_3010.JPEG",
+   "alt": "Perete lung armat cu plasă și gletuit, cu cablu electric ieșit și tavan din gips-carton",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2922",
+   "src": "S5/photo/IMG_2922.JPEG",
+   "alt": "Glaf de fereastră tencuit, cu profil de colț cu plasă montat lângă tâmplăria maro",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2924",
+   "src": "S5/photo/IMG_2924.JPEG",
+   "alt": "Glaf de fereastră tencuit drept, cu profil de colț cu plasă lângă tâmplăria închisă la culoare",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-3011",
+   "src": "S5/photo/IMG_3011.JPEG",
+   "alt": "Cameră cu tavan și perete din gips-carton cu rosturi chituite, saci de material și polistiren",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2936",
+   "src": "S5/photo/IMG_2936.JPEG",
+   "alt": "Încăpere în lucru cu saci de glet, mixer, proiectoare pe stativ și scări de aluminiu",
+   "project": "casa-glet-gips-carton",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2997",
+   "src": "S5/photo/IMG_2997.JPEG",
+   "alt": "Hală luminoasă cu rețea de profile pentru tavan suspendat și ferestre mari pe lungime",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2998",
+   "src": "S5/photo/IMG_2998.JPEG",
+   "alt": "Rețea de profile metalice pentru tavan suspendat sub ferme, în hală cu pereți izolați roz",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2988",
+   "src": "S5/photo/IMG_2988.JPEG",
+   "alt": "Structură de ferme metalice cu tije și primele profile ale tavanului suspendat, lângă ferestre mari",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2984",
+   "src": "S5/photo/IMG_2984.JPEG",
+   "alt": "Hală cu ferme metalice, pereți termoizolați cu plăci roz și materiale pregătite pe pardoseală",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "izolatii",
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2985",
+   "src": "S5/photo/IMG_2985.JPEG",
+   "alt": "Ferme metalice vopsite sub acoperiș din panouri, cu tije de suspensie pentru tavanul fals",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2987",
+   "src": "S5/photo/IMG_2987.JPEG",
+   "alt": "Ferme metalice și tije de suspensie deasupra pereților termoizolați și ferestrelor halei",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2986",
+   "src": "S5/photo/IMG_2986.JPEG",
+   "alt": "Perete termoizolat cu plăci roz, centură de beton cu profil perimetral și tije de suspensie",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "izolatii",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s5-2991",
+   "src": "S5/photo/IMG_2991.JPEG",
+   "alt": "Profile metalice ale tavanului suspendat sub panourile acoperișului, deasupra unei ferestre",
+   "project": "hala-tavan-suspendat",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "tavane-gips-carton",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3109",
+   "src": "S6/photo/IMG_3109.JPEG",
+   "alt": "Culoar între structuri metalice pentru pereți despărțitori, sub tubulatură de ventilație",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3120",
+   "src": "S6/photo/IMG_3120.JPEG",
+   "alt": "Perete înalt din plăci de gips-carton roz, cu rosturi tratate și capete de șuruburi chituite",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3103",
+   "src": "S6/photo/IMG_3103.JPEG",
+   "alt": "Trasarea compartimentărilor cu profile de ghidaj pe pardoseală, scări și pereți placați",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3098",
+   "src": "S6/photo/IMG_3098.JPEG",
+   "alt": "Hală cu stâlp din beton, tubulatură de ventilație izolată și vitrine spre exterior",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [],
+   "categories": [
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3093",
+   "src": "S6/photo/IMG_3093.JPEG",
+   "alt": "Hală comercială cu stâlpi din beton, tubulatură izolată și stive de gips-carton",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3105",
+   "src": "S6/photo/IMG_3105.JPEG",
+   "alt": "Structură metalică pentru pereți despărțitori montată sub o grindă din beton",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3106",
+   "src": "S6/photo/IMG_3106.JPEG",
+   "alt": "Profile metalice de compartimentare ocolind tubulatura de ventilație izolată",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3113",
+   "src": "S6/photo/IMG_3113.JPEG",
+   "alt": "Vată minerală montată între profile metalice, sub tubulatura de ventilație izolată",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3115",
+   "src": "S6/photo/IMG_3115.JPEG",
+   "alt": "Saltele de vată minerală așezate între profilele unui tavan sau perete din gips-carton",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3116",
+   "src": "S6/photo/IMG_3116.JPEG",
+   "alt": "Perete despărțitor în lucru: plăci verzi și albe de gips-carton, vată minerală și profile",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3108",
+   "src": "S6/photo/IMG_3108.JPEG",
+   "alt": "Perete despărțitor placat cu gips-carton, lângă cabină cu plăci verzi rezistente la umezeală",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3114",
+   "src": "S6/photo/IMG_3114.JPEG",
+   "alt": "Structură metalică de compartimentare placată cu gips-carton sub tubulatură izolată",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3095",
+   "src": "S6/photo/IMG_3095.JPEG",
+   "alt": "Perete lung placat cu gips-carton cu rosturi chituite, inclusiv plăci verzi rezistente la umezeală",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3094",
+   "src": "S6/photo/IMG_3094.JPEG",
+   "alt": "Spațiu comercial cu pereți placați cu gips-carton și tavan cu trasee de ventilație",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3096",
+   "src": "S6/photo/IMG_3096.JPEG",
+   "alt": "Spațiu comercial gol, cu vitrină mare și perete placat cu gips-carton în lateral",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3087",
+   "src": "S6/photo/IMG_3087.JPEG",
+   "alt": "Stâlp și grindă placate cu gips-carton, chituite, cu pereți roz rezistenți la foc în fundal",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3085",
+   "src": "S6/photo/IMG_3085.JPEG",
+   "alt": "Colț de vitrină cu grindă placată cu gips-carton și pereți cu rosturi în curs de chituire",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3091",
+   "src": "S6/photo/IMG_3091.JPEG",
+   "alt": "Grindă placată cu gips-carton deasupra vitrinei, profile metalice depozitate pe jos",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3119",
+   "src": "S6/photo/IMG_3119.JPEG",
+   "alt": "Perete din gips-carton rezistent la foc, cu rosturi și șuruburi chituite",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3121",
+   "src": "S6/photo/IMG_3121.JPEG",
+   "alt": "Perete din gips-carton cu rosturi chituite și benzi de armare, sub tubulatura de ventilație",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3126",
+   "src": "S6/photo/IMG_3126.JPEG",
+   "alt": "Gol de ușă într-un perete nou din gips-carton, cu încăperi compartimentate în spate",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3127",
+   "src": "S6/photo/IMG_3127.JPEG",
+   "alt": "Pereți din gips-carton roz rezistent la foc, chituiți, cu plăci noi sprijinite de perete",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3132",
+   "src": "S6/photo/IMG_3132.JPEG",
+   "alt": "Pereți din gips-carton cu rosturi tratate, colț protejat cu profil și scară pe hol",
+   "project": "spatiu-comercial-compartimentari",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3059",
+   "src": "S6/photo/IMG_3059.JPEG",
+   "alt": "Hol larg cu gresie gri mare, pereți albi cu soclu din tencuială decorativă și calorifer",
+   "project": "cladire-holuri-gresie",
+   "services": [
+    "interioare",
+    "pardoseli-placari"
+   ],
+   "categories": [
+    "interioare",
+    "pardoseli"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s6-3058",
+   "src": "S6/photo/IMG_3058.JPEG",
+   "alt": "Sală finisată cu pereți albi, soclu din tencuială decorativă gri și plafoniere pătrate LED",
+   "project": "cladire-holuri-gresie",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3189",
+   "src": "S7/photo/IMG_3189.JPEG",
+   "alt": "Structură metalică de tavan fals cu vată minerală între profile și unitate de climatizare tip casetă montată",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton",
+    "izolatii",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3187",
+   "src": "S7/photo/IMG_3187.JPEG",
+   "alt": "Pereți din gips-carton cu rosturi și șuruburi gletuite, jgheaburi de cabluri sub tavan și moloz pe pardoseală",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3265",
+   "src": "S7/photo/IMG_3265.JPEG",
+   "alt": "Încăpere placată cu gips-carton verde, gletuit pe rosturi, cu tubulatură spiralată și țeavă gri sub tavan",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3268",
+   "src": "S7/photo/IMG_3268.JPEG",
+   "alt": "Perete gletuit neted sub o tubulatură spiralată de ventilație și un jgheab metalic de cabluri",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3256",
+   "src": "S7/photo/IMG_3256.JPEG",
+   "alt": "Plăci gri de gips-carton cu glet aplicat pe rosturi și pe capetele șuruburilor",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3264",
+   "src": "S7/photo/IMG_3264.JPEG",
+   "alt": "Pereți din gips-carton verde rezistent la umezeală, cu glet pe rosturi și șuruburi, sub tubulatură de ventilație",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3241",
+   "src": "S7/photo/IMG_3241.JPEG",
+   "alt": "Perete din gips-carton cu glet pe rosturi și șuruburi, sub un jgheab metalic de cabluri",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3225",
+   "src": "S7/photo/IMG_3225.JPEG",
+   "alt": "Grindă cu reparații locale de glet, sub ea jgheaburi de cabluri și tubulatură de ventilație izolată",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3226",
+   "src": "S7/photo/IMG_3226.JPEG",
+   "alt": "Grindă cu glet aplicat în zone, cablu în tub flexibil coborând spre jgheaburile de cabluri",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3227",
+   "src": "S7/photo/IMG_3227.JPEG",
+   "alt": "Fața unei grinzi cu reparații de glet neșlefuite și un jgheab metalic de cabluri",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3242",
+   "src": "S7/photo/IMG_3242.JPEG",
+   "alt": "Grindă cu petec de gips-carton gletuit și cablu în tub coborând pe perete până la un colac",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "instalatii-electrice",
+    "interioare",
+    "mentenanta"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3246",
+   "src": "S7/photo/IMG_3246.JPEG",
+   "alt": "Tavan din gips-carton cu petec mare gletuit parțial, lângă un difuzor rotund de ventilație",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare",
+    "mentenanta"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3247",
+   "src": "S7/photo/IMG_3247.JPEG",
+   "alt": "Muchii gletuite ale unei casete de tavan, cu cablu negru și tuburi de protecție la vedere",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3269",
+   "src": "S7/photo/IMG_3269.JPEG",
+   "alt": "Perete și grindă gletuite, cu tub flexibil de cabluri intrând în grindă",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3271",
+   "src": "S7/photo/IMG_3271.JPEG",
+   "alt": "Colț de pereți gletuiți cu o țeavă gri orizontală și jgheab de cabluri sus",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3267",
+   "src": "S7/photo/IMG_3267.JPEG",
+   "alt": "Perete din gips-carton verde cu colac de cablu și coloană de scurgere gri prinsă pe suport metalic",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "instalatii-sanitare",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3232",
+   "src": "S7/photo/IMG_3232.JPEG",
+   "alt": "Șliț deschis într-un stâlp tencuit, cu tub flexibil alb pentru cabluri, încă neacoperit",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "instalatii-electrice"
+   ],
+   "categories": [
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3231",
+   "src": "S7/photo/IMG_3231.JPEG",
+   "alt": "Țeavă gri din PVC prinsă cu colier pe tijă filetată, lângă un jgheab vertical de cabluri",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "instalatii-sanitare"
+   ],
+   "categories": [
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s7-3270",
+   "src": "S7/photo/IMG_3270.JPEG",
+   "alt": "Țeavă gri de scurgere cu coturi care intră în pardoseală, lângă un montant metalic",
+   "project": "spatiu-comercial-gletuire",
+   "services": [
+    "instalatii-sanitare"
+   ],
+   "categories": [
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3298",
+   "src": "S8/photo/IMG_3298.JPEG",
+   "alt": "Spațiu comercial deschis cu pereți gletuiți, stâlpi îmbrăcați, jgheaburi de cabluri și tubulatură sub tavan",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3353",
+   "src": "S8/photo/IMG_3353.JPEG",
+   "alt": "Tavan deschis vopsit gri închis cu jgheaburi de cabluri și tubulatură, lângă casete albe din gips-carton",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3337",
+   "src": "S8/photo/IMG_3337.JPEG",
+   "alt": "Perete lung cu nișă din gips-carton finisată și tubulatură de ventilație albă deasupra",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3299",
+   "src": "S8/photo/IMG_3299.JPEG",
+   "alt": "Coridor al spațiului comercial cu jgheaburi de cabluri, pereți gletuiți și un muncitor la lucru",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3297",
+   "src": "S8/photo/IMG_3297.JPEG",
+   "alt": "Perete cu nișă din gips-carton gletuit, hidrant de incendiu și tubulatură de ventilație neagră sub tavan",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3300",
+   "src": "S8/photo/IMG_3300.JPEG",
+   "alt": "Perete cu nișă mare din gips-carton, cu petice de glet proaspăt și hidrant de incendiu alături",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3360",
+   "src": "S8/photo/IMG_3360.JPEG",
+   "alt": "Jgheaburi de cabluri vopsite, conducte izolate și indicator de ieșire sub tavanul închis la culoare",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3349",
+   "src": "S8/photo/IMG_3349.JPEG",
+   "alt": "Tavan deschis vopsit gri cu jgheaburi de cabluri, tuburi electrice și unitate de climatizare protejată",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3355",
+   "src": "S8/photo/IMG_3355.JPEG",
+   "alt": "Tavan înalt vopsit gri cu jgheaburi de cabluri, casete din gips-carton și schele lângă ferestre",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3327",
+   "src": "S8/photo/IMG_3327.JPEG",
+   "alt": "Doi stâlpi albi îmbrăcați în gips-carton, cu spațiul deschis și ferestrele în fundal",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3324",
+   "src": "S8/photo/IMG_3324.JPEG",
+   "alt": "Perete alb finisat lângă un stâlp îmbrăcat în gips-carton, cu doze electrice și cablu în așteptare",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3335",
+   "src": "S8/photo/IMG_3335.JPEG",
+   "alt": "Perete cu nișă din gips-carton finisată, sub tubulatură de ventilație și jgheaburi de cabluri",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "tavane-gips-carton"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3316",
+   "src": "S8/photo/IMG_3316.JPEG",
+   "alt": "Perete alb gletuit și șlefuit, fotografiat din unghi razant pentru a arăta planeitatea",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3315",
+   "src": "S8/photo/IMG_3315.JPEG",
+   "alt": "Încăpere îngustă cu pereți gletuiți și trasee de cabluri în tuburi pe plasă, înainte de șapă",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice",
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3345",
+   "src": "S8/photo/IMG_3345.JPEG",
+   "alt": "Tavan alb cu treceri etanșate pentru jgheaburi de cabluri și o tubulatură de ventilație",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3350",
+   "src": "S8/photo/IMG_3350.JPEG",
+   "alt": "Tavan deschis vopsit gri cu tuburi electrice și o unitate de climatizare împachetată în folie",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "comercial"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3362",
+   "src": "S8/photo/IMG_3362.JPEG",
+   "alt": "Tuburi electrice gri montate pe tavan și pe grindă, vopsite odată cu structura",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "services": [
+    "instalatii-electrice"
+   ],
+   "categories": [
+    "comercial",
+    "instalatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3403",
+   "src": "S8/photo/IMG_3403.JPEG",
+   "alt": "Parter în lucru cu planșeu din grinzi de lemn izolat, plăci de gips-carton stivuite și doi muncitori",
+   "project": "structura-lemn",
+   "services": [
+    "interioare"
+   ],
+   "categories": [
+    "interioare",
+    "constructii",
+    "izolatii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3388",
+   "src": "S8/photo/IMG_3388.JPEG",
+   "alt": "Spațiu de mansardă cu pereți din OSB, ferestre de acoperiș și planșeu din grinzi de lemn",
+   "project": "structura-lemn",
+   "services": [
+    "exterioare"
+   ],
+   "categories": [
+    "constructii"
+   ],
+   "stage": "in_executie"
+  },
+  {
+   "id": "s8-3389",
+   "src": "S8/photo/IMG_3389.JPEG",
+   "alt": "Interior înalt cu pereți și tavan din OSB, fereastră mică și ferestre de acoperiș",
+   "project": "structura-lemn",
+   "services": [
+    "exterioare"
+   ],
+   "categories": [
+    "constructii"
+   ],
+   "stage": "in_executie"
+  }
+ ],
+ "videos": [
+  {
+   "id": "s1-2413",
+   "src": "S1/video/IMG_2413.MP4",
+   "project": "sala-tavan-gips-carton",
+   "title": "Montaj tavan din gips-carton, cu popi de susținere",
+   "poster_frame": 0
+  },
+  {
+   "id": "s1-2431",
+   "src": "S1/video/IMG_2431.MP4",
+   "project": "sala-tavan-gips-carton",
+   "title": "Tavan din gips-carton cu rosturi tratate",
+   "poster_frame": 1
+  },
+  {
+   "id": "s2-2521",
+   "src": "S2/video/IMG_2521.MP4",
+   "project": "locuinta-finisaje-bai",
+   "title": "Tur prin locuință – finisaje interioare",
+   "poster_frame": 2
+  },
+  {
+   "id": "s4-2817",
+   "src": "S4/video/IMG_2817.MP4",
+   "project": "casa-noua-bai-terasa",
+   "title": "Montaj și finisare tavan din gips-carton",
+   "poster_frame": 2
+  },
+  {
+   "id": "s4-2835",
+   "src": "S4/video/IMG_2835.MP4",
+   "project": "casa-noua-bai-terasa",
+   "title": "Placare și finisare stâlp din gips-carton",
+   "poster_frame": 1
+  },
+  {
+   "id": "s5-2947",
+   "src": "S5/video/IMG_2947.MP4",
+   "project": "casa-glet-gips-carton",
+   "title": "Gletuirea și tragerea muchiilor cu șpaclul de colț",
+   "poster_frame": 0
+  },
+  {
+   "id": "s5-2918",
+   "src": "S5/video/IMG_2918.MP4",
+   "project": "casa-glet-gips-carton",
+   "title": "Verificarea planeității peretelui gletuit cu dreptarul",
+   "poster_frame": 1
+  },
+  {
+   "id": "renovare-02",
+   "src": "Site vechi/renovare-02.mp4",
+   "project": "spatiu-comercial-compartimentari",
+   "title": "Structuri metalice pentru compartimentări",
+   "poster_frame": 1
+  },
+  {
+   "id": "renovare-01",
+   "src": "Site vechi/renovare-01.mp4",
+   "project": "spatiu-comercial-compartimentari",
+   "title": "Pereți din gips-carton chituiți într-un spațiu comercial",
+   "poster_frame": 1
+  },
+  {
+   "id": "s6-3088",
+   "src": "S6/video/IMG_3088.MP4",
+   "project": "spatiu-comercial-compartimentari",
+   "title": "Hala comercială în timpul placărilor",
+   "poster_frame": 1
+  },
+  {
+   "id": "s6-3134",
+   "src": "S6/video/IMG_3134.MP4",
+   "project": "spatiu-comercial-compartimentari",
+   "title": "Pereți despărțitori din gips-carton verde și alb",
+   "poster_frame": 2
+  },
+  {
+   "id": "s6-3045",
+   "src": "S6/video/IMG_3045.MOV",
+   "project": "cladire-holuri-gresie",
+   "title": "Hol și săli cu gresie și soclu decorativ",
+   "poster_frame": 1
+  },
+  {
+   "id": "s6-3057",
+   "src": "S6/video/IMG_3057.MP4",
+   "project": "cladire-holuri-gresie",
+   "title": "Hol, sală și intrare cu gresie nouă",
+   "poster_frame": 1
+  },
+  {
+   "id": "s8-3296",
+   "src": "S8/video/IMG_3296.MOV",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "title": "Tur prin spațiul comercial în lucru",
+   "poster_frame": 0
+  },
+  {
+   "id": "s8-3333",
+   "src": "S8/video/IMG_3333.MOV",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "title": "Vopsire airless a unui perete",
+   "poster_frame": 1
+  },
+  {
+   "id": "s8-3328",
+   "src": "S8/video/IMG_3328.MOV",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "title": "Vopsire cu pompa airless",
+   "poster_frame": 1
+  },
+  {
+   "id": "s8-3347",
+   "src": "S8/video/IMG_3347.MOV",
+   "project": "spatiu-comercial-tavan-tehnic",
+   "title": "Tavanul tehnic vopsit și instalațiile",
+   "poster_frame": 1
+  }
+ ],
+ "services": {
+  "interioare": {
+   "cover": "s2-2528",
+   "gallery": [
+    "s2-2526",
+    "s1-2434",
+    "s6-3120",
+    "s5-2926",
+    "s6-3109",
+    "s8-3337"
+   ]
+  },
+  "pardoseli-placari": {
+   "cover": "s6-3059",
+   "gallery": [
+    "s2-2524",
+    "s6-3059"
+   ]
+  },
+  "sape-autonivelante": {
+   "cover": null,
+   "gallery": []
+  },
+  "instalatii-sanitare": {
+   "cover": "s3-2630",
+   "gallery": [
+    "s4-2780",
+    "s4-2781",
+    "s4-2782",
+    "s3-2636",
+    "s3-2642"
+   ]
+  },
+  "instalatii-electrice": {
+   "cover": "s8-3353",
+   "gallery": [
+    "s3-2639",
+    "s8-3360",
+    "s8-3362",
+    "s8-3315",
+    "s7-3232"
+   ]
+  },
+  "exterioare": {
+   "cover": "s4-2811",
+   "gallery": [
+    "s4-2810",
+    "s4-2809"
+   ]
+  },
+  "fatade": {
+   "cover": null,
+   "gallery": []
+  },
+  "mentenanta": {
+   "cover": "s3-2620",
+   "gallery": [
+    "s3-2622",
+    "s7-3246",
+    "s7-3242"
+   ]
+  }
+ },
+ "home": {
+  "hero": [
+   "s2-2528",
+   "s5-2997",
+   "s4-2811"
+  ],
+  "recent": [
+   "s1-2434",
+   "s8-3298",
+   "s2-2524",
+   "s5-2998",
+   "s6-3120",
+   "s2-2526",
+   "s6-3059",
+   "s3-2630"
+  ],
+  "about": [
+   "s5-2926",
+   "s6-3109",
+   "s5-2988"
+  ],
+  "videos": [
+   "s5-2947",
+   "s8-3333",
+   "s2-2521"
+  ]
+ },
+ "categories": [
+  {
+   "id": "interioare",
+   "label": "Interioare"
+  },
+  {
+   "id": "comercial",
+   "label": "Spații comerciale"
+  },
+  {
+   "id": "tavane-gips-carton",
+   "label": "Tavane din gips-carton"
+  },
+  {
+   "id": "bai",
+   "label": "Băi"
+  },
+  {
+   "id": "pardoseli",
+   "label": "Pardoseli"
+  },
+  {
+   "id": "instalatii",
+   "label": "Instalații"
+  },
+  {
+   "id": "izolatii",
+   "label": "Izolații"
+  },
+  {
+   "id": "exterioare",
+   "label": "Exterioare"
+  },
+  {
+   "id": "constructii",
+   "label": "Construcții"
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+/* M-CRAFT: temă exclusiv luminoasă, culori solide, colțuri drepte. */
+
+:root {
+  --bg: #faf8f3;
+  --paper: #ffffff;
+  --concrete: #e9e5dd;
+  --concrete-2: #ddd7cb;
+  --line: #d6d0c4;
+  --ink: #30312e;
+  --ink-2: #565751;
+  --ink-3: #6e6f68;
+  --amber: #d88a16;
+  --amber-soft: #f6e6cc;
+  --rust: #98533b;
+  --wa: #1f9e4f;
+  --focus: #98533b;
+
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-body: 'Work Sans Variable', 'Work Sans', system-ui, sans-serif;
+
+  --wrap: 1240px;
+  --gutter: 16px;
+  --section: 40px;
+  --radius: 2px;
+  --header-h: 64px;
+
+  color-scheme: light;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 24px;
+    --section: 56px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-feature-settings: 'kern';
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 1.6rem + 2vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.65rem, 1.4rem + 1vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 0.85em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--rust);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+ul,
+ol {
+  padding-left: 1.2em;
+  margin: 0 0 0.85em;
+}
+
+li + li {
+  margin-top: 0.3em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.section--concrete {
+  background: var(--concrete);
+}
+
+.section--paper {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 14px;
+}
+
+.skip-link:focus {
+  top: 8px;
+  color: #fff;
+}
+
+/* Etichetă mică deasupra titlurilor: fără litere distanțate */
+.kicker {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rust);
+  margin-bottom: 6px;
+}
+
+.lead {
+  font-size: 1.075rem;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 20px;
+}
+
+.section-head p {
+  margin: 6px 0 0;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+
+.more-link {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Butoane */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.975rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: #c57b0c;
+}
+
+.btn--primary:hover {
+  background: #e49a2a;
+  color: var(--ink);
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: #44453f;
+  color: #fff;
+}
+
+.btn--outline {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn--outline:hover {
+  background: var(--concrete);
+  color: var(--ink);
+}
+
+.btn--wa {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn--wa svg {
+  color: var(--wa);
+}
+
+.btn--wa:hover {
+  border-color: var(--wa);
+  color: var(--ink);
+}
+
+.btn--sm {
+  min-height: 38px;
+  padding: 7px 12px;
+  font-size: 0.9rem;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Grile simple */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Text de conținut (articole, servicii, pagini legale) */
+.prose {
+  max-width: 72ch;
+}
+
+.prose h2 {
+  margin: 1.6em 0 0.5em;
+}
+
+.prose h3 {
+  margin: 1.3em 0 0.4em;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.note {
+  border-left: 3px solid var(--amber);
+  background: var(--paper);
+  padding: 12px 16px;
+  margin: 1em 0;
+}
+
+/* Apariție discretă. Clasa .reveal e pusă din JS doar pe elementele aflate sub ecran,
+   deci conținutul rămâne vizibil fără JavaScript și nimic nu clipește la încărcare. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+  }
+
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
