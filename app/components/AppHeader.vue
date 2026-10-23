@@ -86,7 +86,7 @@ function submitSearch() {
     <div class="bar">
       <div class="wrap bar__in">
         <NuxtLink to="/" class="logo" aria-label="M-CRAFT, pagina principală">
-          <img src="/logo.svg" alt="M-CRAFT" width="369" height="128">
+          <img src="/brand/logo-header.png" alt="M-CRAFT" width="593" height="132">
         </NuxtLink>
 
         <nav class="main-nav" aria-label="Navigare principală">
@@ -138,6 +138,7 @@ function submitSearch() {
           <button type="submit" aria-label="Caută"><AppIcon name="search" /></button>
         </form>
 
+        <NuxtLink to="/contact/#oferta" class="btn btn--outline btn--sm hdr-quote">Cere ofertă</NuxtLink>
         <a :href="company.phone.href" class="btn btn--primary btn--sm call" @click="track('call')">
           <AppIcon name="phone" />
           <span>Sună acum</span>
@@ -257,7 +258,7 @@ function submitSearch() {
 }
 
 .logo img {
-  height: 40px;
+  height: 38px;
   width: auto;
 }
 
@@ -599,7 +600,13 @@ function submitSearch() {
   }
 
   .logo img {
-    height: 34px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hdr-quote {
+    display: none;
   }
 }
 

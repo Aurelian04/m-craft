@@ -3,6 +3,7 @@ import { company, fullAddress } from '~/data/company'
 import { services, serviceUrl } from '~/data/services'
 import { photo, photos } from '~/data/media'
 
+const { track } = useTracking()
 const pics = photos(['s5-2926', 's6-3109', 's3-2630', 's1-2434', 's8-3298', 's2-2526'])
 
 usePageSeo({
@@ -45,7 +46,7 @@ usePageSeo({
           <div>
             <dt>Contact</dt>
             <dd>
-              <a :href="company.phone.href">{{ company.phone.display }}</a> · <a :href="`mailto:${company.email}`">{{ company.email }}</a>
+              <a :href="company.phone.href" @click="track('call')">{{ company.phone.display }}</a> · <a :href="`mailto:${company.email}`">{{ company.email }}</a>
             </dd>
           </div>
         </dl>

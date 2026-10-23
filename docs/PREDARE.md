@@ -48,7 +48,9 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
   - o căutare fără potriviri afișează un mesaj clar.
 - **Consimțământ:**
   - nicio cerere către Google înainte de alegere și nici după „Refuz”;
-  - după „Accept” se încarcă tagul și se trimite `consent update`. Testul s-a făcut cu un ID fictiv `AW-000000000`, folosit doar la test și absent din cod.
+  - după „Accept” se încarcă tagul `AW-18515496319` și se trimite `consent update`;
+  - un click pe telefon trimite conversia „Click telefon” (`AW-18515496319/pO5FCMLbi54dEP-a8PxE`, 1 RON). Testul local a trimis o conversie de test în cont;
+  - cererea trimisă cu succes trimite conversia „Formular trimis” (`AW-18515496319/36uzCMXbi54dEP-a8PxE`, 1 RON), numai după răspunsul de succes de la Web3Forms.
 - **Formular:**
   - câmpurile goale nu se trimit;
   - eroarea simulată afișează mesajul și păstrează datele;
@@ -61,10 +63,15 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
 ## Lipsesc sau trebuie confirmate înainte de publicare
 
 ### Materiale
-- **Fotografii pentru Fațade și Șape autonivelante:** nu există nicio fotografie a acestor lucrări. Paginile funcționează fără galerie (nu apar cadre goale), dar ar fi mult mai credibile cu imagini reale.
+- **Fotografii pentru Fațade și Șape autonivelante:** nu există fotografii cu fațade sau șape finalizate. Am folosit cele mai apropiate imagini reale: termoizolația cu plăci de polistiren extrudat dintr-o hală (pentru „Fațade și termoizolații”) și etapa de dinaintea turnării șapei (pentru „Șape”). Textele alternative descriu exact ce se vede. Fotografiile unor fațade și șape realizate ar ajuta mult.
 - **Fotografii cu lucrări finalizate:** toate cele 192 de fotografii primite arată lucrări în execuție, nimic terminat. Fotografiile cu încăperi gata ar ajuta mult prima pagină și paginile de serviciu.
 - **Parchet:** nu există fotografii de parchet montat.
-- **Logo-ul:** cererea pomenea un logo atașat, dar nu l-am primit separat. Am refăcut vectorial logo-ul existent în repo (colțar chihlimbar + „M-CRAFT” în Big Shoulders Display), cu contururi reale, nu text cu font web, într-o variantă pentru fundal deschis. Favicon-ul folosește colțarul și litera M. Dacă există un fișier original al logo-ului, trebuie comparat.
+- **Logo-ul:** folosește fișierele primite:
+  - header: logo orizontal (`public/brand/logo-header.png`);
+  - footer: logo stivuit (`public/brand/logo-footer.png`);
+  - favicon și iconuri: monograma M, curățată de pete la margini;
+  - schema.org și Open Graph: logo-ul pătrat (`public/brand/logo-schema.png`).
+  Logo-urile sunt PNG; o versiune vectorială (SVG) ar fi mai clară pe ecrane foarte mari.
 - **Recenzii:** nu există recenzii reale. Pagina explică asta și nu apare nicio recenzie pe prima pagină.
 - **Confidențialitate în clipuri:** clipurile cu fețe recognoscibile sau logo-uri ale altor firme (de ex. o vestă „zafit”, logo Lidl prin vitrină) au fost excluse. Pentru a le folosi e nevoie de acordul persoanelor.
 
@@ -84,8 +91,11 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
 
 ### Accesuri și configurări
 - **Găzduire:** site-ul e publicat pe **Cloudflare Pages** (proiectul `m-craft`). Ultimul deploy Vercel e din 11.09.2026, deci configurația Vercel a fost scoasă. Preview-ul branch-ului este la https://redesign.m-craft.pages.dev.
-- **Domeniul final:** se setează `NUXT_PUBLIC_SITE_URL` în Cloudflare Pages (variabilele de producție).
-- **Google Ads:** ID-ul `AW-…` și etichetele celor 3 conversii, plus `G-…` dacă se folosește GA4. Se completează în `nuxt.config.ts`.
+- **Domeniul:** `https://m-craft.ro` (din documentul de tracking), setat implicit în `nuxt.config.ts`. Se poate suprascrie cu `NUXT_PUBLIC_SITE_URL`.
+- **Google Ads:**
+  - tagul și conversiile de formular și telefon sunt configurate;
+  - pentru WhatsApp nu există încă o conversie în cont: click-ul se măsoară ca eveniment `click_whatsapp`, iar eticheta se adaugă în `googleAdsConversions.whatsapp` când e creată;
+  - de decis: modul de consimțământ. Acum e „basic” (tagul se încarcă doar după Accept, cum cerea brieful), deci conversiile se văd doar la vizitatorii care acceptă. Varianta „advanced” (`consentMode: 'advanced'`) încarcă tagul cu consimțământ refuzat și permite modelarea conversiilor de către Google, dar cere actualizarea politicii de cookie-uri.
 - **Cloudflare:** de verificat dacă DPA-ul Cloudflare se aplică contului (politica de confidențialitate numește Cloudflare ca furnizor de găzduire).
 - **Web3Forms:**
   - de acceptat DPA-ul;

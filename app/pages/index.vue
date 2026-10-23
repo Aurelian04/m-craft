@@ -166,12 +166,14 @@ usePageSeo({
       <div class="wrap quote">
         <div>
           <h2>Cere o ofertă</h2>
-          <p class="muted">Descrieți pe scurt lucrarea. Vă răspundem pe email sau la telefon.</p>
+          <p class="muted">Lăsați-ne numele, localitatea și un telefon sau email. Vă contactăm pentru detalii.</p>
           <QuoteForm />
         </div>
         <aside class="quote__side band band--top">
           <h3>Preferați să vorbim direct?</h3>
           <ContactActions :show-quote="false" />
+          <h3 class="quote__next">Ce urmează</h3>
+          <NextSteps compact />
           <p class="muted">Pe WhatsApp puteți trimite și fotografii ale spațiului.</p>
           <p class="muted">Email: <a :href="`mailto:${company.email}`">{{ company.email }}</a></p>
         </aside>
@@ -492,6 +494,10 @@ usePageSeo({
   .svc-card h3 {
     font-size: 1.05rem;
   }
+}
+
+.quote__next {
+  margin: 18px 0 8px;
 }
 
 /* Culoare (docs/design/culoare.md) */

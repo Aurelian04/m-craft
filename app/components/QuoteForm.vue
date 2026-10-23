@@ -20,6 +20,13 @@ const form = reactive({
 })
 const status = ref<'idle' | 'sending' | 'sent' | 'error'>('idle')
 const errorText = ref('')
+const phoneInput = ref<HTMLInputElement | null>(null)
+const resultBox = ref<HTMLElement | null>(null)
+
+// Ajunge un singur mijloc de contact: telefonul sau emailul.
+const contactMissing = computed(() => !form.phone && !form.email)
+watch(contactMissing, (missing) => phoneInput.value?.setCustomValidity(missing ? 'Completați telefonul sau emailul, ca să vă putem răspunde.' : ''))
+onMounted(() => phoneInput.value?.setCustomValidity(contactMissing.value ? 'Completați telefonul sau emailul, ca să vă putem răspunde.' : ''))
 
 const serviceName = computed(() => services.find((s) => s.slug === form.service)?.name ?? (form.service === 'alta' ? 'Altă lucrare' : ''))
 const waText = computed(() => services.find((s) => s.slug === form.service)?.whatsappText ?? defaultWhatsappText)
@@ -41,13 +48,13 @@ async function submit() {
       access_key: web3formsKey,
       subject: `Cerere de ofertă${serviceName.value ? `: ${serviceName.value}` : ''} – site M-CRAFT`,
       from_name: 'Site M-CRAFT',
-      replyto: form.email,
+      ...(form.email ? { replyto: form.email } : {}),
       Nume: form.name,
-      Email: form.email,
       Telefon: form.phone || '-',
+      Email: form.email || '-',
       'Localitatea lucrării': form.locality,
       Serviciu: serviceName.value || '-',
-      Mesaj: form.message,
+      Mesaj: form.message || '-',
       Pagina: route.path,
     }
     for (const [k, v] of Object.entries(fields)) data.append(k, v)
@@ -63,6 +70,8 @@ async function submit() {
     errorText.value = e instanceof Error ? e.message : ''
     status.value = 'error'
   }
+  await nextTick()
+  resultBox.value?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
 }
 </script>
 
@@ -76,22 +85,23 @@ async function submit() {
         <input v-model.trim="form.name" type="text" name="name" autocomplete="name" required maxlength="120">
       </label>
       <label class="qf__field">
-        <span>Telefon <small>(opțional)</small></span>
-        <input v-model.trim="form.phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30">
-      </label>
-    </div>
-    <div class="qf__row">
-      <label class="qf__field">
-        <span>Email <abbr title="obligatoriu">*</abbr></span>
-        <input v-model.trim="form.email" type="email" name="email" autocomplete="email" required maxlength="160">
-      </label>
-      <label class="qf__field">
         <span>Localitatea lucrării <abbr title="obligatoriu">*</abbr></span>
         <input v-model.trim="form.locality" type="text" name="locality" autocomplete="address-level2" required maxlength="80" placeholder="ex. Vicov de Sus">
       </label>
     </div>
+    <p class="qf__either">Telefonul sau emailul: completați cel puțin unul, ca să vă putem răspunde.</p>
+    <div class="qf__row">
+      <label class="qf__field">
+        <span>Telefon</span>
+        <input ref="phoneInput" v-model.trim="form.phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30">
+      </label>
+      <label class="qf__field">
+        <span>Email</span>
+        <input v-model.trim="form.email" type="email" name="email" autocomplete="email" maxlength="160">
+      </label>
+    </div>
     <label class="qf__field">
-      <span>Serviciul dorit</span>
+      <span>Ce lucrare aveți?</span>
       <select v-model="form.service" name="service">
         <option value="">Alegeți (opțional)</option>
         <option v-for="s in services" :key="s.slug" :value="s.slug">{{ s.name }}</option>
@@ -99,14 +109,14 @@ async function submit() {
       </select>
     </label>
     <label class="qf__field">
-      <span>Mesaj <abbr title="obligatoriu">*</abbr></span>
-      <textarea v-model="form.message" name="message" rows="5" required maxlength="4000" />
-      <small class="qf__hint">Ne ajută să știm: ce lucrare doriți, suprafața aproximativă, starea actuală a spațiului și perioada în care ați vrea să înceapă.</small>
+      <span>Detalii <small>(opțional)</small></span>
+      <textarea v-model="form.message" name="message" rows="4" maxlength="4000" placeholder="ex. baie de 6 mp, schimbare faianță și gresie, din luna mai" />
+      <small class="qf__hint">Ne ajută: suprafața aproximativă, starea actuală a spațiului și când ați vrea să înceapă lucrarea.</small>
     </label>
 
     <div class="qf__submit">
       <button type="submit" class="btn btn--primary" :disabled="status === 'sending'">
-        {{ status === 'sending' ? 'Se trimite…' : 'Trimite cererea' }}
+        {{ status === 'sending' ? 'Se trimite…' : 'Trimite cererea de ofertă' }}
       </button>
       <p class="qf__privacy">
         Folosim datele doar pentru a vă răspunde la această cerere. Detalii în
@@ -114,10 +124,10 @@ async function submit() {
       </p>
     </div>
 
-    <div aria-live="polite">
+    <div ref="resultBox" aria-live="polite">
       <p v-if="status === 'sent'" class="qf__msg qf__msg--ok band band--left">
         <AppIcon name="check" />
-        Mulțumim! Cererea a fost trimisă. Vă răspundem pe email sau la telefon.
+        Mulțumim! Cererea a fost trimisă. Vă contactăm la telefonul sau emailul lăsat, ca să stabilim detaliile pentru ofertă.
       </p>
       <div v-else-if="status === 'error'" class="qf__msg qf__msg--err band band--left">
         <p>
@@ -134,6 +144,12 @@ async function submit() {
 </template>
 
 <style scoped>
+.qf__either {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+
 .qf {
   display: grid;
   gap: 12px;

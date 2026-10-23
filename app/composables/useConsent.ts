@@ -75,10 +75,10 @@ function clearGoogleCookies() {
 
 let tagLoaded = false
 
-/** Încarcă Google tag doar dacă există un ID configurat și utilizatorul a acceptat. */
+/** Încarcă Google tag dacă există un ID: în modul „basic” doar după acord, în „advanced” mereu (cu consimțământ refuzat implicit). */
 export function loadGoogleTag() {
-  if (tagLoaded || readChoice() !== 'accepted') return
-  const { googleTagId } = useRuntimeConfig().public
+  const { googleTagId, consentMode } = useRuntimeConfig().public
+  if (tagLoaded || (consentMode !== 'advanced' && readChoice() !== 'accepted')) return
   if (!googleTagId) return
   tagLoaded = true
   const s = document.createElement('script')

@@ -16,6 +16,8 @@ const projects = media.projects.filter((p) => p.services.includes(slug))
 const { showDrafts } = useRuntimeConfig().public
 const posts = visiblePosts(showDrafts).filter((p) => p.relatedServices.includes(slug)).slice(0, 3)
 
+const { track } = useTracking()
+
 usePageSeo({ title: service.seoTitle, description: service.seoDescription, image: cover })
 
 const { siteUrl } = useRuntimeConfig().public
@@ -50,7 +52,7 @@ if (siteUrl) {
           <div class="intro__text">
             <h1>{{ service.h1 }}</h1>
             <p class="lead">{{ service.intro }}</p>
-            <ContactActions :service="slug" :whatsapp-text="service.whatsappText" />
+            <ContactActions :service="slug" :whatsapp-text="service.whatsappText" quote-href="#oferta" />
             <p class="intro__area"><AppIcon name="pin" />Lucrări în județul Suceava · sediul în Vicov de Sus</p>
           </div>
           <figure v-if="cover" class="intro__photo">
@@ -146,7 +148,12 @@ if (siteUrl) {
       <div class="wrap quote">
         <div>
           <h2>Cerere de ofertă: {{ service.name.toLowerCase() }}</h2>
-          <p class="muted">Serviciul este deja selectat. Completați localitatea și câteva detalii despre lucrare.</p>
+          <p class="muted">Serviciul este deja selectat. Lăsați-ne numele, localitatea și un telefon sau email.</p>
+          <NextSteps compact class="quote__steps" />
+          <p class="quote__direct">
+            Preferați să vorbim direct?
+            <a :href="company.phone.href" @click="track('call', { service: slug })">{{ company.phone.display }}</a>
+          </p>
         </div>
         <QuoteForm :service="slug" />
       </div>
@@ -388,7 +395,7 @@ if (siteUrl) {
   }
 
   .intro__photo {
-    order: -1;
+    order: 0;
   }
 }
 
@@ -402,6 +409,15 @@ if (siteUrl) {
     padding-left: 0;
     border-left: 0;
   }
+}
+
+.quote__steps {
+  margin-top: 14px;
+}
+
+.quote__direct {
+  margin-top: 14px;
+  font-weight: 550;
 }
 
 /* Culoare (docs/design/culoare.md) */

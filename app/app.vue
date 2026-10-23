@@ -13,7 +13,7 @@ const org = {
   legalName: company.legalName,
   taxID: company.cui,
   url: siteUrl || undefined,
-  logo: siteUrl ? `${siteUrl}/logo.svg` : undefined,
+  logo: siteUrl ? `${siteUrl}/brand/logo-schema.png` : undefined,
   image: siteUrl ? `${siteUrl}/og-image.jpg` : undefined,
   telephone: '+40757211551',
   email: company.email,

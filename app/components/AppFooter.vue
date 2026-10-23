@@ -13,7 +13,7 @@ const year = new Date().getFullYear()
     <div class="wrap ftr__grid">
       <div class="ftr__brand">
         <NuxtLink to="/" aria-label="M-CRAFT, pagina principală">
-          <img src="/logo.svg" alt="M-CRAFT" width="369" height="128" class="ftr__logo" loading="lazy">
+          <img src="/brand/logo-footer.png" alt="M-CRAFT Construcții &amp; Renovări" width="361" height="240" class="ftr__logo" loading="lazy">
         </NuxtLink>
         <p>{{ company.tagline }}</p>
         <ul class="ftr__contact">
@@ -95,7 +95,7 @@ const year = new Date().getFullYear()
 }
 
 .ftr__logo {
-  height: 44px;
+  height: 84px;
   width: auto;
   margin-bottom: 12px;
 }

@@ -14,6 +14,7 @@ usePageSeo({
     <Breadcrumbs :items="[{ name: 'Contact' }]" />
     <h1>Contact și cerere de ofertă</h1>
     <p class="lead">Ne puteți suna, scrie pe WhatsApp sau email, ori puteți completa formularul de mai jos.</p>
+    <NextSteps class="next" />
 
     <div class="channels">
       <a :href="company.phone.href" class="ch band band--top" @click="track('call')">
@@ -170,6 +171,10 @@ h1 {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+.next {
+  margin-top: 16px;
 }
 
 /* Culoare (docs/design/culoare.md) */

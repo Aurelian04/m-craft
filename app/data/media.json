@@ -715,7 +715,8 @@
    "alt": "Rețea de profile metalice pentru tavan suspendat sub ferme, în hală cu pereți izolați roz",
    "project": "hala-tavan-suspendat",
    "services": [
-    "interioare"
+    "interioare",
+    "fatade"
    ],
    "categories": [
     "tavane-gips-carton",
@@ -754,7 +755,8 @@
    "alt": "Hală cu ferme metalice, pereți termoizolați cu plăci roz și materiale pregătite pe pardoseală",
    "project": "hala-tavan-suspendat",
    "services": [
-    "interioare"
+    "interioare",
+    "fatade"
    ],
    "categories": [
     "izolatii",
@@ -814,7 +816,8 @@
    "alt": "Perete termoizolat cu plăci roz, centură de beton cu profil perimetral și tije de suspensie",
    "project": "hala-tavan-suspendat",
    "services": [
-    "interioare"
+    "interioare",
+    "fatade"
    ],
    "categories": [
     "izolatii",
@@ -1287,7 +1290,8 @@
    "project": "cladire-holuri-gresie",
    "services": [
     "interioare",
-    "pardoseli-placari"
+    "pardoseli-placari",
+    "sape-autonivelante"
    ],
    "categories": [
     "interioare",
@@ -1979,7 +1983,8 @@
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
     "instalatii-electrice",
-    "interioare"
+    "interioare",
+    "sape-autonivelante"
    ],
    "categories": [
     "interioare",
@@ -2502,8 +2507,10 @@
    ]
   },
   "sape-autonivelante": {
-   "cover": null,
-   "gallery": []
+   "cover": "s8-3315",
+   "gallery": [
+    "s6-3059"
+   ]
   },
   "instalatii-sanitare": {
    "cover": "s3-2630",
@@ -2533,8 +2540,11 @@
    ]
   },
   "fatade": {
-   "cover": null,
-   "gallery": []
+   "cover": "s5-2984",
+   "gallery": [
+    "s5-2986",
+    "s5-2998"
+   ]
   },
   "mentenanta": {
    "cover": "s3-2620",

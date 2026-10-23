@@ -18,7 +18,14 @@ export function useTracking() {
     if (context?.service) params.service = context.service
     window.gtag('event', eventNames[action], params)
     const sendTo = config.googleAdsConversions[action]
-    if (sendTo) window.gtag('event', 'conversion', { send_to: sendTo })
+    if (sendTo) {
+      window.gtag('event', 'conversion', {
+        send_to: sendTo,
+        value: config.conversionValue,
+        currency: config.conversionCurrency,
+        transport_type: 'beacon', // pleacă și dacă pagina deschide imediat aplicația de telefon
+      })
+    }
   }
 
   return { track }

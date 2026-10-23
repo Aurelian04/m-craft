@@ -26,8 +26,9 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icon-192.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
@@ -47,20 +48,24 @@ try{if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','upda
 
   runtimeConfig: {
     public: {
-      // Domeniul final nu e încă stabilit: se setează NUXT_PUBLIC_SITE_URL în Cloudflare Pages (producție).
-      // Fără el nu se generează canonical, Open Graph absolut și intrări în sitemap.
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || '',
+      // Domeniul de producție (confirmat în documentul de tracking Google Ads). Se poate suprascrie cu NUXT_PUBLIC_SITE_URL.
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://m-craft.ro',
       // Ciornele (articole draft, note „De validat”) apar doar în preview, la `nuxt dev` sau cu SHOW_DRAFTS=1.
       showDrafts: isPreviewBuild || process.env.SHOW_DRAFTS === '1' || process.env.NODE_ENV === 'development',
       // Cheia Web3Forms a proiectului M-CRAFT (publică prin design).
       web3formsKey: '7c14d1a3-6229-40e0-b216-0b9c40990f67',
-      // Google tag: se completează când există contul. Gol = niciun script Google.
-      googleTagId: '', // ex. 'AW-123456789' sau 'G-XXXXXXX'
+      // Google Ads (docs: Google_Ads_Tracking_M_Craft.docx). Gol = niciun script Google.
+      googleTagId: 'AW-18515496319',
       googleAdsConversions: {
-        lead: '', // 'AW-123456789/etichetă' pentru cererea trimisă
-        call: '', // click pe telefon
-        whatsapp: '', // click pe WhatsApp
+        lead: 'AW-18515496319/36uzCMXbi54dEP-a8PxE', // formular trimis cu succes
+        call: 'AW-18515496319/pO5FCMLbi54dEP-a8PxE', // click pe telefon
+        whatsapp: '', // nu există încă o conversie WhatsApp în cont
       },
+      conversionValue: 1.0,
+      conversionCurrency: 'RON',
+      // 'basic': tagul Google se încarcă doar după „Accept” (cerința din brief).
+      // 'advanced': tagul se încarcă pe toate paginile cu consimțământ refuzat implicit (pinguri fără cookie-uri).
+      consentMode: 'basic',
     },
   },
 

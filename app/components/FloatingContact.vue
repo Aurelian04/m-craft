@@ -16,6 +16,8 @@ const service = computed(() => {
 })
 const waText = computed(() => service.value?.whatsappText ?? defaultWhatsappText)
 const hidden = computed(() => bannerOpen.value || settingsOpen.value || typing.value)
+// formularul e pe aceeași pagină pe Acasă, Contact și paginile de serviciu
+const quoteHref = computed(() => (route.path === '/' || route.path.startsWith('/contact') || service.value ? '#oferta' : '/contact/#oferta'))
 
 function onFocus(e: FocusEvent) {
   const t = e.target as HTMLElement
@@ -45,6 +47,7 @@ onMounted(() => {
       <AppIcon name="whatsapp" />
       <span>WhatsApp</span>
     </a>
+    <NuxtLink :to="quoteHref" class="fc__quote">Ofertă</NuxtLink>
   </div>
 </template>
 
@@ -62,7 +65,8 @@ onMounted(() => {
   visibility: hidden;
 }
 
-.fc__call {
+.fc__call,
+.fc__quote {
   display: none;
 }
 
@@ -107,7 +111,7 @@ onMounted(() => {
     right: 0;
     bottom: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     background: var(--paper);
     border-top: 1px solid var(--line);
     padding: 6px var(--gutter) calc(6px + env(safe-area-inset-bottom));
@@ -126,6 +130,18 @@ onMounted(() => {
     text-decoration: none;
     border-radius: var(--r-md);
     box-shadow: none;
+  }
+
+  .fc__quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 550;
+    text-decoration: none;
+    border-radius: var(--r-md);
   }
 
   .fc__call {
@@ -154,6 +170,28 @@ onMounted(() => {
   /* spațiu rezervat ca bara să nu acopere finalul paginii */
   :global(body) {
     padding-bottom: calc(60px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 860px) {
+  .fc {
+    gap: 6px;
+    grid-template-columns: 0.9fr 1.25fr 0.85fr;
+  }
+
+  .fc__call,
+  .fc__wa,
+  .fc__quote {
+    gap: 6px;
+    padding: 0 6px;
+    font-size: 0.95rem;
+    min-width: 0;
+  }
+
+  .fc__wa svg {
+    width: 20px;
+    height: 20px;
+    flex: none;
   }
 }
 
