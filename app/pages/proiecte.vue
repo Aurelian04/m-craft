@@ -38,16 +38,16 @@ usePageSeo({
     </header>
 
     <div class="filters" role="group" aria-label="Filtrează fotografiile">
-      <button type="button" :aria-pressed="filter === 'toate'" @click="filter = 'toate'">
+      <button type="button" data-cat="toate" :aria-pressed="filter === 'toate'" @click="filter = 'toate'">
         Toate <span>{{ media.photos.length }}</span>
       </button>
-      <button v-for="c in cats" :key="c.id" type="button" :aria-pressed="filter === c.id" @click="filter = c.id">
+      <button v-for="c in cats" :key="c.id" type="button" :data-cat="c.id" :aria-pressed="filter === c.id" @click="filter = c.id">
         {{ c.label }} <span>{{ c.count }}</span>
       </button>
     </div>
     <p class="count" aria-live="polite">{{ total }} fotografii în {{ groups.length }} proiecte</p>
 
-    <section v-for="g in groups" :id="g.id" :key="g.id" class="proj">
+    <section v-for="g in groups" :id="g.id" :key="g.id" class="proj" :data-svc="g.services[0]">
       <div class="proj__head">
         <div>
           <h2>{{ g.title }}</h2>
@@ -249,4 +249,29 @@ usePageSeo({
     top: var(--header-h);
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+[data-cat='toate'] { --cat-d: var(--ink); --cat-m: var(--ink); }
+[data-cat='interioare'] { --cat-d: var(--verde-d); --cat-m: var(--verde-m); }
+[data-cat='comercial'] { --cat-d: var(--otel-d); --cat-m: var(--otel-m); }
+[data-cat='tavane-gips-carton'] { --cat-d: var(--chihlimbar-d); --cat-m: var(--amber); }
+[data-cat='bai'] { --cat-d: var(--faianta-d); --cat-m: var(--faianta-m); }
+[data-cat='pardoseli'] { --cat-d: var(--lemn-d); --cat-m: var(--lemn-m); }
+[data-cat='instalatii'] { --cat-d: var(--teava-d); --cat-m: var(--teava-m); }
+[data-cat='izolatii'] { --cat-d: var(--xps-d); --cat-m: var(--xps-m); }
+[data-cat='exterioare'] { --cat-d: var(--teracota-d); --cat-m: var(--teracota-m); }
+[data-cat='constructii'] { --cat-d: var(--beton-d); --cat-m: var(--beton-m); }
+
+.filters button { border-bottom: 4px solid var(--cat-m); }
+.filters button:hover { border-color: var(--cat-d); }
+.filters button[aria-pressed='true'] { background: var(--cat-d); border-color: var(--cat-d); color: #fff; }
+.filters button[aria-pressed='true'] span { color: #fff; }
+
+.proj { border-top: 6px solid var(--svc-m); }
+.proj__meta { background: var(--svc-t); border: 0; border-left: 5px solid var(--svc-d); }
+.proj__meta dt { color: var(--svc-d); }
+.proj__meta a { color: var(--ink); text-decoration-color: var(--svc-d); }
+
+.ba__pair > div:first-child span { background: var(--ink); color: #fff; border: 0; }
+.ba__pair > div:last-child span { background: var(--amber); color: var(--ink); border: 0; }
 </style>

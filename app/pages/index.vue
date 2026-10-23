@@ -9,6 +9,7 @@ const recent = photos(media.home.recent)
 const about = photos(media.home.about)
 const homeVideos = media.home.videos.map((id) => media.videos.find((v) => v.id === id)).filter((v) => !!v)
 const projectTitle = (id: string) => media.projects.find((p) => p.id === id)?.title ?? ''
+const projectSvc = (id: string) => media.projects.find((p) => p.id === id)?.services[0]
 
 const cards = services.map((s) => ({ ...s, cover: servicePhotos(s.slug).cover }))
 const { track } = useTracking()
@@ -27,7 +28,7 @@ usePageSeo({
     <!-- Hero: text pe panou deschis, fotografii reale alăturate -->
     <section class="hero">
       <div class="wrap hero__grid">
-        <div class="hero__text">
+        <div class="hero__text on-amber">
           <span class="kicker">Vicov de Sus · județul Suceava</span>
           <h1>Renovări și amenajări în Suceava.</h1>
           <p class="lead">
@@ -62,7 +63,7 @@ usePageSeo({
           <NuxtLink to="/servicii/" class="more-link">Toate serviciile →</NuxtLink>
         </div>
         <div class="svc-grid">
-          <NuxtLink v-for="s in cards" :key="s.slug" v-reveal :to="serviceUrl(s.slug)" class="svc-card">
+          <NuxtLink v-for="s in cards" :key="s.slug" v-reveal :to="serviceUrl(s.slug)" class="svc-card" :data-svc="s.slug">
             <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 640px) 50vw, 25vw" ratio="3 / 2" alt="" />
             <div v-else class="svc-card__ph" aria-hidden="true"><span /></div>
             <div class="svc-card__body">
@@ -75,7 +76,7 @@ usePageSeo({
     </section>
 
     <!-- Despre + zona deservită -->
-    <section class="section section--concrete">
+    <section class="section section--verde">
       <div class="wrap about">
         <div v-reveal class="about__text">
           <h2>M-CRAFT, din Vicov de Sus</h2>
@@ -113,7 +114,7 @@ usePageSeo({
           <NuxtLink to="/proiecte/" class="more-link">Toate proiectele →</NuxtLink>
         </div>
         <div class="recent">
-          <button v-for="(p, i) in recent" :key="p.id" v-reveal type="button" class="recent__item" @click="recentOpen = i">
+          <button v-for="(p, i) in recent" :key="p.id" v-reveal type="button" class="recent__item" :data-svc="projectSvc(p.project)" @click="recentOpen = i">
             <Pic :photo="p" sizes="(max-width: 640px) 50vw, 25vw" ratio="1 / 1" :alt="p.alt" />
             <span class="recent__cap">{{ projectTitle(p.project) }}</span>
           </button>
@@ -123,7 +124,7 @@ usePageSeo({
     </section>
 
     <!-- Animație 3D + proces -->
-    <section class="section section--paper">
+    <section class="section section--otel">
       <div class="wrap">
         <div class="section-head">
           <div>
@@ -150,7 +151,7 @@ usePageSeo({
     </section>
 
     <!-- Recenzii: doar dacă există recenzii reale -->
-    <section v-if="reviews.length" class="section section--concrete">
+    <section v-if="reviews.length" class="section section--teracota">
       <div class="wrap">
         <div class="section-head">
           <h2>Recenzii</h2>
@@ -161,7 +162,7 @@ usePageSeo({
     </section>
 
     <!-- Cerere de ofertă -->
-    <section id="oferta" class="section section--concrete">
+    <section id="oferta" class="section section--chihlimbar">
       <div class="wrap quote">
         <div>
           <h2>Cere o ofertă</h2>
@@ -479,4 +480,20 @@ usePageSeo({
     font-size: 1.05rem;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.hero__text { background: var(--amber); border: 0; }
+.hero__contact { border-top: 1px solid var(--amber-line); }
+.hero__contact .wa { color: var(--ink); }
+
+.svc-card { background: var(--svc-t); border: 1px solid var(--svc-t); }
+.svc-card > :first-child { border-bottom: 5px solid var(--svc-d); }
+.svc-card:hover { border-color: var(--svc-d); }
+.svc-card:hover h3 { text-decoration-color: var(--svc-d); }
+.svc-card__ph { background: var(--svc-m); }
+.svc-card__ph span { border-color: var(--svc-d); }
+
+.area { background: var(--paper); border-left: 4px solid var(--verde-d); }
+.recent__cap { background: var(--svc-t); border-top: 4px solid var(--svc-d); }
+.quote__side { border: 1px solid var(--line); border-top: 4px solid var(--wa-d); }
 </style>

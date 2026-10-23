@@ -82,11 +82,11 @@ onBeforeUnmount(stop)
         @touchstart.passive="paused = true"
         @keydown="onKey"
       >
-        <NuxtLink v-for="s in items" :key="s.slug" :to="serviceUrl(s.slug)" class="svc">
+        <NuxtLink v-for="s in items" :key="s.slug" :to="serviceUrl(s.slug)" class="svc" :data-svc="s.slug">
           <Pic v-if="s.cover" :photo="s.cover" sizes="88px" ratio="1 / 1" alt="" class="svc__img" />
           <svg v-else class="svc__img svc__img--none" viewBox="0 0 52 52" aria-hidden="true">
-            <rect x="12" y="10" width="5" height="32" fill="var(--amber)" />
-            <rect x="12" y="37" width="28" height="5" fill="var(--amber)" />
+            <rect x="12" y="10" width="5" height="32" fill="var(--svc-d)" />
+            <rect x="12" y="37" width="28" height="5" fill="var(--svc-d)" />
           </svg>
           <span class="svc__name">{{ s.shortName }}</span>
         </NuxtLink>
@@ -206,4 +206,11 @@ onBeforeUnmount(stop)
     height: 44px;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.svc { background: var(--svc-t); border: 1px solid var(--svc-t); border-left: 5px solid var(--svc-d); }
+.svc:hover { border-color: var(--svc-d); }
+.svc__img--none { background: var(--svc-m); }
+.ctrl button:hover { background: var(--amber); border-color: var(--amber-line); }
+.ctrl button[aria-pressed='true'] { background: var(--chihlimbar-t); }
 </style>

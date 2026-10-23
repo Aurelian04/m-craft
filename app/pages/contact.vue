@@ -169,4 +169,20 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.ch { background: var(--chihlimbar-t); border: 0; border-top: 4px solid var(--amber); }
+.ch:hover { background: #f3d8a8; border-top-color: var(--amber-line); }
+.ch--wa { background: var(--wa-t); border-top-color: var(--wa-d); }
+.ch--wa:hover { background: #c9e9d4; border-top-color: var(--wa-d); }
+.ch--wa svg { color: var(--wa-d); }
+.ch:last-child { background: var(--teracota-t); border-top-color: var(--teracota-d); }
+.ch:last-child:hover { background: #efcdbb; }
+.ch:last-child svg { color: var(--teracota-d); }
+
+.form-col { background: var(--chihlimbar-t); padding: 20px; border-top: 4px solid var(--amber); }
+
+.box { border-top: 4px solid var(--otel-d); }
+.box:first-child { background: var(--verde-t); border-color: var(--verde-t); border-top-color: var(--verde-d); }
+.box dt { color: var(--otel-d); }
 </style>

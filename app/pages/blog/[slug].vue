@@ -16,7 +16,7 @@ usePageSeo({ title: post.seoTitle, description: post.seoDescription, image, noin
 </script>
 
 <template>
-  <div v-if="post" class="wrap page">
+  <div v-if="post" class="wrap page" :data-svc="post.relatedServices[0]">
     <Breadcrumbs :items="[{ name: 'Blog', path: '/blog/' }, { name: post.title }]" />
     <div class="layout">
       <article>
@@ -37,7 +37,7 @@ usePageSeo({ title: post.seoTitle, description: post.seoDescription, image, noin
             <li v-for="s in services" :key="s!.slug"><NuxtLink :to="serviceUrl(s!.slug)">{{ s!.name }}</NuxtLink></li>
           </ul>
         </div>
-        <div class="box box--cta">
+        <div class="box box--cta on-amber">
           <h2>Aveți o lucrare în plan?</h2>
           <ContactActions />
         </div>
@@ -124,4 +124,11 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.fig :deep(img) { border-bottom: 6px solid var(--svc-d); }
+article :deep(.prose h2) { border-top: 3px solid var(--svc-m); padding-top: 12px; }
+.box:first-child { background: var(--svc-t); border-color: var(--svc-t); border-top: 4px solid var(--svc-d); }
+.box--cta { background: var(--amber); border-color: var(--amber-line); }
+.box:last-child:not(.box--cta) { border-top: 4px solid var(--otel-d); }
 </style>

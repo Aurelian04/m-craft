@@ -93,7 +93,7 @@ const studs = [0, 1, 2, 3, 4, 5]
 
     <figcaption class="ra__legend">
       <ul>
-        <li v-for="(s, i) in stages" :key="s.id" :class="{ done: stage > i, now: running && stage === i + 1 }">
+        <li v-for="(s, i) in stages" :key="s.id" :data-layer="s.id" :class="{ done: stage > i, now: running && stage === i + 1 }">
           <strong>{{ s.label }}</strong>
           <span>{{ s.text }}</span>
         </li>
@@ -438,4 +438,29 @@ const studs = [0, 1, 2, 3, 4, 5]
     gap: 0;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.ra__scene { background: var(--chihlimbar-t); }
+.slab { background: #9ea6a7; box-shadow: 0 0 0 1px #8b9394; }
+.slab::before { background: #8b9394; }
+.screed { background: #c9cecd; }
+.floor-tiles span { background: #e9d6b8; border-color: #d4bc97; }
+.wall--back { background: var(--teracota-m); }
+.wall__studs span { background: var(--otel-m); }
+.wall__studs i { background: #7d91a2; }
+.wall__boards span { background: var(--verde-m); border-color: #79ad84; }
+.wall__plaster { background: #e8e2d6; }
+.wall__tiles span { background: var(--faianta-m); }
+.wall__paint { background: #f4ead8; }
+
+.ra__legend li { border-left-width: 6px; }
+.ra__legend li[data-layer='sapa'] { --lay: var(--beton-m); --lay-t: var(--beton-t); }
+.ra__legend li[data-layer='gresie'] { --lay: #d4bc97; --lay-t: var(--lemn-t); }
+.ra__legend li[data-layer='structura'] { --lay: var(--otel-m); --lay-t: var(--otel-t); }
+.ra__legend li[data-layer='placare'] { --lay: var(--verde-m); --lay-t: var(--verde-t); }
+.ra__legend li[data-layer='faianta'] { --lay: var(--faianta-m); --lay-t: var(--faianta-t); }
+.ra__legend li[data-layer='finisaj'] { --lay: var(--amber); --lay-t: var(--chihlimbar-t); }
+.ra__legend li.done { border-left-color: var(--lay); }
+.ra__legend li.now { background: var(--lay-t); }
+.ra__replay:hover { background: var(--amber); border-color: var(--amber-line); }
 </style>

@@ -36,4 +36,9 @@ h1 {
   font-size: 0.9rem;
   margin-bottom: 24px;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.upd { display: inline-block; padding: 2px 10px; background: var(--otel-t); color: var(--otel-d); }
+.page :deep(.prose h2) { border-top: 3px solid var(--otel-m); padding-top: 12px; }
+.page :deep(.prose li::marker) { color: var(--otel-d); }
 </style>

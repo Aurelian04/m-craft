@@ -111,7 +111,7 @@ function submitSearch() {
               <div v-show="dropdownOpen" id="dd-servicii" class="dd">
                 <ul class="dd__list">
                   <li v-for="s in serviceThumbs" :key="s.slug">
-                    <NuxtLink :to="serviceUrl(s.slug)" class="dd__item">
+                    <NuxtLink :to="serviceUrl(s.slug)" class="dd__item" :data-svc="s.slug">
                       <img v-if="s.thumb" :src="s.thumb" alt="" width="64" height="48" loading="lazy">
                       <span>
                         <strong>{{ s.name }}</strong>
@@ -159,6 +159,8 @@ function submitSearch() {
       </div>
     </div>
 
+    <div class="strip strip--mob" aria-hidden="true"><span v-for="s in services" :key="s.slug" :data-svc="s.slug" /></div>
+
     <div v-show="mobileOpen" id="mobile-menu" class="mob">
       <nav aria-label="Meniu mobil">
         <NuxtLink to="/" class="mob__link">Acasă</NuxtLink>
@@ -176,7 +178,7 @@ function submitSearch() {
           </button>
         </div>
         <ul v-show="mobileServicesOpen" id="mob-servicii" class="mob__sub">
-          <li v-for="s in services" :key="s.slug">
+          <li v-for="s in services" :key="s.slug" :data-svc="s.slug">
             <NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink>
           </li>
         </ul>
@@ -589,5 +591,31 @@ function submitSearch() {
   .logo img {
     height: 34px;
   }
+}
+
+/* Culoare (docs/design/culoare.md) */
+.util { background: var(--teracota-d); color: #fff; }
+.util__area svg { color: #fff; }
+.util__links a { color: #fff; }
+.util__links a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--amber); }
+
+.main-nav a:hover { border-bottom-color: var(--amber); }
+.main-nav a.on { background: var(--chihlimbar-t); border-bottom: 3px solid var(--amber); }
+
+.dd { box-shadow: none; border: 1px solid var(--line); border-top: 4px solid var(--amber); }
+.main-nav .dd__item { border-left: 4px solid var(--svc-m); }
+.main-nav .dd__item:hover { background: var(--svc-t); border-left-color: var(--svc-d); }
+.dd__item img { border-bottom: 3px solid var(--svc-d); }
+.dd__foot { background: var(--chihlimbar-t); margin: 8px -10px -10px; padding: 10px 18px; border-top: 0; }
+
+.mob__sub { border-left: 0; padding-left: 0; }
+.mob__sub li[data-svc] a { display: flex; gap: 10px; align-items: center; }
+.mob__sub li[data-svc] a::before { content: ''; flex: none; width: 12px; height: 12px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; }
+.mob__contact { background: var(--chihlimbar-t); padding: 14px; border-top: 4px solid var(--amber); }
+
+.strip--mob { display: none; }
+@media (max-width: 860px) {
+  .strip--mob { display: grid; height: 6px; }
+  .mob { inset: calc(var(--header-h) + 7px) 0 0; }
 }
 </style>

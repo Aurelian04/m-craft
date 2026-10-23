@@ -249,4 +249,16 @@ async function submit() {
     grid-template-columns: 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.qf__field abbr { color: var(--teracota-d); }
+.qf input,
+.qf select,
+.qf textarea { border-color: #958b7a; }
+.qf input:focus,
+.qf select:focus,
+.qf textarea:focus { outline-color: var(--teracota-d); border-color: var(--teracota-d); }
+.qf__msg--ok { background: var(--wa-t); border-left-color: var(--wa-d); }
+.qf__msg--ok svg { color: var(--wa-d); }
+.qf__msg--err { background: var(--antifoc-t); border-left-color: var(--antifoc-d); }
 </style>

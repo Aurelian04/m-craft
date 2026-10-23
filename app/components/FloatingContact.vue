@@ -154,4 +154,14 @@ onMounted(() => {
     padding-bottom: calc(60px + env(safe-area-inset-bottom));
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.fc__wa { background: var(--wa-d); border: 1px solid var(--wa-d); color: #fff; box-shadow: none; }
+.fc__wa svg { color: #fff; }
+.fc__wa:hover { background: #12692f; color: #fff; border-color: #12692f; }
+@media (max-width: 860px) {
+  .fc { background: var(--chihlimbar-t); border-top: 3px solid var(--amber); }
+  .fc__call { border-color: var(--amber-line); }
+  .fc__wa svg { color: #fff; }
+}
 </style>

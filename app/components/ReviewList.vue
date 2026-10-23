@@ -48,4 +48,10 @@ blockquote {
   color: var(--ink-2);
   margin: 0;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.rv li { border-top: 4px solid var(--amber); }
+.rv li:nth-child(3n + 2) { border-top-color: var(--teracota-d); }
+.rv li:nth-child(3n) { border-top-color: var(--verde-d); }
+.rv__meta strong { color: var(--teracota-d); }
 </style>

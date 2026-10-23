@@ -38,7 +38,7 @@ usePageSeo({
           <template v-else>Nu am găsit nimic pentru „{{ term }}”. Încercați un cuvânt mai scurt sau un alt termen, de exemplu „gresie”, „glet” sau „baie”.</template>
         </p>
         <ol v-if="results.length" class="res">
-          <li v-for="r in results" :key="r.doc.url">
+          <li v-for="r in results" :key="r.doc.url" :data-type="r.doc.type">
             <span class="res__type">{{ r.doc.type }}</span>
             <h2><NuxtLink :to="r.doc.url">{{ r.doc.title }}</NuxtLink></h2>
             <p>{{ r.snippet }}</p>
@@ -126,4 +126,15 @@ h1 {
   color: var(--ink-2);
   margin: 0;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.res li { padding-left: 14px; border-left: 4px solid var(--type-m, var(--line)); }
+.res li[data-type='Serviciu'] { --type-d: var(--chihlimbar-d); --type-m: var(--amber); --type-t: var(--chihlimbar-t); }
+.res li[data-type='Proiect'] { --type-d: var(--teracota-d); --type-m: var(--teracota-m); --type-t: var(--teracota-t); }
+.res li[data-type='Articol'] { --type-d: var(--otel-d); --type-m: var(--otel-m); --type-t: var(--otel-t); }
+.res li[data-type='Pagină'] { --type-d: var(--beton-d); --type-m: var(--beton-m); --type-t: var(--beton-t); }
+.res__type { padding: 1px 8px; background: var(--type-t); color: var(--type-d); }
+.res h2 a { text-decoration-color: var(--type-d); }
+.sf { padding: 14px; background: var(--chihlimbar-t); border-top: 4px solid var(--amber); }
+.sf input { border-color: #958b7a; }
 </style>

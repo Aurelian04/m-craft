@@ -75,4 +75,12 @@ details p {
   color: var(--ink-2);
   max-width: 75ch;
 }
+
+/* Culoare (docs/design/culoare.md) */
+summary::after { background: var(--svc-d); border-color: var(--svc-d); color: #fff; font-weight: 700; }
+details[open] { background: var(--svc-t); }
+details[open] summary,
+details[open] p { padding-inline: 12px; }
+details[open] summary::after { background: var(--svc-d); }
+summary:hover { color: var(--svc-d); }
 </style>

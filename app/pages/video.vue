@@ -22,7 +22,7 @@ usePageSeo({
       </p>
     </header>
 
-    <section v-for="g in groups" :id="g.id" :key="g.id" class="grp">
+    <section v-for="g in groups" :id="g.id" :key="g.id" class="grp" :data-svc="g.services[0]">
       <div class="grp__head">
         <h2>{{ g.title }}</h2>
         <NuxtLink :to="`/proiecte/#${g.id}`" class="more-link">Fotografiile proiectului →</NuxtLink>
@@ -75,4 +75,9 @@ usePageSeo({
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.grp { border-top: 6px solid var(--svc-m); padding-top: 0; }
+.grp__head { background: var(--svc-t); padding: 10px 14px; margin-bottom: 14px; }
+.grp__head .more-link { color: var(--svc-d); }
 </style>

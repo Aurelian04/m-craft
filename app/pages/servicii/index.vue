@@ -12,6 +12,7 @@ usePageSeo({
 </script>
 
 <template>
+  <div>
   <div class="wrap page">
     <Breadcrumbs :items="[{ name: 'Servicii' }]" />
     <header class="head">
@@ -23,7 +24,7 @@ usePageSeo({
     </header>
 
     <ul class="list">
-      <li v-for="s in rows" :key="s.slug" v-reveal class="row">
+      <li v-for="s in rows" :key="s.slug" v-reveal class="row" :data-svc="s.slug">
         <NuxtLink :to="serviceUrl(s.slug)" class="row__img" tabindex="-1" aria-hidden="true">
           <Pic v-if="s.cover" :photo="s.cover" sizes="(max-width: 700px) 100vw, 260px" ratio="4 / 3" alt="" />
           <span v-else class="row__ph"><span /></span>
@@ -42,16 +43,20 @@ usePageSeo({
       </li>
     </ul>
 
-    <section class="section">
+  </div>
+  <section class="section section--otel">
+    <div class="wrap">
       <h2 class="steps-title">Cum lucrăm</h2>
       <ProcessSteps />
-    </section>
+    </div>
+  </section>
   </div>
 </template>
 
 <style scoped>
 .page {
   padding-top: 20px;
+  padding-bottom: var(--section);
 }
 
 .head {
@@ -170,4 +175,13 @@ usePageSeo({
     flex: 1;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.list { border-top: 4px solid var(--amber); }
+.row { border-left: 6px solid var(--svc-m); padding-left: 14px; transition: background-color 0.15s ease; }
+.row:hover { background: var(--svc-t); border-left-color: var(--svc-d); }
+.row__ph { background: var(--svc-m); }
+.row__ph span { border-color: var(--svc-d); }
+.row__body h2 a:hover { text-decoration-color: var(--svc-d); }
+.row__topics li + li::before { color: var(--svc-d); }
 </style>

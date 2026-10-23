@@ -61,4 +61,8 @@ const link = `https://www.google.com/maps/search/?api=1&query=${query}`
   color: var(--ink-2);
   max-width: 36ch;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.map { background: var(--otel-t); border-top: 4px solid var(--otel-d); }
+.map__ph svg { color: var(--teracota-d); }
 </style>

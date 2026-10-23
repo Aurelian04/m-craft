@@ -6,7 +6,7 @@ defineProps<{ projects: Project[] }>()
 
 <template>
   <div class="pc">
-    <NuxtLink v-for="p in projects" :key="p.id" :to="`/proiecte/#${p.id}`" class="pc__card">
+    <NuxtLink v-for="p in projects" :key="p.id" :to="`/proiecte/#${p.id}`" class="pc__card" :data-svc="p.services[0]">
       <Pic v-if="photo(p.cover)" :photo="photo(p.cover)!" sizes="(max-width: 640px) 100vw, 25vw" ratio="4 / 3" alt="" />
       <div class="pc__body">
         <h3>{{ p.title }}</h3>
@@ -63,4 +63,8 @@ defineProps<{ projects: Project[] }>()
     grid-template-columns: 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.pc__card { background: var(--paper); border: 1px solid var(--paper); border-bottom: 5px solid var(--svc-m); }
+.pc__card:hover { border-color: var(--svc-d); }
 </style>

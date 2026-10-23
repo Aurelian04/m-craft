@@ -112,4 +112,10 @@ figcaption {
   font-weight: 500;
   line-height: 1.35;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.vc__play { background: var(--amber); border: 1px solid var(--amber-line); color: var(--ink); }
+.vc__poster:hover .vc__play { background: var(--paper); }
+.vc__dur { background: var(--ink); color: #fff; }
+figcaption { border-left: 3px solid var(--amber); padding-left: 8px; }
 </style>

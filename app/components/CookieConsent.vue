@@ -205,4 +205,11 @@ function save() {
     min-width: 0;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.cc { background: var(--chihlimbar-t); border-top: 4px solid var(--amber); box-shadow: none; }
+.cc__text a { color: var(--teracota-d); }
+.ccd { border-top: 4px solid var(--amber); }
+.ccd::backdrop { background: rgb(248 230 198 / 0.9); }
+.opt__fixed { padding: 1px 8px; background: var(--verde-t); color: var(--verde-d); }
 </style>

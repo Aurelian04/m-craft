@@ -51,4 +51,7 @@ h1 {
   border: 1px solid var(--line);
   border-left: 6px solid var(--amber);
 }
+
+/* Culoare (docs/design/culoare.md) */
+.empty { background: var(--chihlimbar-t); border: 0; border-left: 6px solid var(--amber); }
 </style>

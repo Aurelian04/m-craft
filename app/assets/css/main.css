@@ -9,11 +9,34 @@
   --ink: #30312e;
   --ink-2: #565751;
   --ink-3: #6e6f68;
-  --amber: #d88a16;
-  --amber-soft: #f6e6cc;
-  --rust: #98533b;
-  --wa: #1f9e4f;
-  --focus: #98533b;
+  /* marcă */
+  --amber: #dc9a34; /* = logo */
+  --amber-hover: #e6ab52;
+  --amber-line: #b07419; /* bordura butonului principal */
+  --amber-soft: #f8e6c6;
+  --rust: #9a4326; /* = teracotă închis; folosit pentru linkuri */
+  --wa: #1f9e4f; /* iconul WhatsApp pe alb */
+  --wa-d: #157a3c; /* fundal plin cu text alb */
+  --wa-t: #dff2e6;
+  --focus: #9a4326;
+
+  /* Culorile materialelor de pe șantier. Fiecare are trei nuanțe:
+     -d text/fundal pentru text alb, -m decor (benzi, mostre, fără text), -t fundal pentru text grafit. */
+  --chihlimbar-d: #7c5108; --chihlimbar-m: #dc9a34; --chihlimbar-t: #f8e6c6;
+  --teracota-d: #9a4326; --teracota-m: #cf6d47; --teracota-t: #f5dfd3;
+  --verde-d: #2f6646; --verde-m: #8fbf98; --verde-t: #dcebdc;
+  --faianta-d: #1b6763; --faianta-m: #62aaa3; --faianta-t: #d4eae6;
+  --beton-d: #4f585b; --beton-m: #a1a8a8; --beton-t: #e3e6e5;
+  --teava-d: #215e98; --teava-m: #73a3d3; --teava-t: #dbe8f5;
+  --antifoc-d: #a2323b; --antifoc-m: #e2898d; --antifoc-t: #f9dedc;
+  --xps-d: #943961; --xps-m: #e7b3c6; --xps-t: #f8dfe9;
+  --lemn-d: #76501f; --lemn-m: #c99c60; --lemn-t: #f0e2c9;
+  --otel-d: #3a5367; --otel-m: #93a6b6; --otel-t: #dfe7ee;
+
+  /* culoarea „curentă” de serviciu; implicit = marca */
+  --svc-d: var(--chihlimbar-d);
+  --svc-m: var(--amber);
+  --svc-t: var(--chihlimbar-t);
 
   --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
   --font-body: 'Work Sans Variable', 'Work Sans', system-ui, sans-serif;
@@ -111,9 +134,16 @@ a {
   color: var(--rust);
   text-underline-offset: 0.18em;
   text-decoration-thickness: 1px;
+  text-decoration-color: var(--amber);
 }
 
 a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--rust);
+}
+
+::selection {
+  background: var(--amber);
   color: var(--ink);
 }
 
@@ -186,8 +216,11 @@ button {
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--rust);
-  margin-bottom: 6px;
+  color: var(--teracota-d);
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 4px solid var(--amber);
+  line-height: 1.2;
 }
 
 .lead {
@@ -255,11 +288,11 @@ button {
 .btn--primary {
   background: var(--amber);
   color: var(--ink);
-  border-color: #c57b0c;
+  border-color: var(--amber-line);
 }
 
 .btn--primary:hover {
-  background: #e49a2a;
+  background: var(--amber-hover);
   color: var(--ink);
 }
 
@@ -280,22 +313,23 @@ button {
 }
 
 .btn--outline:hover {
-  background: var(--concrete);
+  background: var(--chihlimbar-t);
   color: var(--ink);
 }
 
 .btn--wa {
-  background: var(--paper);
+  background: var(--wa-t);
   color: var(--ink);
-  border-color: var(--line);
+  border-color: var(--wa-d);
 }
 
 .btn--wa svg {
-  color: var(--wa);
+  color: var(--wa-d);
 }
 
 .btn--wa:hover {
-  border-color: var(--wa);
+  background: #c9e9d4;
+  border-color: var(--wa-d);
   color: var(--ink);
 }
 
@@ -334,11 +368,57 @@ button {
 }
 
 .note {
-  border-left: 3px solid var(--amber);
-  background: var(--paper);
+  border-left: 4px solid var(--amber);
+  background: var(--chihlimbar-t);
   padding: 12px 16px;
   margin: 1em 0;
 }
+
+/* Codul de culoare al serviciilor: orice element cu data-svc primește --svc-d/-m/-t. */
+[data-svc='interioare'] { --svc-d: var(--verde-d); --svc-m: var(--verde-m); --svc-t: var(--verde-t); }
+[data-svc='pardoseli-placari'] { --svc-d: var(--faianta-d); --svc-m: var(--faianta-m); --svc-t: var(--faianta-t); }
+[data-svc='sape-autonivelante'] { --svc-d: var(--beton-d); --svc-m: var(--beton-m); --svc-t: var(--beton-t); }
+[data-svc='instalatii-sanitare'] { --svc-d: var(--teava-d); --svc-m: var(--teava-m); --svc-t: var(--teava-t); }
+[data-svc='instalatii-electrice'] { --svc-d: var(--antifoc-d); --svc-m: var(--antifoc-m); --svc-t: var(--antifoc-t); }
+[data-svc='exterioare'] { --svc-d: var(--teracota-d); --svc-m: var(--teracota-m); --svc-t: var(--teracota-t); }
+[data-svc='fatade'] { --svc-d: var(--xps-d); --svc-m: var(--xps-m); --svc-t: var(--xps-t); }
+[data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
+
+/* Secțiuni colorate pe toată lățimea */
+.section--verde { background: var(--verde-t); }
+.section--otel { background: var(--otel-t); }
+.section--teracota { background: var(--teracota-t); }
+.section--chihlimbar { background: var(--chihlimbar-t); }
+.section--svc { background: var(--svc-t); }
+
+/* Panou chihlimbar plin: tot textul grafit, butonul principal devine grafit */
+.on-amber { background: var(--amber); color: var(--ink); }
+.on-amber :is(h1, h2, h3, p, .lead, .muted, .kicker) { color: var(--ink); }
+.on-amber .kicker { border-left-color: var(--ink); }
+.on-amber a:not(.btn) { color: var(--ink); text-decoration-color: var(--ink); }
+.on-amber .btn--primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+.on-amber .btn--primary:hover { background: #44453f; color: #fff; }
+.on-amber :is(.btn--outline, .btn--wa) { background: var(--paper); border-color: var(--ink); color: var(--ink); }
+
+/* Banda de mostre: cele 8 culori de serviciu, ca un mostrar de materiale */
+.strip { display: grid; grid-template-columns: repeat(8, 1fr); height: 8px; }
+.strip > span { background: var(--svc-m); }
+
+/* Pătrățel-mostră înaintea unui serviciu în liste */
+.swatch-list { list-style: none; padding-left: 0; }
+.swatch-list > li[data-svc] { display: flex; gap: 10px; align-items: baseline; }
+.swatch-list > li[data-svc]::before {
+  content: '';
+  flex: none;
+  width: 10px;
+  height: 10px;
+  background: var(--svc-m);
+  outline: 1px solid var(--svc-d);
+  outline-offset: -1px;
+}
+
+.prose ul li::marker,
+.prose ol li::marker { color: var(--svc-d); }
 
 /* Apariție discretă. Clasa .reveal e pusă din JS doar pe elementele aflate sub ecran,
    deci conținutul rămâne vizibil fără JavaScript și nimic nu clipește la încărcare. */

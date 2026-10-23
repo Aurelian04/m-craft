@@ -52,7 +52,7 @@ usePageSeo({
       </div>
     </div>
 
-    <section class="section section--concrete">
+    <section class="section section--teracota">
       <div class="wrap cols">
         <div>
           <h2>Pentru cine lucrăm</h2>
@@ -64,8 +64,8 @@ usePageSeo({
         </div>
         <div>
           <h2>Ce lucrăm</h2>
-          <ul class="svc">
-            <li v-for="s in services" :key="s.slug">
+          <ul class="svc swatch-list">
+            <li v-for="s in services" :key="s.slug" :data-svc="s.slug">
               <NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink>
             </li>
           </ul>
@@ -73,7 +73,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--otel">
       <div class="wrap">
         <h2 class="mb">Cum se desfășoară o colaborare</h2>
         <ProcessSteps />
@@ -111,7 +111,7 @@ usePageSeo({
     </section>
 
     <section class="section">
-      <div class="wrap cta">
+      <div class="wrap cta on-amber">
         <div>
           <h2>Aveți o lucrare în județul Suceava?</h2>
           <p class="muted">Spuneți-ne ce și unde. Vă răspundem cu întrebările necesare pentru ofertă.</p>
@@ -236,4 +236,14 @@ usePageSeo({
     columns: 1;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.facts { background: var(--chihlimbar-t); border: 0; border-top: 4px solid var(--amber); }
+.facts > div + div { border-top: 1px solid #ead2a8; }
+.facts dt { color: var(--teracota-d); font-weight: 600; }
+.who li::marker { color: var(--teracota-d); }
+.svc { columns: 2; }
+.svc a { color: var(--ink); text-decoration-color: var(--svc-d); }
+.org > div { background: var(--paper); padding: 14px 16px; border-top: 4px solid var(--otel-d); }
+.cta { border: 0; }
 </style>

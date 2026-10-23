@@ -205,4 +205,10 @@ function touchEnd(e: TouchEvent) {
     height: 44px;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.lb__close { background: var(--amber); border-color: var(--amber-line); }
+.lb__nav:hover { background: var(--amber); border-color: var(--amber-line); }
+.lb__stage { background: var(--chihlimbar-t); border-color: var(--amber); color: var(--chihlimbar-d); }
+.lb__count { color: var(--teracota-d); font-weight: 600; }
 </style>

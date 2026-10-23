@@ -98,4 +98,11 @@ const steps = [
     left: -9px;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.steps li::before { width: 18px; height: 18px; top: -10px; }
+.steps li:nth-child(1)::before { background: var(--amber); }
+.steps li:nth-child(2)::before { background: var(--teracota-d); }
+.steps li:nth-child(3)::before { background: var(--otel-d); }
+.steps li:nth-child(4)::before { background: var(--verde-d); }
 </style>

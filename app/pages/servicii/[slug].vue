@@ -42,7 +42,7 @@ if (siteUrl) {
 </script>
 
 <template>
-  <div v-if="service">
+  <div v-if="service" :data-svc="slug">
     <section class="intro">
       <div class="wrap">
         <Breadcrumbs :items="[{ name: 'Servicii', path: '/servicii/' }, { name: service.name }]" />
@@ -116,7 +116,7 @@ if (siteUrl) {
         <nav v-if="related.length" class="side__box" aria-label="Servicii asociate">
           <h2>Servicii asociate</h2>
           <ul class="side__links">
-            <li v-for="r in related" :key="r!.slug">
+            <li v-for="r in related" :key="r!.slug" :data-svc="r!.slug">
               <NuxtLink :to="serviceUrl(r!.slug)">{{ r!.name }}</NuxtLink>
             </li>
           </ul>
@@ -132,7 +132,7 @@ if (siteUrl) {
       </aside>
     </div>
 
-    <section v-if="projects.length" class="section section--paper">
+    <section v-if="projects.length" class="section section--svc">
       <div class="wrap">
         <div class="section-head">
           <h2>Proiecte în care apare această lucrare</h2>
@@ -142,7 +142,7 @@ if (siteUrl) {
       </div>
     </section>
 
-    <section id="oferta" class="section section--concrete">
+    <section id="oferta" class="section section--chihlimbar">
       <div class="wrap quote">
         <div>
           <h2>Cerere de ofertă: {{ service.name.toLowerCase() }}</h2>
@@ -401,4 +401,26 @@ if (siteUrl) {
     border-left: 0;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.intro { background: var(--svc-t); border-bottom: 0; }
+.intro__area svg { color: var(--svc-d); }
+.intro__photo :deep(img) { border-bottom: 6px solid var(--svc-d); }
+.intro__factors { border-left: 6px solid var(--svc-d); }
+
+.block + .block { border-top: 3px solid var(--svc-m); }
+
+.options { border-top: 0; gap: 8px; }
+.options > div,
+.options > div:nth-child(even) { background: var(--svc-t); border: 0; border-top: 4px solid var(--svc-d); padding: 12px 14px; }
+.options dt { color: var(--svc-d); }
+
+.factors { background: var(--chihlimbar-t); padding: 16px 18px; border-left: 6px solid var(--amber); }
+.factors li::before { background: var(--chihlimbar-d); }
+
+.side__box:first-child { background: var(--chihlimbar-t); border-color: var(--chihlimbar-t); border-top: 4px solid var(--amber); }
+.side__box[aria-label='Articole'] { border-top: 4px solid var(--otel-d); }
+.side__links li[data-svc] a { display: flex; gap: 10px; align-items: baseline; }
+.side__links li[data-svc] a::before { content: ''; flex: none; width: 10px; height: 10px; background: var(--svc-m); outline: 1px solid var(--svc-d); outline-offset: -1px; }
+.side__links a:hover { color: var(--svc-d); }
 </style>

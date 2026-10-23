@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { visiblePosts, postUrl, postImages } from '~/data/posts'
 import { photo } from '~/data/media'
+import { getService } from '~/data/services'
 
 const { showDrafts } = useRuntimeConfig().public
 const posts = visiblePosts(showDrafts)
@@ -23,11 +24,12 @@ usePageSeo({
     <p v-if="!posts.length" class="empty">Articolele sunt în pregătire și vor fi publicate după verificare.</p>
 
     <ul v-else class="posts">
-      <li v-for="p in posts" :key="p.slug" v-reveal>
+      <li v-for="p in posts" :key="p.slug" v-reveal :data-svc="p.relatedServices[0]">
         <NuxtLink :to="postUrl(p.slug)" class="post">
           <Pic v-if="postImages[p.slug] && photo(postImages[p.slug]!)" :photo="photo(postImages[p.slug]!)!" sizes="(max-width: 640px) 100vw, 30vw" ratio="16 / 10" alt="" />
           <div class="post__body">
             <span v-if="p.draft" class="draft">Ciornă, nepublicată</span>
+            <span v-if="getService(p.relatedServices[0] ?? '')" class="post__tag">{{ getService(p.relatedServices[0]!)!.shortName }}</span>
             <h2>{{ p.title }}</h2>
             <p>{{ p.excerpt }}</p>
             <span class="post__more">Citește articolul →</span>
@@ -134,4 +136,11 @@ usePageSeo({
     grid-template-columns: 1fr;
   }
 }
+
+/* Culoare (docs/design/culoare.md) */
+.post :deep(img) { border-bottom: 5px solid var(--svc-m); }
+.post:hover { border-color: var(--svc-d); }
+.post__tag { align-self: start; margin-bottom: 6px; padding: 1px 8px; background: var(--svc-t); color: var(--svc-d); font-size: 0.8rem; font-weight: 600; }
+.post__more { color: var(--svc-d); }
+.empty { background: var(--chihlimbar-t); border: 0; border-left: 6px solid var(--amber); }
 </style>

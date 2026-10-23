@@ -11,6 +11,7 @@ useHead({ title: notFound.value ? 'Pagina nu a fost găsită | M-CRAFT' : 'Eroar
 <template>
   <NuxtLayout>
     <div class="wrap page">
+      <div class="err on-amber">
       <h1>{{ notFound ? 'Pagina nu a fost găsită' : 'A apărut o eroare' }}</h1>
       <p class="lead">
         {{ notFound ? 'Adresa poate fi greșită sau pagina a fost mutată.' : 'Încercați din nou peste câteva momente.' }}
@@ -21,8 +22,9 @@ useHead({ title: notFound.value ? 'Pagina nu a fost găsită | M-CRAFT' : 'Eroar
         <NuxtLink to="/servicii/" class="btn btn--outline">Servicii</NuxtLink>
         <NuxtLink to="/contact/" class="btn btn--outline">Contact</NuxtLink>
       </div>
+      </div>
       <ul class="svc">
-        <li v-for="s in services" :key="s.slug"><NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink></li>
+        <li v-for="s in services" :key="s.slug" :data-svc="s.slug"><NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink></li>
       </ul>
     </div>
   </NuxtLayout>
@@ -47,4 +49,12 @@ h1 {
 .svc {
   columns: 2 240px;
 }
+
+/* Culoare (docs/design/culoare.md) */
+.err { padding: 24px; }
+.err .links { margin-bottom: 0; }
+.svc { list-style: none; padding: 0; margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; columns: auto; }
+.svc li { margin: 0; }
+.svc a { display: block; padding: 10px 12px; background: var(--svc-t); border-left: 5px solid var(--svc-d); color: var(--ink); text-decoration: none; font-weight: 600; }
+.svc a:hover { border-left-width: 9px; }
 </style>

@@ -9,6 +9,7 @@ const year = new Date().getFullYear()
 
 <template>
   <footer class="ftr">
+    <div class="strip" aria-hidden="true"><span v-for="s in services" :key="s.slug" :data-svc="s.slug" /></div>
     <div class="wrap ftr__grid">
       <div class="ftr__brand">
         <NuxtLink to="/" aria-label="M-CRAFT, pagina principală">
@@ -30,8 +31,8 @@ const year = new Date().getFullYear()
 
       <nav aria-label="Servicii">
         <h2 class="ftr__h">Servicii</h2>
-        <ul class="ftr__list">
-          <li v-for="s in services" :key="s.slug">
+        <ul class="ftr__list swatch-list">
+          <li v-for="s in services" :key="s.slug" :data-svc="s.slug">
             <NuxtLink :to="serviceUrl(s.slug)">{{ s.name }}</NuxtLink>
           </li>
         </ul>
@@ -214,5 +215,20 @@ const year = new Date().getFullYear()
     grid-template-columns: 1fr;
     gap: 22px;
   }
+}
+
+/* Culoare (docs/design/culoare.md) */
+.ftr { border-top: 0; }
+.ftr__h { display: inline-block; padding-bottom: 2px; border-bottom: 3px solid var(--amber); }
+.ftr__list.swatch-list > li + li { margin-top: 6px; }
+.ftr__contact li:nth-child(1) svg { color: var(--chihlimbar-d); }
+.ftr__contact .wa { color: var(--wa-d); }
+.ftr__contact li:nth-child(3) svg { color: var(--teracota-d); }
+.ftr__legal dt { color: var(--teracota-d); }
+.ftr__bottom {
+  max-width: none;
+  background: var(--concrete-2);
+  border-top: 0;
+  padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter)));
 }
 </style>
