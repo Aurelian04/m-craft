@@ -24,7 +24,7 @@ const service: Service = {
         'pereți despărțitori și placări din gips-carton pe structură metalică',
         'tavane suspendate din gips-carton, inclusiv pentru ascunderea traseelor sau pentru spoturi',
         'reparații de tencuială, glet și zugrăveli',
-        'coordonarea cu lucrările de instalații electrice și sanitare',
+        'coordonarea cu lucrările de instalații sanitare și cu electricianul autorizat, pentru partea electrică',
         'finisaje de pardoseală și placări, acolo unde fac parte din lucrare',
       ],
     },
@@ -96,7 +96,7 @@ const service: Service = {
     'renovare completă sau doar anumite lucrări',
     'starea pereților și a tavanelor: fisuri, tencuială desprinsă, denivelări',
     'volumul demontărilor și evacuarea molozului',
-    'mutarea sau refacerea instalațiilor electrice și sanitare',
+    'mutarea sau refacerea instalațiilor (partea electrică se face de un electrician autorizat ANRE)',
     'tipul tavanelor și pereților din gips-carton: niveluri, spoturi, goluri, izolație fonică',
     'nivelul de finisaj cerut pentru pereți',
     'dacă locuința rămâne locuită în timpul lucrărilor și accesul la etaj',
@@ -131,7 +131,7 @@ const service: Service = {
       a: 'Până când gletul este complet uscat, ceea ce depinde de grosime, de temperatură și de ventilare. Fișa tehnică a produsului dă un reper, iar înainte de vopsea suprafața se șlefuiește, se desprăfuiește și se amorsează.',
     },
   ],
-  related: ['pardoseli-placari', 'instalatii-electrice', 'instalatii-sanitare', 'sape-autonivelante'],
+  related: ['pardoseli-placari', 'instalatii-sanitare', 'sape-autonivelante'],
   whatsappText:
     'Bună ziua! Mă interesează o ofertă pentru renovarea interioară a unei locuințe. Lucrarea este în [localitate].',
   keywords: [

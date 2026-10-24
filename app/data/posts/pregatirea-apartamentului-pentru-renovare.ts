@@ -10,7 +10,7 @@ const post: Post = {
     'O renovare începe înainte de prima lovitură de ciocan. Iată ce merită făcut cu apartamentul, cu vecinii și cu utilitățile înainte ca echipa să intre în lucru.',
   draft: true,
   tags: ['renovare apartament', 'pregătire șantier', 'asociația de proprietari', 'utilități', 'protecții', 'planificare'],
-  relatedServices: ['interioare', 'instalatii-sanitare', 'instalatii-electrice'],
+  relatedServices: ['interioare', 'instalatii-sanitare'],
   body: [
     {
       type: 'p',

@@ -10,7 +10,7 @@ const post: Post = {
     'Într-o renovare, fiecare etapă pregătește suportul pentru următoarea. O ordine greșită înseamnă lucrări terminate care trebuie desfăcute.',
   draft: true,
   tags: ['ordinea lucrărilor', 'renovare interioară', 'etape renovare', 'instalații', 'finisaje', 'timpi de uscare'],
-  relatedServices: ['interioare', 'instalatii-sanitare', 'instalatii-electrice', 'pardoseli-placari', 'sape-autonivelante'],
+  relatedServices: ['interioare', 'instalatii-sanitare', 'pardoseli-placari', 'sape-autonivelante'],
   body: [
     {
       type: 'p',

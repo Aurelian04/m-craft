@@ -122,7 +122,7 @@ const service: Service = {
       a: 'Nu. Aici este vorba numai de apă și canalizare. Instalațiile de gaze naturale se proiectează și se execută numai de operatori autorizați în domeniul gazelor naturale.',
     },
   ],
-  related: ['pardoseli-placari', 'interioare', 'instalatii-electrice', 'sape-autonivelante'],
+  related: ['pardoseli-placari', 'interioare', 'sape-autonivelante', 'mentenanta'],
   whatsappText:
     'Bună ziua! Mă interesează o ofertă pentru instalații sanitare la renovarea băii sau a bucătăriei. Lucrarea este în [localitate].',
   keywords: [

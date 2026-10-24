@@ -413,7 +413,6 @@ button {
 [data-svc='pardoseli-placari'] { --svc-d: var(--faianta-d); --svc-m: var(--faianta-m); --svc-t: var(--faianta-t); }
 [data-svc='sape-autonivelante'] { --svc-d: var(--beton-d); --svc-m: var(--beton-m); --svc-t: var(--beton-t); }
 [data-svc='instalatii-sanitare'] { --svc-d: var(--teava-d); --svc-m: var(--teava-m); --svc-t: var(--teava-t); }
-[data-svc='instalatii-electrice'] { --svc-d: var(--antifoc-d); --svc-m: var(--antifoc-m); --svc-t: var(--antifoc-t); }
 [data-svc='exterioare'] { --svc-d: var(--teracota-d); --svc-m: var(--teracota-m); --svc-t: var(--teracota-t); }
 [data-svc='fatade'] { --svc-d: var(--xps-d); --svc-m: var(--xps-m); --svc-t: var(--xps-t); }
 [data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
@@ -435,7 +434,7 @@ button {
 .on-amber :is(.btn--outline, .btn--wa) { background: var(--paper); border-color: var(--ink); color: var(--ink); }
 
 /* Banda de mostre: cele 8 culori de serviciu, ca un mostrar de materiale */
-.strip { display: grid; grid-template-columns: repeat(8, 1fr); height: 8px; }
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; height: 8px; }
 .strip > span { background: var(--svc-m); }
 
 /* Pătrățel-mostră înaintea unui serviciu în liste */

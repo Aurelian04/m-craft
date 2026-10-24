@@ -6,7 +6,7 @@ const rows = services.map((s) => ({ ...s, cover: servicePhotos(s.slug).cover }))
 
 usePageSeo({
   title: 'Servicii de renovare, amenajări și instalații în Suceava',
-  description: 'Amenajări interioare și exterioare, fațade, gresie, faianță și parchet, șape autonivelante, instalații sanitare și electrice, mentenanță în județul Suceava.',
+  description: 'Amenajări interioare și exterioare, fațade, gresie, faianță și parchet, șape autonivelante, instalații sanitare și mentenanță în județul Suceava.',
   image: rows[0]?.cover,
 })
 </script>

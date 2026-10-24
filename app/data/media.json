@@ -336,7 +336,6 @@
    "alt": "Coridor cu pereți din gips-carton gletuiți, goluri de uși și trasee de cabluri la tavan",
    "project": "cladire-noua-instalatii",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1529,7 +1528,6 @@
    "alt": "Grindă cu petec de gips-carton gletuit și cablu în tub coborând pe perete până la un colac",
    "project": "spatiu-comercial-gletuire",
    "services": [
-    "instalatii-electrice",
     "interioare",
     "mentenanta"
    ],
@@ -1650,9 +1648,7 @@
    ],
    "alt": "Șliț deschis într-un stâlp tencuit, cu tub flexibil alb pentru cabluri, încă neacoperit",
    "project": "spatiu-comercial-gletuire",
-   "services": [
-    "instalatii-electrice"
-   ],
+   "services": [],
    "categories": [
     "instalatii"
    ],
@@ -1728,7 +1724,6 @@
    "alt": "Tavan deschis vopsit gri închis cu jgheaburi de cabluri și tubulatură, lângă casete albe din gips-carton",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1771,7 +1766,6 @@
    "alt": "Coridor al spațiului comercial cu jgheaburi de cabluri, pereți gletuiți și un muncitor la lucru",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1834,7 +1828,6 @@
    "alt": "Jgheaburi de cabluri vopsite, conducte izolate și indicator de ieșire sub tavanul închis la culoare",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1856,7 +1849,6 @@
    "alt": "Tavan deschis vopsit gri cu jgheaburi de cabluri, tuburi electrice și unitate de climatizare protejată",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1878,7 +1870,6 @@
    "alt": "Tavan înalt vopsit gri cu jgheaburi de cabluri, casete din gips-carton și schele lângă ferestre",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare"
    ],
    "categories": [
@@ -1982,7 +1973,6 @@
    "alt": "Încăpere îngustă cu pereți gletuiți și trasee de cabluri în tuburi pe plasă, înainte de șapă",
    "project": "spatiu-comercial-tavan-tehnic",
    "services": [
-    "instalatii-electrice",
     "interioare",
     "sape-autonivelante"
    ],
@@ -2044,9 +2034,7 @@
    ],
    "alt": "Tuburi electrice gri montate pe tavan și pe grindă, vopsite odată cu structura",
    "project": "spatiu-comercial-tavan-tehnic",
-   "services": [
-    "instalatii-electrice"
-   ],
+   "services": [],
    "categories": [
     "comercial",
     "instalatii"
@@ -2348,7 +2336,6 @@
    "cover": "s3-2630",
    "services": [
     "instalatii-sanitare",
-    "instalatii-electrice",
     "interioare"
    ],
    "before_after": []
@@ -2466,8 +2453,7 @@
    ],
    "cover": "s8-3298",
    "services": [
-    "interioare",
-    "instalatii-electrice"
+    "interioare"
    ],
    "before_after": []
   },
@@ -2520,16 +2506,6 @@
     "s4-2782",
     "s3-2636",
     "s3-2642"
-   ]
-  },
-  "instalatii-electrice": {
-   "cover": "s8-3353",
-   "gallery": [
-    "s3-2639",
-    "s8-3360",
-    "s8-3362",
-    "s8-3315",
-    "s7-3232"
    ]
   },
   "exterioare": {

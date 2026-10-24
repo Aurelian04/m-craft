@@ -121,7 +121,7 @@ const service: Service = {
       a: 'Uneori da, chiar cu aceeași culoare, pentru că vopseaua veche și-a schimbat nuanța și luciul în timp. Pentru un aspect uniform, se zugrăvește de obicei întregul perete.',
     },
   ],
-  related: ['interioare', 'pardoseli-placari', 'instalatii-sanitare', 'instalatii-electrice'],
+  related: ['interioare', 'pardoseli-placari', 'instalatii-sanitare'],
   whatsappText:
     'Bună ziua! Mă interesează o ofertă pentru câteva lucrări de mentenanță și reparații. Lucrarea este în [localitate].',
   keywords: [

@@ -3,7 +3,6 @@ import interioare from './interioare'
 import exterioare from './exterioare'
 import fatade from './fatade'
 import instalatiiSanitare from './instalatii-sanitare'
-import instalatiiElectrice from './instalatii-electrice'
 import mentenanta from './mentenanta'
 import pardoseliPlacari from './pardoseli-placari'
 import sapeAutonivelante from './sape-autonivelante'
@@ -14,7 +13,6 @@ export const services: Service[] = [
   pardoseliPlacari,
   sapeAutonivelante,
   instalatiiSanitare,
-  instalatiiElectrice,
   exterioare,
   fatade,
   mentenanta,

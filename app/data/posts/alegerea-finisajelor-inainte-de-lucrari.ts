@@ -10,7 +10,7 @@ const post: Post = {
     'Unele finisaje par o alegere de final, dar de ele depind instalațiile, cotele pardoselii și golurile de uși. Iată ce trebuie hotărât înainte de primele lucrări.',
   draft: true,
   tags: ['finisaje', 'alegere materiale', 'planificare renovare', 'obiecte sanitare', 'uși interioare', 'iluminat', 'gresie și faianță'],
-  relatedServices: ['interioare', 'pardoseli-placari', 'instalatii-sanitare', 'instalatii-electrice'],
+  relatedServices: ['interioare', 'pardoseli-placari', 'instalatii-sanitare'],
   body: [
     {
       type: 'p',

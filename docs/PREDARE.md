@@ -4,8 +4,8 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
 
 ## Ce conține
 
-- **Pagini (26):**
-  - Acasă, Servicii, 8 pagini de serviciu, Proiecte, Video, Despre noi, Recenzii;
+- **Pagini (25):**
+  - Acasă, Servicii, 7 pagini de serviciu, Proiecte, Video, Despre noi, Recenzii;
   - Blog, cu 6 articole în ciornă;
   - Contact, Căutare;
   - Termeni și condiții, Politica de confidențialitate, Politica de cookie-uri;
@@ -76,10 +76,7 @@ Branch: `redesign`. `main` și site-ul actual nu au fost modificate.
 - **Confidențialitate în clipuri:** clipurile cu fețe recognoscibile sau logo-uri ale altor firme (de ex. o vestă „zafit”, logo Lidl prin vitrină) au fost excluse. Pentru a le folosi e nevoie de acordul persoanelor.
 
 ### Confirmări de la firmă (detaliate în `docs/research/*.md`)
-- **Instalații electrice:**
-  - firma are sau colaborează cu un electrician autorizat ANRE?
-  - pagina nu afirmă nicio autorizare și e scrisă ca ghid pentru client;
-  - fără confirmare, pagina rămâne informativă sau se scoate din meniu.
+- **Instalații electrice:** serviciul a fost scos de pe site, pentru că firma nu are autorizație ANRE. Adresa veche `/servicii/instalatii-electrice/` redirecționează spre `/servicii/`. Textele din `docs/research/servicii-b.md` rămân pentru o eventuală reactivare.
 - **Ce execută efectiv firma:** instalații sanitare (trasee, probe de presiune), fațade ETICS complete, hidroizolații de terasă, parchet (laminat, stratificat, masiv), șape autonivelante, mentenanță.
 - **Legislație:**
   - Legea 50/1991 a fost înlocuită de Codul amenajării teritoriului, urbanismului și construcțiilor (Legea 169/2026), după research;
