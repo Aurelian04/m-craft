@@ -1,0 +1,482 @@
+/* M-CRAFT: temă exclusiv luminoasă, culori solide, colțuri discret rotunjite. */
+
+:root {
+  --bg: #faf8f3;
+  --paper: #ffffff;
+  --concrete: #e9e5dd;
+  --concrete-2: #ddd7cb;
+  --line: #d6d0c4;
+  --ink: #30312e;
+  --ink-2: #565751;
+  --ink-3: #6e6f68;
+  /* marcă */
+  --amber: #dc9a34; /* = logo */
+  --amber-hover: #e6ab52;
+  --amber-line: #b07419; /* bordura butonului principal */
+  --amber-soft: #f8e6c6;
+  --rust: #9a4326; /* = teracotă închis; folosit pentru linkuri */
+  --wa: #1f9e4f; /* iconul WhatsApp pe alb */
+  --wa-d: #157a3c; /* fundal plin cu text alb */
+  --wa-t: #dff2e6;
+  --focus: #9a4326;
+
+  /* Culorile materialelor de pe șantier. Fiecare are trei nuanțe:
+     -d text/fundal pentru text alb, -m decor (benzi, mostre, fără text), -t fundal pentru text grafit. */
+  --chihlimbar-d: #7c5108; --chihlimbar-m: #dc9a34; --chihlimbar-t: #f8e6c6;
+  --teracota-d: #9a4326; --teracota-m: #cf6d47; --teracota-t: #f5dfd3;
+  --verde-d: #2f6646; --verde-m: #8fbf98; --verde-t: #dcebdc;
+  --faianta-d: #1b6763; --faianta-m: #62aaa3; --faianta-t: #d4eae6;
+  --beton-d: #4f585b; --beton-m: #a1a8a8; --beton-t: #e3e6e5;
+  --teava-d: #215e98; --teava-m: #73a3d3; --teava-t: #dbe8f5;
+  --antifoc-d: #a2323b; --antifoc-m: #e2898d; --antifoc-t: #f9dedc;
+  --xps-d: #943961; --xps-m: #e7b3c6; --xps-t: #f8dfe9;
+  --lemn-d: #76501f; --lemn-m: #c99c60; --lemn-t: #f0e2c9;
+  --otel-d: #3a5367; --otel-m: #93a6b6; --otel-t: #dfe7ee;
+
+  /* culoarea „curentă” de serviciu; implicit = marca */
+  --svc-d: var(--chihlimbar-d);
+  --svc-m: var(--amber);
+  --svc-t: var(--chihlimbar-t);
+
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-body: 'Work Sans Variable', 'Work Sans', system-ui, sans-serif;
+
+  --wrap: 1240px;
+  --gutter: 16px;
+  --section: 40px;
+  /* Scara de raze: mic = etichete, chip-uri, miniaturi; mediu = butoane, câmpuri, carduri mici;
+     mare = carduri, panouri, imagini mari. Fără capsule (999px). */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --header-h: 64px;
+
+  color-scheme: light;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 24px;
+    --section: 56px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-feature-settings: 'kern';
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 1.6rem + 2vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.65rem, 1.4rem + 1vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0 0 0.85em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Implicit browserul pune 700; în textul curent ajunge o accentuare mai ușoară. */
+strong,
+b {
+  font-weight: 600;
+}
+
+a {
+  color: var(--rust);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--amber);
+}
+
+a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--rust);
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+ul,
+ol {
+  padding-left: 1.2em;
+  margin: 0 0 0.85em;
+}
+
+li + li {
+  margin-top: 0.3em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.section--concrete {
+  background: var(--concrete);
+}
+
+.section--paper {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+}
+
+.skip-link:focus {
+  top: 8px;
+  color: #fff;
+}
+
+/* Etichetă mică deasupra titlurilor: fără litere distanțate */
+.kicker {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: var(--teracota-d);
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 4px solid var(--amber);
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.075rem;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 20px;
+}
+
+.section-head p {
+  margin: 6px 0 0;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+
+.more-link {
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+/* Butoane */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  font-weight: 550;
+  font-size: 0.975rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber-line);
+}
+
+.btn--primary:hover {
+  background: var(--amber-hover);
+  color: var(--ink);
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: #44453f;
+  color: #fff;
+}
+
+.btn--outline {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn--outline:hover {
+  background: var(--chihlimbar-t);
+  color: var(--ink);
+}
+
+.btn--wa {
+  background: var(--wa-t);
+  color: var(--ink);
+  border-color: var(--wa-d);
+}
+
+.btn--wa svg {
+  color: var(--wa-d);
+}
+
+.btn--wa:hover {
+  background: #c9e9d4;
+  border-color: var(--wa-d);
+  color: var(--ink);
+}
+
+.btn--sm {
+  min-height: 38px;
+  padding: 7px 12px;
+  font-size: 0.9rem;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Grile simple */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Text de conținut (articole, servicii, pagini legale) */
+.prose {
+  max-width: 72ch;
+}
+
+.prose h2 {
+  margin: 1.6em 0 0.5em;
+}
+
+.prose h3 {
+  margin: 1.3em 0 0.4em;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.note {
+  border-radius: var(--r-md);
+  background: var(--chihlimbar-t);
+  padding: 12px 16px 12px 20px;
+  margin: 1em 0;
+}
+
+/* Bandă de culoare pe o singură latură a unui element rotunjit: rămâne dreaptă
+   și e tăiată curat de colțuri (o bordură groasă s-ar curba stângaci pe colț).
+   Culoarea vine din --band, grosimea din --band-w. */
+.band {
+  position: relative;
+  overflow: hidden;
+}
+
+.band::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--band, var(--amber));
+  transition: background-color 0.15s ease, width 0.15s ease;
+}
+
+.band--top::before { left: 0; right: 0; top: 0; height: var(--band-w, 4px); }
+.band--bottom::before { left: 0; right: 0; bottom: 0; height: var(--band-w, 4px); }
+.band--left::before { top: 0; bottom: 0; left: 0; width: var(--band-w, 4px); }
+
+/* Codul de culoare al serviciilor: orice element cu data-svc primește --svc-d/-m/-t. */
+[data-svc='interioare'] { --svc-d: var(--verde-d); --svc-m: var(--verde-m); --svc-t: var(--verde-t); }
+[data-svc='pardoseli-placari'] { --svc-d: var(--faianta-d); --svc-m: var(--faianta-m); --svc-t: var(--faianta-t); }
+[data-svc='sape-autonivelante'] { --svc-d: var(--beton-d); --svc-m: var(--beton-m); --svc-t: var(--beton-t); }
+[data-svc='instalatii-sanitare'] { --svc-d: var(--teava-d); --svc-m: var(--teava-m); --svc-t: var(--teava-t); }
+[data-svc='exterioare'] { --svc-d: var(--teracota-d); --svc-m: var(--teracota-m); --svc-t: var(--teracota-t); }
+[data-svc='fatade'] { --svc-d: var(--xps-d); --svc-m: var(--xps-m); --svc-t: var(--xps-t); }
+[data-svc='mentenanta'] { --svc-d: var(--lemn-d); --svc-m: var(--lemn-m); --svc-t: var(--lemn-t); }
+
+/* Secțiuni colorate pe toată lățimea */
+.section--verde { background: var(--verde-t); }
+.section--otel { background: var(--otel-t); }
+.section--teracota { background: var(--teracota-t); }
+.section--chihlimbar { background: var(--chihlimbar-t); }
+.section--svc { background: var(--svc-t); }
+
+/* Panou chihlimbar plin: tot textul grafit, butonul principal devine grafit */
+.on-amber { background: var(--amber); color: var(--ink); }
+.on-amber :is(h1, h2, h3, p, .lead, .muted, .kicker) { color: var(--ink); }
+.on-amber .kicker { border-left-color: var(--ink); }
+.on-amber a:not(.btn) { color: var(--ink); text-decoration-color: var(--ink); }
+.on-amber .btn--primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+.on-amber .btn--primary:hover { background: #44453f; color: #fff; }
+.on-amber :is(.btn--outline, .btn--wa) { background: var(--paper); border-color: var(--ink); color: var(--ink); }
+
+/* Banda de mostre: cele 8 culori de serviciu, ca un mostrar de materiale */
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; height: 8px; }
+.strip > span { background: var(--svc-m); }
+
+/* Pătrățel-mostră înaintea unui serviciu în liste */
+.swatch-list { list-style: none; padding-left: 0; }
+.swatch-list > li[data-svc] { display: flex; gap: 10px; align-items: baseline; }
+.swatch-list > li[data-svc]::before {
+  content: '';
+  flex: none;
+  width: 10px;
+  height: 10px;
+  background: var(--svc-m);
+  outline: 1px solid var(--svc-d);
+  outline-offset: -1px;
+  border-radius: calc(var(--r-sm) / 2);
+}
+
+.prose ul li::marker,
+.prose ol li::marker { color: var(--svc-d); }
+
+/* Apariție discretă. Clasa .reveal e pusă din JS doar pe elementele aflate sub ecran,
+   deci conținutul rămâne vizibil fără JavaScript și nimic nu clipește la încărcare. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+  }
+
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
